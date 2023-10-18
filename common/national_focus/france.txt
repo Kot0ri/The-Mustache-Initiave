@@ -7480,8 +7480,12 @@
 		y = 2
 		
 		prerequisite = {
-			focus = FRA_Ideals_of_Carlism focus = Franco-Iberian_Culture
+			focus = FRA_Ideals_of_Carlism 
 		}
+		prerequisite = {
+			focus = Franco-Iberian_Culture
+		}
+
 		relative_position_id = FRA_Franco-Iberian_Culture
 		cost = 5
 
