@@ -156,6 +156,7 @@ characters={
 		}
 		country_leader={
 			ideology=liberalism
+			traits={ emergency_powers our_right_to_survive liberal_democratic_paragon }
 			expire="1989.1.1.1"
 			id=-1
 		}
