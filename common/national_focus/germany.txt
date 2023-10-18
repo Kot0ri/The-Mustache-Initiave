@@ -2321,7 +2321,6 @@ focus_tree = {
 	focus = {
 		id = GER_Preperations_for_rhineland
 		icon = GFX_goal_generic_military_sphere
-		mutually_exclusive = { focus = GER_oppose_hitler }
 		x = 17
 		y = 0
 		cost = 2
@@ -2347,6 +2346,7 @@ focus_tree = {
 		id = GER_Restore_Nobilities_Command_of_Military
 		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = GER_army_innovation }
+		mutually_exclusive = { focus = GER_Prinzenerlaß }
 		x = 1.5
 		y = 2
 		relative_position_id = GER_army_innovation
@@ -2367,6 +2367,7 @@ focus_tree = {
 		id = GER_Prinzenerlaß
 		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = GER_army_innovation focus= GER_Preperations_for_rhineland}
+		mutually_exclusive = { focus = GER_Restore_Nobilities_Command_of_Military }
 		x = -1.0
 		y = 2
 		relative_position_id = GER_army_innovation
