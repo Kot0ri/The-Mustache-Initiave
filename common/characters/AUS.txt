@@ -17,7 +17,7 @@ characters={
 		name=AUS_karl_renner
 		portraits={
 			civilian={
-				large=GFX_portrait_AUS_karl_renner
+				large="gfx/leaders/AUS/AUS_karl_renner.dds"
 			}
 		}
 		country_leader={
@@ -86,7 +86,7 @@ characters={
 		name=AUS_alfred_klahr
 		portraits={
 			civilian={
-				large=GFX_portrait_AUS_alfred_klahr
+				large="gfx/leaders/AUS/AUS_alfred_klahr.dds"
 			}
 		}
 		country_leader={
