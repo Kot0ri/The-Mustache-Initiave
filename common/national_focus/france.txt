@@ -7647,6 +7647,51 @@
 		}
 	}
 	focus = {
+		id = FRA_southern_sphere
+		icon = GFX_focus_attack_britain
+		x = 3
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_proclaim_the_third_empire
+		}
+		relative_position_id = FRA_proclaim_the_third_empire
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		will_lead_to_war_with = AUS
+		will_lead_to_war_with = SPA
+		will_lead_to_war_with = ITA
+		available = {
+			is_subject = no
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = SPA
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+			create_wargoal = {
+				target = AUS
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+			create_wargoal = {
+				target = ITA
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+		}
+	}
+	focus = {
 		id = FRA_reorganize_the_dutch
 		icon = GFX_focus_CZE_german_puppet
 		x = 2
