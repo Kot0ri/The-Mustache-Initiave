@@ -470,6 +470,27 @@ ideas = {
 			
 
 		}
+
+		MAN_imperial_academia = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
 		
 	}
 
