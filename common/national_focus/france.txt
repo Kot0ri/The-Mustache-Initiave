@@ -7695,6 +7695,65 @@
 		}
 	}
 	focus = {
+		id = FRA_Polish_allaince
+		icon = GFX_focus_attack_britain
+		x = 4
+		y = 2
+		
+		prerequisite = {
+			focus = FRA_proclaim_the_third_empire
+		}
+		relative_position_id = FRA_proclaim_the_third_empire
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+			is_subject = no
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = Continetal_Leauge
+			add_to_faction = POL
+		}
+	}
+	focus = {
+		id = FRA_Pressure_the_Swiss
+		icon = GFX_focus_attack_britain
+		x = 0
+		y = 2
+		
+		prerequisite = {
+			focus = FRA_Polish_allaince
+		}
+		relative_position_id = FRA_Polish_allaince
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+			is_subject = no
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			puppet = SWI
+		}
+	}
+	focus = {
 		id = FRA_reorganize_the_dutch
 		icon = GFX_focus_CZE_german_puppet
 		x = 2
