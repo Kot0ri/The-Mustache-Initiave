@@ -1065,6 +1065,25 @@ ideas = {
 			}
 		}
 
+		TUR_psnzer = { 
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_kemalist_army_officers_limited_power_loyal
+				
+			removal_cost = -1
+				
+			modifier = {
+			tank_speed = 0.15
+			}
+		}
+
 		TUR_legacy_of_ataturk_defiled = { 
 
 			allowed = {
