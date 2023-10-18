@@ -28,7 +28,7 @@ focus_tree = {
 		}
 		x = 5
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -57,7 +57,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = TUR_the_montreux_convention
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -104,7 +104,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_the_montreux_convention
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -2198,7 +2198,7 @@ focus_tree = {
 		x = -12
 		y = 1
 		relative_position_id = TUR_democratic_capstone_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -2436,7 +2436,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_purge_the_kemalists
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -2454,7 +2454,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_return_of_the_sultan
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -2489,12 +2489,11 @@ focus_tree = {
 				HUN = { has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary }
 			}
 		}
-		mutually_exclusive = { focus = TUR_press_the_austro_hungarian_claim }
 		prerequisite = { focus = TUR_reclaim_macedonia }
 		x = -1
 		y = 1
 		relative_position_id = TUR_reclaim_macedonia
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -2557,7 +2556,6 @@ focus_tree = {
 				HUN = { has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary }
 			}
 		}
-		mutually_exclusive = { focus = TUR_join_the_central_powers }
 		prerequisite = { focus = TUR_reclaim_macedonia }
 		x = 1
 		y = 1
@@ -2621,7 +2619,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_reclaim_macedonia
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -2651,7 +2649,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = TUR_aligning_bulgaria
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
