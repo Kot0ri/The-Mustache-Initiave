@@ -7481,9 +7481,7 @@
 		
 		prerequisite = {
 			focus = FRA_Ideals_of_Carlism 
-		}
-		prerequisite = {
-			focus = Franco-Iberian_Culture
+			focus = FRA_Franco-Iberian_Culture
 		}
 
 		relative_position_id = FRA_Franco-Iberian_Culture
