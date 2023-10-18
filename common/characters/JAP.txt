@@ -151,7 +151,7 @@ characters={
 		name=JAP_civillian_council
 		portraits={
 			civilian={
-				large="GFX_Portrait_civillian_Council"
+				large="gfx/leaders/JAP/Portrait_jap_civilian_Council.dds"
 			}
 		}
 		country_leader={
