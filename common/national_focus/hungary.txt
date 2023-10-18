@@ -4596,7 +4596,7 @@ focus_tree = {
 			icon = "GFX_HUN_basic_medium_tank_medium"
 		}
 	}
-	
+}
 
 
 	focus = {
