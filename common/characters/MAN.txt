@@ -34,7 +34,7 @@ characters={
 		name=MAN_zhang_jinghui
 		portraits={
 			civilian={
-				large="GFX_portrait_man_zhang_jinghui"
+				large="gfx/leaders/MAN/Portrait_man_zhang_jinghui.dds"
 		    }
 		}
 		country_leader={
