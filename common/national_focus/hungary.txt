@@ -4556,7 +4556,7 @@ focus_tree = {
 				}
 				icon = "GFX_HUN_basic_medium_tank_medium"
 			}
-		}
+			create_equipment_variant = {
 			name = "44M Zrinyi I"
 			type = medium_tank_chassis_2
 			parent_version = 0
@@ -4575,6 +4575,7 @@ focus_tree = {
 			}
 			icon = "GFX_HUN_basic_medium_tank_medium"
 		}
+	}
 	
 
 
