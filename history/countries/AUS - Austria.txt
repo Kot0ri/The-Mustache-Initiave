@@ -31,6 +31,8 @@ set_technology = {
 	basic_train = 1
 }
 
+recruit_character = AUS_emil_fey
+recruit_character = AUS_eduard_barger
 recruit_character = AUS_kurt_schuschnigg
 recruit_character = AUS_karl_renner
 recruit_character = AUS_ernst_rudiger_von_starhemberg

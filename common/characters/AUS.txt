@@ -115,6 +115,41 @@ characters={
 			legacy_id=-1
 		}
 	}
+
+		AUS_eduard_barger={
+		name="Eduard Barger"
+		portraits={
+			army={
+				large="gfx/leaders/AUS/Eduard_Barger.dds"
+				small=GFX_portrait_AUS_karl_eglseer_small
+			}
+		}
+		corps_commander={
+			traits={old_guard}
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+		AUS_emil_fey={
+		name="Emil Fey"
+		portraits={
+			army={
+				large="gfx/leaders/AUS/AUS_Emil_Fey.dds"
+				small=GFX_portrait_AUS_karl_eglseer_small
+			}
+		}
+		corps_commander={
+			traits={politically_connected}
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
 	AUS_odilo_globocnik={
 		advisor={
 			slot = army_chief
