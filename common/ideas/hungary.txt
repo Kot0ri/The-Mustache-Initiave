@@ -493,7 +493,7 @@ ideas = {
 			factor = 1
 		}
 	}
-}
+
 
 	naval_manufacturer = {
 	
