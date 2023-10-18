@@ -5236,6 +5236,7 @@
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
+			add_manpower = 50000
 		}
 	}
 	focus = {
@@ -5272,6 +5273,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_war_support = 0.1
+			add_political_power = 150
 		}
 	}
 	focus = {
