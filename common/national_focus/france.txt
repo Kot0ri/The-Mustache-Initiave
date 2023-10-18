@@ -7727,7 +7727,7 @@
 	focus = {
 		id = FRA_Pressure_the_Swiss
 		icon = GFX_focus_attack_britain
-		x = 4
+		x = 0
 		y = 2
 		
 		prerequisite = {
