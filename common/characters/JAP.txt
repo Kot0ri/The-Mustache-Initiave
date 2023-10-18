@@ -22,7 +22,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=shōwa_statism
+			ideology=showa_statism
 			traits={}
 			expire="1989.1.1.1"
 			id=-1
@@ -417,7 +417,6 @@ characters={
 			logistics_skill=2
 			legacy_id=0
 		}
-	}
 
 	JAP_seishiro_itagaki={
 		name=JAP_seishiro_itagaki

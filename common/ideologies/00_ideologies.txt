@@ -143,8 +143,13 @@ ideologies = {
 			rexism = {
 			}
 
-			shōwa_statism = {
+			showa_statism = {
 			}
+
+            austrofascism = {
+				
+			}
+
 		}
 
 		dynamic_faction_names = {
