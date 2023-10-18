@@ -14,13 +14,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-
-		tag = JAP
-
-		date = 1936.03.09
+		date > 1936.03.09
+		country_exists = JAP
+		has_government = fascism
 	}
 
-	hidden = yes
+	mean_time_to_happen = {
+		days = 2
+	}
 
 	option = {
 		name = japan.19.a
