@@ -143,6 +143,20 @@ characters={
 		country_leader={
 			ideology=liberalism
 			expire="1989.1.1.1"
+			id=-2
+		}
+	}
+
+	JAP_civillian_council={
+		name=JAP_civillian_council
+		portraits={
+			civilian={
+				large="GFX_Portrait_civillian_Council"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1989.1.1.1"
 			id=-1
 		}
 	}

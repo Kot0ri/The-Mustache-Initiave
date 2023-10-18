@@ -7371,6 +7371,28 @@
 			set_cosmetic_tag = FRANCO_SPAIN
 		}
 	}
+
+	focus = {
+		id = FRA_Franco-Iberian_Culture
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		
+		prerequisite = {
+			focus = FRA_unite_the_crowns
+		}
+		relative_position_id = FRA_unite_the_crowns
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
 	focus = {
 		id = FRA_two_countries_two_crowns
 		icon = GFX_goal_tripartite_pact
@@ -7427,6 +7449,48 @@
 			add_stability = 0.1
 			add_to_tech_sharing_group = FRA_legitimist_tech_sharing
 			SPB = { add_to_tech_sharing_group = FRA_legitimist_tech_sharing }
+		}
+	}
+
+	focus = {
+		id = FRA_Ideals_of_Carlism
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		
+		prerequisite = {
+			focus = FRA_two_countries_two_crowns
+		}
+		relative_position_id = FRA_two_countries_two_crowns
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Counter-Revolutionarism
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 2
+		
+		prerequisite = {
+			focus = FRA_Ideals_of_Carlism focus = Franco-Iberian_Culture
+		}
+		relative_position_id = FRA_Franco-Iberian_Culture
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			
 		}
 	}
 
