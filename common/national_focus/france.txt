@@ -7499,7 +7499,30 @@
 		}
 
 		completion_reward = {
-			
+			create_wargoal = {
+				target = ENG
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = GER
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = ITA
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = USA
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = SOV
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = BEL
+				type = annex_everything
+			}
 		}
 	}
 
