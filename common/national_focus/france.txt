@@ -7750,7 +7750,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			puppet_tag = SWI
+			puppet = SWI
 		}
 	}
 	focus = {
