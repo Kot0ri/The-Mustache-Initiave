@@ -95,6 +95,68 @@ ideas = {
 				
 			}
 		}
+
+		FRA_crusade_against_democracy = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				tag = FRA #stays with main country
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.2
+				defence = 0.2
+				offence = 0.2
+				army_org_factor = 0.05
+				army_morale_factor = 0.15
+				political_power_factor = 0.1
+			}
+		}
+	
+		FRA_revivied_neoclassicism = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				tag = FRA #stays with main country
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				stabiltiy = 0.25
+				political_power_factor = 0.1
+			}
+		}
+	
+		FRA_carlist_ideals_renewed = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				tag = FRA #stays with main country
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				stabiltiy = 0.25
+				monthly_manpower_gain = +5000
+			}
+		}
+
 		FRA_devalue_the_franc = {
 			picture = generic_foreign_capital
 			allowed = {
@@ -1812,64 +1874,6 @@ ideas = {
 			traits = { industrial_concern }
 		}
 	}
-	FRA_crusade_against_democracy = {
-		picture = generic_production_bonus
-		allowed = {
-			original_tag = FRA
-			always = no
-		}
 
-		allowed_civil_war = {
-			tag = FRA #stays with main country
-		}
 
-		removal_cost = -1
-		
-		modifier = {
-			conscription_factor = 0.2
-			defence = 0.2
-			offence = 0.2
-			army_org_factor = 0.05
-			army_morale_factor = 0.15
-			political_power_factor = 0.1
-		}
-	}
-
-	FRA_revivied_neoclassicism = {
-		picture = generic_production_bonus
-		allowed = {
-			original_tag = FRA
-			always = no
-		}
-
-		allowed_civil_war = {
-			tag = FRA #stays with main country
-		}
-
-		removal_cost = -1
-		
-		modifier = {
-			stabiltiy = 0.25
-			political_power_factor = 0.1
-		}
-	}
-
-	FRA_carlist_ideals_renewed = {
-		picture = generic_production_bonus
-		allowed = {
-			original_tag = FRA
-			always = no
-		}
-
-		allowed_civil_war = {
-			tag = FRA #stays with main country
-		}
-
-		removal_cost = -1
-		
-		modifier = {
-			stabiltiy = 0.25
-			monthly_manpower_gain = +5000
-		}
-	}
 }
