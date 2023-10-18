@@ -7476,13 +7476,13 @@
 	focus = {
 		id = FRA_Counter-Revolutionarism
 		icon = GFX_goal_generic_demand_territory
-		x = -1
-		y = -4
+		x = 1
+		y = 2
 		
 		prerequisite = {
 			focus = FRA_Ideals_of_Carlism focus = Franco-Iberian_Culture
 		}
-		relative_position_id = FRA_two_countries_two_crowns
+		relative_position_id = FRA_Franco-Iberian_Culture
 		cost = 5
 
 		ai_will_do = {
