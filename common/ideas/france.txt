@@ -170,11 +170,10 @@ ideas = {
 	
 			removal_cost = -1
 			
-			targeted_modifier = {
-				tag = FRA
+			modifier = {
 				cavalry_attack_factor = 0.1
 				modifier_army_sub_unit_cavalry_speed_factor = 0.15
-				cavarly_breakthrough = 0.25
+				cavarly_breakthrough_factor = 0.25
 				army_artillery_attack_factor = 0.15
 			}
 		}
