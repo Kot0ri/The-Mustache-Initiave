@@ -8329,7 +8329,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_naval_rearmament
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -8358,7 +8358,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_the_old_school
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -8381,7 +8381,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_the_old_school
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -8545,7 +8545,7 @@
 		x = 4
 		y = 1
 		relative_position_id = FRA_naval_rearmament
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
