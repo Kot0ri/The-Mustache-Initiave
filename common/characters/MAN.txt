@@ -38,7 +38,7 @@ characters={
 		    }
 		}
 		country_leader={
-			ideology=shōwa_statism
+			ideology=showa_statism
 			traits={ anti_communist japanese_puppet }
 			expire="1960.1.1.1"
 			id=-1
