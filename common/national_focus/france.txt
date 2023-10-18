@@ -7579,6 +7579,7 @@
 				news_event = { id = lar_news.8 days = 3 random_days = 5 }
 			}
 			set_cosmetic_tag = FRA_THIRD_EMPIRE
+			add_ideas = 	FRA_napoleons_warmachine
 		}
 	}
 	focus = {

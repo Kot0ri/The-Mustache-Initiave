@@ -157,6 +157,28 @@ ideas = {
 			}
 		}
 
+		FRA_napoleons_warmachine = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				tag = FRA #stays with main country
+			}
+	
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = FRA
+				cavalry_attack_factor = 0.1
+				modifier_army_sub_unit_cavalry_speed_factor = 0.15
+				cavarly_breakthrough = 0.25
+				army_artillery_attack_factor = 0.15
+			}
+		}
+
 		FRA_devalue_the_franc = {
 			picture = generic_foreign_capital
 			allowed = {
