@@ -394,6 +394,56 @@ ideas = {
 			}
 		}
 	}
+
+	tank_manufacturer = {
+			
+		designer = yes
+
+		mw_armor = {
+			
+			picture = generic_tank_manufacturer_2
+
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			# made  tanks
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	ganz_armor = {
+			
+	picture = generic_tank_manufacturer_1
+
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_destroyer_manufacturer }
+			
+			# made  tanks
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
 	
 	aircraft_manufacturer = {
 			
@@ -421,6 +471,29 @@ ideas = {
 			}
 		}
 	}
+
+	UFAG = {
+			
+		picture = generic_air_manufacturer_1
+
+		
+		allowed = {
+			original_tag = HUN
+		}
+		
+		research_bonus = {
+			air_equipment = 0.15
+		}
+		
+		traits = { medium_aircraft_manufacturer }
+		
+		# plane experiments
+					
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 
 	naval_manufacturer = {
 	

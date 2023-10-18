@@ -157,6 +157,27 @@ ideas = {
 			}
 		}
 
+		FRA_napoleons_warmachine = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				tag = FRA #stays with main country
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+				modifier_army_sub_unit_cavalry_speed_factor = 0.15
+				cavarly_breakthrough_factor = 0.25
+				army_artillery_attack_factor = 0.15
+			}
+		}
+
 		FRA_devalue_the_franc = {
 			picture = generic_foreign_capital
 			allowed = {
@@ -437,6 +458,8 @@ ideas = {
 			
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
 		FRA_constitutional_revision = {
@@ -491,6 +514,8 @@ ideas = {
 				conscription = 0.03
 				conscription_factor = 0.25
 				training_time_army_factor = -0.2
+				army_infantry_attack_factor = 0.05
+				army_artillery_attack_factor = 0.05
 			}
 		}
 		FRA_firepower = {
