@@ -2321,7 +2321,7 @@ focus_tree = {
 	focus = {
 		id = GER_Preperations_for_rhineland
 		icon = GFX_goal_generic_military_sphere
-		x = 17
+		x = 22
 		y = 0
 		cost = 2
 
@@ -2369,7 +2369,7 @@ focus_tree = {
 		prerequisite = { focus = GER_army_innovation focus= GER_Preperations_for_rhineland}
 		mutually_exclusive = { focus = GER_Restore_Nobilities_Command_of_Military }
 		x = -1.0
-		y = 2
+		y = 1
 		relative_position_id = GER_army_innovation
 		cost = 10
 		ai_will_do = {
@@ -2785,9 +2785,10 @@ focus_tree = {
 		id = GER_rhineland
 		icon = GFX_goal_generic_military_sphere
 		mutually_exclusive = { focus = GER_oppose_hitler }
+		prerequisite = { focus= GER_Preperations_for_rhineland}
 		x = 25
 		y = 0
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 			if = {
