@@ -2345,6 +2345,7 @@ focus_tree = {
 				category = train
 			}
 		}		
+	}
 
 	focus = {
 		id = GER_Restore_Nobles_Command_of_Military
@@ -2383,7 +2384,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
-		
+		add_command_power = 25
+		add_army_experince = 25
 			}
 		}
 	
