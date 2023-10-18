@@ -7340,6 +7340,9 @@
 			else = {
 				any_state = {
 					is_core_of = SPB
+					is_core_of = SPA
+					is_core_of = SPC
+					is_core_of = SPD
 					is_controlled_by = ROOT
 				}
 			}
@@ -7364,6 +7367,9 @@
 			every_state = {
 				limit = {
 					is_core_of = SPB
+					is_core_of = SPA
+					is_core_of = SPC
+					is_core_of = SPD
 				}
 				add_core_of = ROOT
 			}
@@ -7389,7 +7395,8 @@
 		}
 
 		completion_reward = {
-			
+			add_ideas = FRA_crusade_against_democracy
+			add_ideas = FRA_revivied_neoclassicism
 		}
 	}
 
@@ -7469,7 +7476,7 @@
 		}
 
 		completion_reward = {
-			
+			add_ideas = FRA_carlist_ideals_renewed
 		}
 	}
 
