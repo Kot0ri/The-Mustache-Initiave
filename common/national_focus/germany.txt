@@ -2338,7 +2338,8 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_MILITARY }	
 		completion_reward = {
-		
+		add_technology = armored_train
+		add_technology = railway_gun
 			}
 		}		
 
