@@ -80,7 +80,7 @@ ideas = {
 						max_command_power = 25
 						army_infantry_attack_factor = 0.05
 					}
-		
+				}
 
 	political_advisor = {
 	
@@ -433,4 +433,3 @@ ideas = {
 
 	}
 	}
-}
