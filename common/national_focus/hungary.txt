@@ -5242,6 +5242,37 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HUN_danube_forces
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = HUN_naval_warfare}
+		x = 4
+		y = 1
+		relative_position_id = HUN_naval_warfare
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+		completion_reward = {
+	}
+}
+
+	focus = {
 		id = HUN_restauration
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = HUN_naval_warfare }
