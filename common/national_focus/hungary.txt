@@ -1300,6 +1300,72 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HUN_further_democratization 
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = HUN_federalize_power}
+		x = 0
+		y = 1
+		relative_position_id = HUN_federalize_power
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = HUN_universal_sufferage
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = HUN_further_democratization }
+		x = 0
+		y = 1
+		relative_position_id = HUN_further_democratization 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+
 	############################
 	####### FASCIST KING #######
 	############################
