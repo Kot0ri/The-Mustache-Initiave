@@ -272,6 +272,32 @@ focus_tree = {
 							}
 						}
 
+		focus = {
+			id = HUN_restore_the_imperial_council_and_diet_of_hungary
+			icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+			prerequisite = { focus = HUN_the_new_royal_army }
+			x = 0
+			y = 1
+			relative_position_id = HUN_the_new_royal_army
+			cost = 35
+			ai_will_do = {
+			factor = 60
+			}
+						
+			available = {
+			has_government = neutrality
+			}
+						
+						
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+								
+			}
+		}
+
 	focus = {
 		id = HUN_demand_a_referendum
 		icon = GFX_goal_generic_forceful_treaty
