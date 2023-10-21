@@ -222,7 +222,7 @@ focus_tree = {
 
 	focus = {
 	id = HUN_return_of_the_habsburgs
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 		prerequisite = { focus = HUN_invite_the_habsburg_prince }
 		x = -3
 		y = 1
@@ -248,33 +248,29 @@ focus_tree = {
 			}
 		}
 
-		focus = {
+
+	focus = {
 			id = HUN_the_new_royal_army
-				icon = GFX_goal_generic_dangerous_deal
-				prerequisite = { focus = HUN_return_of_the_habsburgs }
-				x = 0
-				y = 1
-				relative_position_id = HUN_return_of_the_habsburgs
-				cost = 5
-		
-				ai_will_do = {
-					factor = 60
-				}
-		
-				available = {
-					has_government = neutrality
-				}
-		
-		
+			icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+			prerequisite = { focus = HUN_return_of_the_habsburgs }
+			x = 0
+			y = 1
+			relative_position_id = HUN_return_of_the_habsburgs
+			cost = 5		
+			ai_will_do = {
+			factor = 60
+			}	
+			available = {
+			has_government = neutrality
+			}	
 				cancel_if_invalid = yes
 				continue_if_invalid = no
-				available_if_capitulated = yes
-		
-				search_filters = { FOCUS_FILTER_MILITARY }
-				completion_reward = {
-				
-					}
-				}
+			available_if_capitulated = yes				
+						search_filters = { FOCUS_FILTER_MILITARY }
+						completion_reward = {
+						
+							}
+						}
 
 	focus = {
 		id = HUN_demand_a_referendum
@@ -802,6 +798,34 @@ focus_tree = {
 			add_state_claim = 762
 		}
 	}
+
+	focus = {
+		id = HUN_fix_the_past_mistakes
+			icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+			prerequisite = { focus = HUN_reclaim_the_empire }
+			x = 0
+			y = 1
+			relative_position_id = HUN_reclaim_the_empire
+			cost = 10
+	
+			ai_will_do = {
+				factor = 60
+			}
+	
+			available = {
+				has_government = neutrality
+			}
+	
+	
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+	
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+			
+				}
+			}
 
 	############################
 	##### DEMOCRATIC KING ######
