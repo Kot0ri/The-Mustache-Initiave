@@ -1,5 +1,27 @@
 ideas = {
 
+	country = { 
+
+		HAN_Gateway_to_Germany	= {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = SHL
+			}
+
+			allowed_civil_war = {
+				tag = SHL
+			}
+			removal_cost = -1
+
+			}
+			
+			modifier = {
+				political_power_gain = 0.05
+			trade_opinion_factor = 0.25
+			}
+		}
+
 	political_advisor = {
 	
 		HAN_democratic_guy = {

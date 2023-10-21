@@ -2,15 +2,15 @@
 ideas = {
 	country = { 
 
-		BAV_Legacy_of_the_Swan_King	= {
+		BAY_Legacy_of_the_Swan_King	= {
 			picture = tfv_can_conscription_crisis
 
 			allowed = {
-				original_tag = BAV
+				original_tag = BAY
 			}
 
 			allowed_civil_war = {
-				tag = BAV
+				tag = BAY
 			}
 			removal_cost = -1
 
@@ -21,15 +21,15 @@ ideas = {
 				stability_weekly = 0.01
 			}
 	
-		BAV_Renewed_1818_Constituation	= {
+		BAY_Renewed_1818_Constituation	= {
 			picture = tfv_can_conscription_crisis
 
 			allowed = {
-				original_tag = BAV
+				original_tag = BAY
 			}
 
 			allowed_civil_war = {
-				tag = BAV
+				tag = BAY
 			}
 			removal_cost = -1
 
@@ -39,15 +39,15 @@ ideas = {
 				political_power_gain = 0.01
 			}
 
-			BAV_Wittelsbach_Legacy	= {
+			BAY_Wittelsbach_Legacy	= {
 				picture = tfv_can_conscription_crisis
 	
 				allowed = {
-					original_tag = BAV
+					original_tag = BAY
 				}
 	
 				allowed_civil_war = {
-					tag = BAV
+					tag = BAY
 				}
 				removal_cost = -1
 	
@@ -58,15 +58,15 @@ ideas = {
 					neutrality_acceptance = 50
 				}
 
-				BAV_Military_Legacy	= {
+				BAY_Military_Legacy	= {
 					picture = tfv_can_conscription_crisis
 		
 					allowed = {
-						original_tag = BAV
+						original_tag = BAY
 					}
 		
 					allowed_civil_war = {
-						tag = BAV
+						tag = BAY
 					}
 					removal_cost = -1
 		
@@ -433,3 +433,4 @@ ideas = {
 
 	}
 	}
+}

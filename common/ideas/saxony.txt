@@ -1,5 +1,28 @@
 ideas = {
 
+	country = { 
+
+		SAX_Saxon_Pride	= {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = SHL
+			}
+
+			allowed_civil_war = {
+				tag = SHL
+			}
+			removal_cost = -1
+
+			}
+			
+			modifier = {
+				neutrality_drift = 0.2
+				facist_drift = 0.2
+				conscription_factor = 0.05
+			}
+		}
+
 	political_advisor = {
 	
 		SAX_democratic_guy = {
