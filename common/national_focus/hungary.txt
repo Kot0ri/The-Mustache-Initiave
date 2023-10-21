@@ -1267,6 +1267,39 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = HUN_federalize_power
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = HUN_joint_oil_exploitation_company focus = HUN_an_unlikely_alliance}
+		x = 1
+		y = 1
+		relative_position_id = HUN_joint_oil_exploitation_company
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		}
+	}
+
 	############################
 	####### FASCIST KING #######
 	############################
