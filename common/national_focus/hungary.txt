@@ -2605,6 +2605,78 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HUN_anti_facist_military_planning
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = HUN_soviet_hungarian_military_academy }
+		x = 0
+		y = 1
+		relative_position_id = HUN_soviet_hungarian_military_academy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			SOU = { 
+				exists = yes
+				has_government = communism
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = HUN_egalitarian_recruitment
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = HUN_anti_facist_military_planning }
+		x = 0
+		y = 1
+		relative_position_id = HUN_anti_facist_military_planning
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			SOU = { 
+				exists = yes
+				has_government = communism
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
 		id = HUN_join_comintern
 		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = HUN_assassinate_horthy }
