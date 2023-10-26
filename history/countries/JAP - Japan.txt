@@ -19,6 +19,8 @@ add_ideas = {
 	JAP_hirohito_2
 }
 
+country_event = { id = japan.24 days = 56 }
+
 609 = {
 	start_resistance = yes
 	set_compliance = 5
