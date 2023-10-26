@@ -20,6 +20,9 @@ add_ideas = {
 }
 
 country_event = { id = japan.24 days = 56 }
+country_event = { id = japan.25 days = 3104 }
+country_event = { id = japan.26 days = 21 }
+
 
 609 = {
 	start_resistance = yes

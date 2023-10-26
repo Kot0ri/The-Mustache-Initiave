@@ -9,7 +9,7 @@ country_event = {
 	id = japan.19
 	title = japan.19.t
 	desc = japan.19.d
-	picture = GFX_report_event_japanese_officers
+	picture = GFX_report_event_japanese_reply
 
 	fire_only_once = yes
 
@@ -38,7 +38,7 @@ country_event = {
 	id = japan.20
 	title = japan.20.t
 	desc = japan.20.d
-	picture = GFX_report_event_japanese_officers
+	picture = GFX_report_event_japanese_reply
 
 	fire_only_once = yes
 
@@ -67,7 +67,7 @@ country_event = {
 	id = japan.21
 	title = japan.21.t
 	desc = japan.21.d
-	picture = GFX_report_event_japanese_officers
+	picture = GFX_report_event_japanese_reply
 
 	fire_only_once = yes
 
@@ -96,7 +96,7 @@ country_event = {
 	id = japan.22
 	title = japan.22.t
 	desc = japan.22.d
-	picture = GFX_report_event_japanese_officers
+	picture = GFX_report_event_japanese_reply
 
 	fire_only_once = yes
 
@@ -125,7 +125,7 @@ country_event = {
 	id = japan.23
 	title = japan.23.t
 	desc = japan.23.d
-	picture = GFX_report_event_japanese_officers
+	picture = GFX_report_event_japanese_reply
 
 	fire_only_once = yes
 
@@ -194,6 +194,97 @@ country_event = {
 		name = japan.24.b
 		add_popularity = { ideology = fascism popularity = 0.8 }
 	}
+
+	option = {
+		name = japan.24.c
+		ai_chance = {
+			base = 5
+		}
+		if = {
+			limit = {
+				MEN = { is_subject_of = ROOT }
+			}
+			set_autonomy = { target = MEN autonomy_state = autonomy_free }
+		}
+		if = {
+			limit = {
+				MAN = { is_subject_of = ROOT }
+			}
+			set_autonomy = { target = MAN autonomy_state = autonomy_free } 
+			MAN = {
+				set_autonomy = { target = MEN autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+		if = {
+			limit = {
+				MAN = { has_idea = MAN_kwantung_veto }
+			}
+			MAN = { remove_ideas = MAN_kwantung_veto }
+		}
+		start_civil_war = {
+			ruling_party = communism
+			ideology = ROOT
+			size = 0.5	#This was too much for AI
+			capital = 282
+			states = { 282 533 536 555 529 530 528 526 524 645 648 646 647 684 633 609 745 527 525 }
+			keep_unit_leaders = {
+				750 751 752
+			}
+		}
+		remove_ideas = JAP_hirohito_2
+	}
+
+
+option = {
+	name = japan.24.d
+	ai_chance = {
+		base = 5
+	}
+	hidden_effect = {
+		if = {
+			limit = {
+				has_country_leader = { id = 700 ruling_only = yes }
+			}
+			remove_country_leader_trait = imperial_sanction
+		}
+	}
+	country_event = { id = wtt_japan.114 }
+	effect_tooltip = {
+		if = {
+			limit = {
+				MAN = { is_subject_of = ROOT }
+			}
+			set_autonomy = { target = MAN autonomy_state = autonomy_free }
+		}
+		if = {
+			limit = {
+				MAN = { has_idea = MAN_kwantung_veto }
+			}
+			MAN = { remove_ideas = MAN_kwantung_veto }
+		}
+		if = {
+			limit = {
+				MEN = { is_subject_of = ROOT }
+			}
+			MAN = { puppet = MEN }
+		}
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = fascism
+			size = 0.5
+		}
+		if = {
+			limit = {
+				any_state = {
+					is_controlled_by = ROOT
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+			set_autonomy = { target = KOR autonomy_state = autonomy_free }
+		}
+	}
 }
 
 country_event = {
@@ -218,9 +309,9 @@ country_event = {
 	option = {
 		name = japan.25.a
 		ai_chance = {
-			base = 5
+			base = 10
 		}
-		set_politics = { ruling_party = monarchism elections_allowed = no }
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		add_popularity = { ideology = neutrality popularity = 0.9 }
 		add_timed_idea = { idea = JAP_military_purges days = 90 }
 		remove_ideas = JAP_hirohito_2
@@ -229,9 +320,48 @@ country_event = {
 	option = {
 		name = japan.25.b
 		ai_chance = {
+			base = 15
+		}
+		add_popularity = { ideology = fascism popularity = 0.6 }
+	}
+}
+
+# Ideology Events
+country_event = {
+	id = japan.26
+	title = japan.26.t
+	desc = japan.26.d
+	picture = GFX_report_event_japanese_officers
+
+	fire_only_once = yes
+
+	trigger = {
+		date = 1936.01.21
+		country_exists = JAP
+	}
+
+		mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = japan.26.a
+		ai_chance = {
+			base = 5
+		}
+		add_timed_idea = {
+			idea = communist_influence
+			days = 120
+		}
+		#Increases Communist Support
+	}
+
+	option = {
+		name = japan.26.b
+		ai_chance = {
 			base = 10
 		}
-		add_popularity = { ideology = fascism popularity = 0.8 }
+		add_war_support = 0.05
 	}
 }
 
