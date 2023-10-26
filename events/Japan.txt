@@ -162,6 +162,7 @@ country_event = {
 	trigger = {
 		date = 1936.02.26
 		country_exists = JAP
+		has_government = fascism
 	}
 
 	mean_time_to_happen = {
@@ -187,6 +188,44 @@ country_event = {
 			}
 			promote_leader = yes
 		}
+	}
+
+	option = {
+		name = japan.24.b
+		add_popularity = { ideology = showa_statism popularity = 0.8 }
+	}
+}
+
+country_event = {
+	id = japan.25
+	title = japan.25.t
+	desc = japan.25.d
+	picture = GFX_report_event_japanese_officers
+
+	fire_only_once = yes
+
+	trigger = {
+		date = 1944.07.1
+		country_exists = JAP
+		has_government = fascism
+		has_war_with = ENG
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = japan.25.a
+		set_politics = { ruling_party = monarchism elections_allowed = no }
+		add_popularity = { ideology = neutrality popularity = 0.9 }
+		add_timed_idea = { idea = JAP_military_purges days = 90 }
+		remove_ideas = JAP_hirohito_2
+	}
+
+	option = {
+		name = japan.25.b
+		add_popularity = { ideology = showa_statism popularity = 0.8 }
 	}
 }
 
