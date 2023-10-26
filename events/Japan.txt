@@ -192,7 +192,7 @@ country_event = {
 
 	option = {
 		name = japan.24.b
-		add_popularity = { ideology = showa_statism popularity = 0.8 }
+		add_popularity = { ideology = fascism popularity = 0.8 }
 	}
 }
 
@@ -217,6 +217,9 @@ country_event = {
 
 	option = {
 		name = japan.25.a
+		ai_chance = {
+			base = 5
+		}
 		set_politics = { ruling_party = monarchism elections_allowed = no }
 		add_popularity = { ideology = neutrality popularity = 0.9 }
 		add_timed_idea = { idea = JAP_military_purges days = 90 }
@@ -225,7 +228,10 @@ country_event = {
 
 	option = {
 		name = japan.25.b
-		add_popularity = { ideology = showa_statism popularity = 0.8 }
+		ai_chance = {
+			base = 10
+		}
+		add_popularity = { ideology = fascism popularity = 0.8 }
 	}
 }
 
