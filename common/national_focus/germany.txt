@@ -2627,6 +2627,7 @@ focus_tree = {
 				uses = `
 				category = land_doctrine
 			}
+		}
 			effect_tooltip = {
 				create_equipment_variant = {
 					name = "Panzer V Panther Ausf. D"
@@ -2713,7 +2714,6 @@ focus_tree = {
 			
 			}
 	}
-}
 
 	focus = {
 		id = GER_rocketry_focus
