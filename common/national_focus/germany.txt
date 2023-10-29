@@ -2626,6 +2626,10 @@ focus_tree = {
 				uses = `
 				category = land_doctrine
 			}
+			if = {
+				limit = { 
+					has_dlc = "No Step Back"
+				}
 			effect_tooltip = {
 				create_equipment_variant = {
 					name = "Panzer V Panther Ausf. D"
@@ -2648,7 +2652,7 @@ focus_tree = {
 				}
 				create_equipment_variant = {
 					name = "Panzer VI Tiger 1 Ausf. E"
-					type = heavy_tank_chasis_1
+					type = heavy_tank_chassis_1
 					parent_version = 0
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
@@ -2667,7 +2671,7 @@ focus_tree = {
 				}
 				create_equipment_variant = {
 					name = "Panzer VII Lowe Ausf. K"
-					type = heavy_tank_chasis_2
+					type = heavy_tank_chassis_2
 					parent_version = 0
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
@@ -2686,7 +2690,7 @@ focus_tree = {
 				}
 				create_equipment_variant = {
 					name = "Panzer VIII Panther 2 Ausf. G"
-					type = modern_tank_chasis
+					type = modern_tank_chassis
 					parent_version = 0
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
@@ -2713,6 +2717,7 @@ focus_tree = {
 			}
 	}
 	}
+}
 	focus = {
 		id = GER_rocketry_focus
 		icon = GFX_focus_rocketry
