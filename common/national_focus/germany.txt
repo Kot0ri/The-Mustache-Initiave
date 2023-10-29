@@ -2623,7 +2623,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = `
+				uses = 1
 				category = land_doctrine
 			}
 			if = {
@@ -2715,6 +2715,110 @@ focus_tree = {
 			
 			}
 	}
+	}
+
+	focus = {
+		id = GER_anti_tank_efforts
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = GER_army_innovation_2 }
+		x = -1
+		y = 2
+		relative_position_id = GER_army_innovation_2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = { 
+					has_dlc = "No Step Back"
+				}
+				create_equipment_variant = {
+					name = "Panzerjager 1"
+					type = light_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_light_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 1
+						tank_nsb_armor_upgrade = 0
+					}
+					icon = "GFX_GER_light_tank_light"
+				}
+				create_equipment_variant = {
+					name = "Marder 2"
+					type = light_tank_chassis_2
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_light_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 2
+						tank_nsb_armor_upgrade = 2
+					}
+					icon = "GFX_GER_light_tank_light"
+				}
+				create_equipment_variant = {
+					name = "Nashorn"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 2
+						tank_nsb_armor_upgrade = 2
+					}
+					icon = "GFX_GER_medium_tank_medium"
+				}
+				create_equipment_variant = {
+					name = "Elephant"
+					type = heavy_tank_chassis_2
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_heavy_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 3
+						tank_nsb_armor_upgrade = 4
+					}
+					icon = "GFX_GER_heavy_tank_heavy"
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					name = anti_armor_bonus
+					technology = antitank1
+					technology = antitank2
+					technology = antitank3
+					technology = antiair5
+				}
+			}
+		}
 	}
 
 	focus = {
