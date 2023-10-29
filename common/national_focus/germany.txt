@@ -2630,7 +2630,6 @@ focus_tree = {
 				limit = { 
 					has_dlc = "No Step Back"
 				}
-			effect_tooltip = {
 				create_equipment_variant = {
 					name = "Panzer V Panther Ausf. D"
 					type = medium_tank_chassis_3
@@ -2717,7 +2716,7 @@ focus_tree = {
 			}
 	}
 	}
-}
+
 	focus = {
 		id = GER_rocketry_focus
 		icon = GFX_focus_rocketry
