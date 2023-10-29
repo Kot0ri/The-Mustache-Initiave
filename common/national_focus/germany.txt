@@ -2651,7 +2651,7 @@ focus_tree = {
 				}
 				create_equipment_variant = {
 					name = "Panzer VI Tiger 1 Ausf. E"
-					type = heavy_tank_chassis_1
+					type = heavy_tank_chassis_2
 					parent_version = 0
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
@@ -2670,7 +2670,7 @@ focus_tree = {
 				}
 				create_equipment_variant = {
 					name = "Panzer VII Lowe Ausf. K"
-					type = heavy_tank_chassis_2
+					type = heavy_tank_chassis_3
 					parent_version = 0
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
