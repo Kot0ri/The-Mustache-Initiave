@@ -2688,7 +2688,7 @@ focus_tree = {
 					icon = "GFX_GER_advandce_heavy_tank_heavy"
 				}
 				create_equipment_variant = {
-					name = "Panzer VIII Panther 2 Ausf. G"
+					name = "Panzer IX Panther 2 Ausf. G"
 					type = modern_tank_chassis
 					parent_version = 0
 					modules = {
@@ -2790,7 +2790,7 @@ focus_tree = {
 					icon = "GFX_GER_medium_tank_medium"
 				}
 				create_equipment_variant = {
-					name = "Elephant"
+					name = "Panzerjager Ferdinand (Elefant)"
 					type = heavy_tank_chassis_2
 					parent_version = 0
 					modules = {
@@ -2818,6 +2818,68 @@ focus_tree = {
 				}
 			}
 		}
+	}
+
+	focus = {
+		id = GER_army_innovation_4
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		relative_position_id = GER_army_innovation_3
+		prerequisite = { focus = GER_army_innovation_3}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = { 
+					has_dlc = "No Step Back"
+				}
+				create_equipment_variant = {
+					name = "Panzer VI Tiger 2 Ausf. B"
+					type = heavy_tank_chassis_2
+					parent_version = 1
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_heavy_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = smoke_launchers
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 5
+						tank_nsb_armor_upgrade = 10
+					}
+					icon = "GFX_GER_basic_heavy_tank_heavy"
+				}
+				create_equipment_variant = {
+					name = "Panzer VIII Maus Ausf. V"
+					type = super_heavy_tank_chassis
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_heavy_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = smoke_launchers
+						special_type_slot_3 = extra_ammo_storage
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 14
+					}
+					icon = "GFX_GER_super_heavy_tank_heavy"
+				}
+			}
+	}
 	}
 
 	focus = {
