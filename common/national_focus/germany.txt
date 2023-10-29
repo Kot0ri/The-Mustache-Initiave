@@ -2607,7 +2607,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_army_innovation_2
-		prerequisite = { focus = GER_army_innovation_2 focus = GER_anti_tank_efforts
+		prerequisite = { focus = GER_army_innovation_2 focus = GER_anti_tank_efforts}
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2712,7 +2712,6 @@ focus_tree = {
 					uses = 2
 					category = armor
 				}
-			
 			}
 	}
 	}
