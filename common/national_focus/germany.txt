@@ -2676,7 +2676,7 @@ focus_tree = {
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
 						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
+						suspension_type_slot = tank_interleaved_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_2
@@ -2695,7 +2695,7 @@ focus_tree = {
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
 						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
+						suspension_type_slot = tank_torsion_bar_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_2
@@ -2714,7 +2714,7 @@ focus_tree = {
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
 						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
+						suspension_type_slot = tank_interleaved_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_2
@@ -2733,7 +2733,7 @@ focus_tree = {
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
 						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
+						suspension_type_slot = tank_interleaved_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_2
@@ -2769,7 +2769,7 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		NOT = { has_war_with = SOV }
+		available = { has_war_with = SOV }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			if = {
@@ -2856,6 +2856,119 @@ focus_tree = {
 					technology = antitank2
 					technology = antitank3
 					technology = antiair5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_tank_modernization_program
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = GER_anti_tank_efforts}
+		x = 0
+		y = 1
+		relative_position_id = GER_anti_tank_efforts
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = { 
+					has_dlc = "No Step Back"
+				}
+				create_equipment_variant = {
+					name = "Panzerkampfwagen I Ausf. F"
+					type = light_tank_chassis_3
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_machine_gun
+						turret_type_slot = tank_light_one_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 4
+					}
+					icon = "GFX_GER_light_tank_light"
+				}
+				create_equipment_variant = {
+					name = "Panzerkampfwagen II Ausf. J"
+					type = light_tank_chassis_3
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_auto_cannon_2
+						turret_type_slot = tank_light_two_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 4
+					}
+					icon = "GFX_GER_light_tank_light"
+				}
+				create_equipment_variant = {
+					name = "Panzerkampfwagen II Ausf. L (Luchs)"
+					type = light_tank_chassis_3
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_auto_cannon_2
+						turret_type_slot = tank_light_two_man_tank_turret
+						suspension_type_slot = tank_interleaved_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 4
+					}
+					icon = "GFX_GER_light_tank_light"
+				}
+				create_equipment_variant = {
+					name = "Nashorn"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 2
+						tank_nsb_armor_upgrade = 2
+					}
+					icon = "GFX_GER_medium_tank_medium"
+				}
+				create_equipment_variant = {
+					name = "Panzerjager Ferdinand (Elefant)"
+					type = heavy_tank_chassis_2
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_heavy_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 3
+						tank_nsb_armor_upgrade = 4
+					}
+					icon = "GFX_GER_heavy_tank_heavy"
 				}
 			}
 		}
@@ -3001,7 +3114,7 @@ focus_tree = {
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
 						turret_type_slot = tank_heavy_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
+						suspension_type_slot = tank_interleaved_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_2
@@ -3064,7 +3177,7 @@ focus_tree = {
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
 						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_interlocked_road_wheels
+						suspension_type_slot = tank_interleaved_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
 						special_type_slot_1 = tank_radio_2
@@ -3083,7 +3196,7 @@ focus_tree = {
 				modules = {
 					main_armament_slot = tank_high_velocity_cannon
 					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_torsion_bar
+					suspension_type_slot = tank_torsion_bar_suspension
 					armor_type_slot = tank_welded_armor
 					engine_type_slot = tank_gasoline_engine
 					special_type_slot_1 = tank_radio_2
@@ -3102,7 +3215,7 @@ focus_tree = {
 			modules = {
 				main_armament_slot = tank_close_support_gun
 				turret_type_slot = tank_medium_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar
+				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = tank_radio_2
@@ -3121,7 +3234,7 @@ focus_tree = {
 		modules = {
 			main_armament_slot = tank_high_velocity_cannon
 			turret_type_slot = tank_medium_three_man_tank_turret
-			suspension_type_slot = tank_torsion_bar
+			suspension_type_slot = tank_torsion_bar_suspension
 			armor_type_slot = tank_welded_armor
 			engine_type_slot = tank_gasoline_engine
 			special_type_slot_1 = tank_radio_2
