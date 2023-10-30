@@ -2760,7 +2760,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = GER_army_innovation_2 }
 		mutually_exclusive = { focus = GER_reliability_focus }
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = GER_army_innovation_2
 		cost = 10
@@ -2868,13 +2868,12 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_army_innovation_2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		available_if_capitulated = yes
-		available = { has_war_with = SOV }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			if = {
@@ -3043,7 +3042,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = GER_army_innovation_2 }
 		mutually_exclusive = { focus = GER_anti_tank_efforts}
-		x = -3
+		x = -4
 		y = 2
 		relative_position_id = GER_army_innovation_2
 		cost = 5
