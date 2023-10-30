@@ -2644,7 +2644,8 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_army_innovation_2
-		prerequisite = { focus = GER_army_innovation_2 focus = GER_anti_tank_efforts}
+		prerequisite = { focus = GER_assualt_guns }
+		prerequisite = { focus = GER_anti_tank_efforts}
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2856,6 +2857,121 @@ focus_tree = {
 					technology = antitank3
 					technology = antiair5
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_assualt_guns
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = GER_army_innovation_2 }
+		x = 0
+		y = 2
+		relative_position_id = GER_army_innovation_2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		available = { has_war_with = SOV }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = { 
+					has_dlc = "No Step Back"
+				}
+				create_equipment_variant = {
+					name = "Sturmgeschütz III (StuG III)"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_close_support_gun
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 2
+						tank_nsb_armor_upgrade = 3
+					}
+					icon = "GFX_GER_medium_tank_medium"
+				}
+				create_equipment_variant = {
+					name = "Sturmpanzer I Bison"
+					type = light_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_cannon
+						turret_type_slot = tank_light_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 1
+						tank_nsb_armor_upgrade = 0
+					}
+					icon = "GFX_GER_light_tank_light"
+				}
+				create_equipment_variant = {
+					name = "38(t) Ausf. K Grille"
+					type = light_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_medium_howitzer
+						turret_type_slot = tank_light_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 1
+						tank_nsb_armor_upgrade = 0
+					}
+					icon = "GFX_GER_light_tank_light"
+				}
+				create_equipment_variant = {
+					name = "Sturmpanzer IV Brummbär"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_howitzer
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 2
+						tank_nsb_armor_upgrade = 3
+					}
+					icon = "GFX_GER_medium_tank_medium"
+				}
+				create_equipment_variant = {
+					name = "Sturmpanzer VI Sturmtiger"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_howitzer
+						turret_type_slot = tank_heavy_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 2
+						tank_nsb_armor_upgrade = 3
+					}
+					icon = "GFX_GER_heavy_tank_heavy"
+				}
+			
 			}
 		}
 	}
