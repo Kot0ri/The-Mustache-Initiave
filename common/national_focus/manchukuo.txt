@@ -53,7 +53,7 @@
 
 	focus = {
 		id = MAN_continue_the_pacification_campaign
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_jap_manchurian_project
 		x = 6
 		y = 0
 

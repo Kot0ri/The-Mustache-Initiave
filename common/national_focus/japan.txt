@@ -17,7 +17,7 @@ continuous_focus_position = { x = 20 y = 1200 }
 
 focus = {
 	id = JAP_land_of_the_rising_sun
-	icon = GFX_goal_generic_major_war
+	icon = GFX_focus_jap_pacific_guardian
 	x = 6
 	y = 0
 
