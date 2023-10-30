@@ -2935,7 +2935,26 @@ focus_tree = {
 					icon = "GFX_GER_light_tank_light"
 				}
 				create_equipment_variant = {
-					name = "Nashorn"
+					name = "Panzer III Ausf. N"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_close_support_gun
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = armor_skirts
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 5
+					}
+					icon = "GFX_GER_medium_tank_medium"
+				}
+				create_equipment_variant = {
+					name = "Panzer IV Ausf.J, 10/BW"
 					type = medium_tank_chassis_1
 					parent_version = 0
 					modules = {
@@ -2944,35 +2963,16 @@ focus_tree = {
 						suspension_type_slot = tank_bogie_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = armor_skirts
 					}
 					upgrades = {
-						tank_nsb_engine_upgrade = 2
-						tank_nsb_armor_upgrade = 2
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 6
 					}
 					icon = "GFX_GER_medium_tank_medium"
 				}
-				create_equipment_variant = {
-					name = "Panzerjager Ferdinand (Elefant)"
-					type = heavy_tank_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_high_velocity_cannon
-						turret_type_slot = tank_heavy_fixed_superstructure_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 3
-						tank_nsb_armor_upgrade = 4
-					}
-					icon = "GFX_GER_heavy_tank_heavy"
-				}
-			}
-		}
-	}
+				
 
 	focus = {
 		id = GER_assualt_guns
