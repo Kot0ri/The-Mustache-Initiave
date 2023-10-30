@@ -2174,6 +2174,24 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_luftwaffe_field_command
+		prerequisite = { focus = GER_air_innovation }
+		x = 0
+		y = 1
+		relative_position_id = GER_air_innovation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER  FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
 		id = GER_tactical_air_effort
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = GER_air_innovation }
@@ -2614,7 +2632,7 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			# Balance research bonus for 2 techs under land_doctrine
 			
@@ -2833,7 +2851,7 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			if = {
 				limit = { 
