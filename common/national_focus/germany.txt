@@ -2972,7 +2972,9 @@ focus_tree = {
 					}
 					icon = "GFX_GER_medium_tank_medium"
 				}
-				
+			}
+		}
+	}
 
 	focus = {
 		id = GER_assualt_guns
@@ -10444,6 +10446,4 @@ focus_tree = {
 		}
 	}
 }
-		}
-	}
-}
+		
