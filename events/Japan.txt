@@ -175,6 +175,7 @@ country_event = {
 		add_popularity = { ideology = neutrality popularity = 0.9 }
 		add_timed_idea = { idea = JAP_military_purges days = 90 }
 		remove_ideas = JAP_hirohito_2
+		load_focus_tree = japan_kodoha_focus
 		add_country_leader_role = {
 			character = JAP_emperor_hirohito
 			country_leader = {
