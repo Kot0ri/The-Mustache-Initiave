@@ -1371,7 +1371,7 @@
 	}
 
 	focus = {
-		id = MAN_assertiveness
+		id = MAN_gather_the_clans
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = MAN_modernise_the_industrial_sector }
 		mutually_exclusive = { focus = MAN_obedience }
@@ -1417,10 +1417,10 @@
 	focus = {
 		id = MAN_request_control_of_the_railways
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = MAN_assertiveness }
+		prerequisite = { focus = MAN_gather_the_clans }
 		x = 0
 		y = 1
-		relative_position_id = MAN_assertiveness
+		relative_position_id = MAN_gather_the_clans
 
 		cost = 10
 
