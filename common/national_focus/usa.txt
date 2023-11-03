@@ -3310,6 +3310,140 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_a_tale_of_two_generals
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_america_first }
+		relative_position_id = USA_america_first
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.25 }
+		}
+	}
+
+
+	focus = {
+		id = USA_american_caesar
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_a_tale_of_two_generals }
+		relative_position_id = USA_a_tale_of_two_generals
+		mutually_exclusive = {focus = USA_duty_honor_country}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		completion_reward = {
+			set_party_name = {
+				ideology = neutrality
+				long_name = Pattons_Legion
+				name = Ironshirts
+			}
+			
+		}
+	}
+
+	focus = {
+		id = USA_duty_honor_country
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_a_tale_of_two_generals }
+		relative_position_id = USA_a_tale_of_two_generals
+		mutually_exclusive = {focus = USA_american_caesar}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			set_party_name = {
+				ideology = neutrality
+				long_name = McArthurs_legion
+				name = Blueshirts
+			}
+		}
+	}
+
+	focus = {
+		id = USA_push_to_save_democracy
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 3
+		prerequisite = { focus = USA_duty_honor_country focus = USA_american_caesar }
+		relative_position_id = USA_a_tale_of_two_generals
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			set_party_name = {
+			USA_civil_war_fired
+		}
+	}
+
+
+
+	focus = {
 		id = USA_empower_the_huac
 		icon = GFX_goal_generic_war_with_comintern
 		x = 0
