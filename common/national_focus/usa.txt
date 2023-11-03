@@ -2098,6 +2098,23 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_atomic_energy_act
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = USA_manhattan_project }
+		relative_position_id = USA_manhattan_project
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
 		x = 4
@@ -3414,7 +3431,7 @@ focus = {
 		id = USA_push_to_save_democracy
 		icon = GFX_goal_generic_forceful_treaty
 		x = -1
-		y = 3
+		y = 2
 		prerequisite = { focus = USA_duty_honor_country focus = USA_american_caesar }
 		relative_position_id = USA_a_tale_of_two_generals
 		cost = 10
@@ -3436,12 +3453,68 @@ focus = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			set_party_name = {
-			USA_civil_war_fired
-		}
+			
+	}
 	}
 
+	focus = {
+		id = USA_crush_the_anti_american_ideals
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_push_to_save_democracy}
+		relative_position_id = USA_push_to_save_democracy
+		cost = 10
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+	}
+	}
+
+	focus = {
+		id = USA_seek_out_allies
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		prerequisite = { focus = USA_duty_honor_country}
+		relative_position_id = USA_duty_honor_country
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		completion_reward = {
+			
+	}
+	}
 
 	focus = {
 		id = USA_empower_the_huac
@@ -3895,6 +3968,40 @@ focus = {
 
 		completion_reward = {
 			
+		}
+	}
+
+	focus = {
+		id = USA_form_the_golden_circle
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_declare_the_neo_confederacy}
+		relative_position_id = USA_declare_the_neo_confederacy
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = the_Golden_Circle
 		}
 	}
 
@@ -6219,6 +6326,35 @@ focus = {
 				bonus = 1.0
 				category = motorized_equipment
 			}
+		}
+	}
+	focus = {
+		id = USA_heavy_tank_experimentation
+		icon = GFX_goal_generic_build_tank
+		x = 2
+		y = 6
+		prerequisite = { focus = USA_armored_infantry}
+		relative_position_id = USA_selective_training_act
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+		
 		}
 	}
 	focus = {
