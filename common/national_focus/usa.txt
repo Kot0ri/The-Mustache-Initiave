@@ -3222,11 +3222,11 @@ focus = {
 	focus = {
 		id = USA_america_first
 		icon = GFX_goal_generic_political_pressure
-		x =-20
-		y = 1
+		x =-24
+		y = 2
 		prerequisite = { focus = USA_a_new_wind_blows}
-		mutually_exclusive = {focus = USA_suspend_the_presecution
-		relative_position_id = USA_accumulated_wealth_tax_act
+		mutually_exclusive = {focus = USA_suspend_the_presecution}
+		relative_position_id = USA_a_new_wind_blows
 		cost = 10
 
 		ai_will_do = {
@@ -3726,6 +3726,108 @@ focus = {
 		completion_reward = {
 			unlock_decision_category_tooltip = USA_honor_the_confederacy
 			custom_effect_tooltip = USA_honor_the_confederacy_tt
+		}
+	}
+
+	focus = {
+		id = USA_declare_the_neo_confederacy
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_honor_the_confederacy}
+		relative_position_id = USA_honor_the_confederacy
+		mutually_exclusive = {focus= USA_german_states_of_america}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_german_states_of_america
+		icon = GFX_focus_ger_reichskommisariats
+		x = 0
+		y = 2
+		prerequisite = { focus = USA_work_with_the_bund}
+		relative_position_id = USA_work_with_the_bund
+		mutually_exclusive = {focus= USA_declare_the_neo_confederacy}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = Pan_Atlantic_Germania
+			add_to_faction = GER
+		}
+	}
+
+	focus = {
+		id = USA_the_new_american_reich
+		icon = GFX_focus_ger_reichskommisariats
+		x = 0
+		y = 2
+		prerequisite = { focus = USA_german_states_of_america}
+		relative_position_id = USA_german_states_of_america
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
 		}
 	}
 
