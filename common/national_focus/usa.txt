@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2000 }
 	default = no
 #	focus = {
 #		id = USA_
@@ -61,38 +61,105 @@ focus_tree = {
 #		}
 #	}
 
+focus = {
+	id = USA_foundation_of_democracy
+	icon = GFX_focus_generic_self_management
+	x = 1
+	y = 0
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		has_government = democratic
+	}
+	
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_political_power = 150
+			}
+		}
+
+		focus = {
+			id = USA_beacon_of_liberty
+			icon = GFX_focus_generic_self_management
+			relative_position_id = USA_foundation_of_democracy
+			prerequisite = {focus = USA_foundation_of_democracy }
+			mutually_exclusive = {focus = USA_a_new_wind_blows}
+			x = 3
+			y = 2
+			cost = 5
+		
+			ai_will_do = {
+				factor = 1
+			}
+		
+			available = {
+				has_government = democratic
+			}
+			
+			bypass = {
+		
+			}
+		
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+			search_filters = {FOCUS_FILTER_POLITICAL}
+			completion_reward = {
+				add_political_power = 50
+					}
+				}
+
+focus = {
+	id = USA_a_new_wind_blows
+	icon = GFX_focus_generic_self_management
+	relative_position_id = USA_foundation_of_democracy
+	prerequisite = {focus = USA_foundation_of_democracy }
+	mutually_exclusive = {focus = USA_beacon_of_liberty}
+	x = -3
+	y = 2
+	cost = 5
+				
+	ai_will_do = {
+	factor = 1
+	}
+				
+	available = {
+		has_government = democratic
+}
+					
+	bypass = {
+				
+	}
+				
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+		available_if_capitulated = no
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_stability = -0.05
+		}
+	}
+
+
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
-		x = 14
-		y = 0
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "Man the Guns" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+		relative_position_id = USA_beacon_of_liberty
+		prerequisite = {focus = USA_beacon_of_liberty }
+		x = -2
+		y = 1
+		
 
 		mutually_exclusive = { focus = USA_reestablish_the_gold_standard }
 		cost = 10
@@ -146,10 +213,11 @@ focus_tree = {
 	focus = {
 		id = USA_suspend_the_presecution
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = -7
-		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal }
-		relative_position_id = USA_continue_the_new_deal
+		x = -3
+		y = 2
+		prerequisite = { focus = USA_a_new_wind_blows}
+		mutually_exclusive = {focus = USA_america_first}
+		relative_position_id = USA_a_new_wind_blows
 		cost = 10
 
 		ai_will_do = {
@@ -796,7 +864,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_suspend_the_presecution }
-		prerequisite = { focus = USA_agricultural_adjustment_act }
+
 		relative_position_id = USA_suspend_the_presecution
 		cost = 10
 
@@ -1250,6 +1318,7 @@ focus_tree = {
 		id = USA_wpa
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = USA_continue_the_new_deal }
+		prerequisite = { focus = USA_a_new_wind_blows }
 		relative_position_id = USA_continue_the_new_deal
 		x = -4
 		y = 1
@@ -2064,7 +2133,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2320,7 +2389,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 15
 		ai_will_do = {
 			factor = 1
 		}
@@ -2919,70 +2988,10 @@ focus_tree = {
 	focus = {
 		id = USA_reestablish_the_gold_standard
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 18
-		y = 0
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "Man the Guns" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_limited_intervention
-			}
-		}
+		relative_position_id = USA_beacon_of_liberty
+		prerequisite = { focus = USA_beacon_of_liberty}
+		x = 4
+		y = 1
 		cost = 10
 
 		ai_will_do = {
@@ -3213,10 +3222,11 @@ focus_tree = {
 	focus = {
 		id = USA_america_first
 		icon = GFX_goal_generic_political_pressure
-		x = 4
-		y = 1
-		prerequisite = { focus = USA_reestablish_the_gold_standard }
-		relative_position_id = USA_reestablish_the_gold_standard
+		x =-24
+		y = 2
+		prerequisite = { focus = USA_a_new_wind_blows}
+		mutually_exclusive = {focus = USA_suspend_the_presecution}
+		relative_position_id = USA_a_new_wind_blows
 		cost = 10
 
 		ai_will_do = {
@@ -3305,7 +3315,6 @@ focus_tree = {
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_extend_the_chinese_exclusion_acts }
-		prerequisite = { focus = USA_labour_management_relations_act }
 		relative_position_id = USA_america_first
 		cost = 10
 
@@ -3717,6 +3726,108 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_category_tooltip = USA_honor_the_confederacy
 			custom_effect_tooltip = USA_honor_the_confederacy_tt
+		}
+	}
+
+	focus = {
+		id = USA_declare_the_neo_confederacy
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_honor_the_confederacy}
+		relative_position_id = USA_honor_the_confederacy
+		mutually_exclusive = {focus= USA_german_states_of_america}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_german_states_of_america
+		icon = GFX_focus_ger_reichskommisariats
+		x = 0
+		y = 2
+		prerequisite = { focus = USA_work_with_the_bund}
+		relative_position_id = USA_work_with_the_bund
+		mutually_exclusive = {focus= USA_declare_the_neo_confederacy}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = Pan_Atlantic_Germania
+			add_to_faction = GER
+		}
+	}
+
+	focus = {
+		id = USA_the_new_american_reich
+		icon = GFX_focus_ger_reichskommisariats
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_german_states_of_america}
+		relative_position_id = USA_german_states_of_america
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
 		}
 	}
 
@@ -4652,8 +4763,9 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 42
-		y = 0
+		prerequisite = { focus = USA_beacon_of_liberty}
+		x = 34
+		y = 4
 		offset = {
 			x = -26
 			y = 0
@@ -4788,7 +4900,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4817,7 +4929,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4846,7 +4958,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -4886,7 +4998,7 @@ focus_tree = {
 		y = 3
 		prerequisite = { focus = USA_reinforce_monroe_doctrine }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5018,7 +5130,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_intervention_in_europe }
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5048,7 +5160,7 @@ focus_tree = {
 		prerequisite = { focus = USA_intervention_in_europe }
 		mutually_exclusive = { }
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5083,7 +5195,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -5159,7 +5271,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -5204,6 +5316,70 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = USA_anti_communist_bloc
+		dynamic = yes
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_anti_bolshevist_aid }
+		relative_position_id = USA_anti_bolshevist_aid
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SOV = { has_civil_war = no }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_form_NATO
+		dynamic = yes
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_anti_communist_bloc }
+		relative_position_id = USA_anti_communist_bloc
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SOV = { has_civil_war = no }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = NATO
+			add_to_faction = ENG
+			add_to_faction = FRA
+			add_to_faction = CAN
+		}
+	}
+
+	focus = {
 		id = USA_war_plan_red
 		icon = GFX_focus_attack_britain
 		prerequisite = { focus = USA_intervention_in_europe }
@@ -5213,7 +5389,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -5234,7 +5410,7 @@ focus_tree = {
 		y = 3
 		prerequisite = { focus = USA_war_plan_red }
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5263,7 +5439,7 @@ focus_tree = {
 		y = 3
 		prerequisite = { focus = USA_war_plan_red }
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5327,7 +5503,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_intervention_in_asia
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -5347,7 +5523,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_intervention_in_asia }
 		relative_position_id = USA_intervention_in_asia
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5480,8 +5656,8 @@ focus_tree = {
 		x = 16
 		y = 0
 		relative_position_id = USA_war_plans_division
-		
-		cost = 10
+		prerequisite = { focus = USA_beacon_of_liberty}
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
