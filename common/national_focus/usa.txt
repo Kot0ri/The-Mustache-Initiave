@@ -5316,6 +5316,70 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_anti_communist_bloc
+		dynamic = yes
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_anti_bolshevist_aid }
+		relative_position_id = USA_anti_bolshevist_aid
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SOV = { has_civil_war = no }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_form_NATO
+		dynamic = yes
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_anti_communist_bloc }
+		relative_position_id = USA_anti_communist_bloc
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SOV = { has_civil_war = no }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = NATO
+			add_to_faction = ENG
+			add_to_faction = FRA
+			add_to_faction = CAN
+		}
+	}
+
+	focus = {
 		id = USA_war_plan_red
 		icon = GFX_focus_attack_britain
 		prerequisite = { focus = USA_intervention_in_europe }
