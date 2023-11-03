@@ -1544,7 +1544,7 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			puppet = MEN
 		}
 	}
 
@@ -1857,7 +1857,7 @@
 		completion_reward = {
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 			add_timed_idea = { idea = MAN_qing_nostalgia days = 90 }
-			remove_idea = { idea = MAN_aisin_gioro_puyi }
+			remove_ideas = MAN_aisin_gioro_puyi
 		}
 	}
 

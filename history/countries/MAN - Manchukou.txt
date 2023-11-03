@@ -8,6 +8,8 @@ set_technology = {
 	
 }
 
+set_research_slots = 3
+
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
 	set_country_flag = MAN_northern_bandits
