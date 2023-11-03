@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2000 }
 	default = no
 #	focus = {
 #		id = USA_
@@ -864,7 +864,7 @@ focus = {
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_suspend_the_presecution }
-		prerequisite = { focus = USA_agricultural_adjustment_act }
+
 		relative_position_id = USA_suspend_the_presecution
 		cost = 10
 
@@ -3225,7 +3225,7 @@ focus = {
 		x =-20
 		y = 1
 		prerequisite = { focus = USA_a_new_wind_blows}
-		mutually_exclusive = {focus = USA_america_first}
+		mutually_exclusive = {focus = USA_suspend_the_persecution}
 		relative_position_id = USA_accumulated_wealth_tax_act
 		cost = 10
 
