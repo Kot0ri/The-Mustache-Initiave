@@ -3803,7 +3803,7 @@ focus = {
 		id = USA_the_new_american_reich
 		icon = GFX_focus_ger_reichskommisariats
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = USA_german_states_of_america}
 		relative_position_id = USA_german_states_of_america
 		cost = 10
