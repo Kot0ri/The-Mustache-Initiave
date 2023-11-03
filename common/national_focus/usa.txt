@@ -2098,6 +2098,23 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_atomic_energy_act
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = USA_manhattan_project }
+		relative_position_id = USA_manhattan_project
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
 		x = 4
@@ -3951,6 +3968,40 @@ focus = {
 
 		completion_reward = {
 			
+		}
+	}
+
+	focus = {
+		id = USA_form_the_golden_circle
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_declare_the_neo_confederacy}
+		relative_position_id = USA_declare_the_neo_confederacy
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_civil_war = yes
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = the_Golden_Circle
 		}
 	}
 
