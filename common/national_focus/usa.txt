@@ -3414,7 +3414,7 @@ focus = {
 		id = USA_push_to_save_democracy
 		icon = GFX_goal_generic_forceful_treaty
 		x = -1
-		y = 3
+		y = 2
 		prerequisite = { focus = USA_duty_honor_country focus = USA_american_caesar }
 		relative_position_id = USA_a_tale_of_two_generals
 		cost = 10
@@ -3436,12 +3436,68 @@ focus = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			set_party_name = {
-			USA_civil_war_fired
-		}
+			
+	}
 	}
 
+	focus = {
+		id = USA_crush_the_anti_american_ideals
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_push_to_save_democracy}
+		relative_position_id = USA_push_to_save_democracy
+		cost = 10
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+	}
+	}
+
+	focus = {
+		id = USA_seek_out_allies
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		prerequisite = { focus = USA_duty_honor_country}
+		relative_position_id = USA_duty_honor_country
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		completion_reward = {
+			
+	}
+	}
 
 	focus = {
 		id = USA_empower_the_huac
