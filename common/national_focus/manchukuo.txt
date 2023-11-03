@@ -1476,7 +1476,8 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			add_ideas = MAN_white_russian_advisers
+			add_war_support = 0.1
 		}
 	}
 
@@ -1576,7 +1577,20 @@
 		
 	
 		completion_reward = {
+			if = {
+				limit = {
+					is_subject_of = JAP
+				}
+				unlock_decision_tooltip = MAN_prepare_to_seize_arms
+			}
 			add_stability = 0.1
+			
+			if = {
+				limit = {
+					has_idea = MAN_kwantung_veto
+				}
+				remove_ideas = MAN_kwantung_veto
+			}
 		}
 	}
 
@@ -1642,7 +1656,49 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			unlock_decision_tooltip = MAN_raise_manchu_banner
+			division_template = {
+				name = "People's Volunteers Division"
+				priority = 2
+				division_names_group = MAN_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 328 }
+				create_unit = {
+					division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
+					owner = MAN
+				}
+			}			
 		}
 	}
 
@@ -1675,7 +1731,48 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = MAN_expand_the_imperial_guards_tt
+			add_war_support = 0.1
+			hidden_effect = {
+				division_template = {
+					name = "Imperial Guards Division"
+					priority = 2
+					division_names_group = MAN_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+	    	   		 	infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+			
+	    	   		 	infantry = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 328 }
+					create_unit = {
+						division = "name = \"1. Imperial Guards Division\" division_template = \"Imperial Guards Division\" start_experience_factor = 1.0" 
+						owner = MAN
+					}
+					create_unit = {
+						division = "name = \"2. Imperial Guards Division\" division_template = \"Imperial Guards Division\" start_experience_factor = 1.0" 
+						owner = MAN
+					}
+					create_unit = {
+						division = "name = \"3. Imperial Guards Division\" division_template = \"Imperial Guards Division\" start_experience_factor = 1.0" 
+						owner = MAN
+					}
+					create_unit = {
+						division = "name = \"4. Imperial Guards Division\" division_template = \"Imperial Guards Division\" start_experience_factor = 1.0" 
+						owner = MAN
+					}
+				}			
+			}			
 		}
 	}
 
@@ -1709,7 +1806,21 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			MAN_low_legitimacy_level_down = yes
+			add_ideas = MAN_bolster_nationalism
+			unlock_decision_tooltip = MAN_recruit_bandits_generic
+			unlock_decision_tooltip = MAN_fund_underground_gun_shops
+			every_state = {
+				limit = {
+					has_state_flag = MAN_local_arms_procurement_AF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1777,7 +1888,8 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			add_political_power = 150
+			MAN_low_legitimacy_level_down = yes
 		}
 	}
 
@@ -1876,7 +1988,41 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			hidden_effect = { set_variable = { MAN_independence_target = OVERLORD } } #We're using a variable here because the saved event target becomes invalidated deep in ScopedEventTarget
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				add_country_leader_trait = nationalist_symbol
+			}
+			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }
+			effect_tooltip = {		
+				if = {
+					limit = {
+						is_in_faction_with = OVERLORD
+					}
+					leave_faction = yes
+				}
+				declare_war_on = {
+					target = OVERLORD
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_in_faction_with = var:MAN_independence_target
+					}
+					leave_faction = yes
+				}
+				declare_war_on = {
+					target = var:MAN_independence_target 
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.48 days = 2 }
+			}
 		}
 	}
 

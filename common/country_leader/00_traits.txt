@@ -103,7 +103,7 @@ leader_traits = {
 		}
 	}
 
-	emperor_of_manchuria = {
+	emperor_kangde= {
 		random = no
 		stability_factor = 0.4 #HM PUYI
 

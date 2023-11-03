@@ -193,7 +193,7 @@ ideas = {
 			picture = generic_army_war_college
 			
 			modifier = {
-				max_command_power = 20
+				max_command_power = 40
 			}
 		}
 
@@ -231,9 +231,9 @@ ideas = {
 			picture = generic_war_preparation
 			
 			modifier = {
-				army_morale_factor = 0.05
+				army_morale_factor = 0.1
 				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				army_core_defence_factor = 0.1
 			}
 		}
 
@@ -437,7 +437,7 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				operative_slot = 1
+				operative_slot = 2
 			}
 		}
 
@@ -466,7 +466,7 @@ ideas = {
 
 			picture = bra_monarchist_uprising
 			
-			traits = { emperor_of_manchuria staunch_monarchist }
+			traits = { emperor_kangde staunch_monarchist }
 			
 
 		}
