@@ -3225,7 +3225,7 @@ focus = {
 		x =-20
 		y = 1
 		prerequisite = { focus = USA_a_new_wind_blows}
-		mutually_exclusive = {focus = USA_suspend_the_persecution}
+		mutually_exclusive = {focus = USA_suspend_the_presecution
 		relative_position_id = USA_accumulated_wealth_tax_act
 		cost = 10
 
