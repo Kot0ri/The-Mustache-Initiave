@@ -1372,7 +1372,7 @@
 
 	focus = {
 		id = MAN_gather_the_clans
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_modernise_the_industrial_sector }
 		mutually_exclusive = { focus = MAN_obedience }
 		x = 2
@@ -1415,11 +1415,476 @@
 	}
 
 	focus = {
-		id = MAN_request_control_of_the_railways
-		icon = GFX_goal_generic_construct_infrastructure
+		id = MAN_lobby_for_international_recognition
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_gather_the_clans }
+		x = 2
+		y = 1
+		relative_position_id = MAN_gather_the_clans
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_appeal_to_white_russians
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_lobby_for_international_recognition }
+		x = 1
+		y = 1
+		relative_position_id = MAN_lobby_for_international_recognition
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_eradicate_fascism
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_lobby_for_international_recognition }
+		x = -1
+		y = 1
+		relative_position_id = MAN_lobby_for_international_recognition
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_royal_visit_to_chahar
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_eradicate_fascism }
+		prerequisite = { focus = MAN_appeal_to_white_russians }
+		x = -1
+		y = 1
+		relative_position_id = MAN_appeal_to_white_russians
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_isolate_the_kwantung_army
+		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_gather_the_clans }
 		x = 0
 		y = 1
+		relative_position_id = MAN_gather_the_clans
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_reassert_a_royalist_agenda
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_gather_the_clans }
+		x = -2
+		y = 1
+		relative_position_id = MAN_gather_the_clans
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_enforce_a_manchurian_identity
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_reassert_a_royalist_agenda }
+		x = 1
+		y = 1
+		relative_position_id = MAN_reassert_a_royalist_agenda
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_support_the_manchukuo_imperial_guards
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_reassert_a_royalist_agenda }
+		x = -1
+		y = 1
+		relative_position_id = MAN_reassert_a_royalist_agenda
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_recruit_anti-japanese_holdouts
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_support_the_manchukuo_imperial_guards }
+		prerequisite = { focus = MAN_enforce_a_manchurian_identity }
+		x = -1
+		y = 1
+		relative_position_id = MAN_enforce_a_manchurian_identity
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_install_imperial_government
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_isolate_the_kwantung_army }
+		prerequisite = { focus = MAN_eradicate_fascism }
+		prerequisite = { focus = MAN_enforce_a_manchurian_identity }
+		x = 0
+		y = 2
+		relative_position_id = MAN_isolate_the_kwantung_army
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_dissolve_the_concordia_association
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_install_imperial_government }
+		x = -1.5
+		y = 1
+		relative_position_id = MAN_install_imperial_government
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_recall_pujie_from_japan
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_install_imperial_government }
+		x = 1.5
+		y = 1
+		relative_position_id = MAN_install_imperial_government
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_purge_the_council_of_general_affairs
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_install_imperial_government }
+		x = 0
+		y = 1
+		relative_position_id = MAN_install_imperial_government
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_restore_imperial_integrity
+		icon = GFX_focus_jap_manchurian_project
+		prerequisite = { focus = MAN_purge_the_council_of_general_affairs }
+		x = 0
+		y = 1
+		relative_position_id = MAN_purge_the_council_of_general_affairs
+
+		cost = 3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MAN_request_control_of_the_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 8
 		relative_position_id = MAN_gather_the_clans
 
 		cost = 10
