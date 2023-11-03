@@ -61,38 +61,105 @@ focus_tree = {
 #		}
 #	}
 
+focus = {
+	id = USA_foundation_of_democracy
+	icon = GFX_focus_generic_self_management
+	x = 1
+	y = 0
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		has_government = democratic
+	}
+	
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_political_power = 150
+			}
+		}
+
+		focus = {
+			id = USA_beacon_of_liberty
+			icon = GFX_focus_generic_self_management
+			relative_position_id = USA_foundation_of_democracy
+			prerequisite = {focus = USA_foundation_of_democracy }
+			mutually_exclusive = {focus = USA_a_new_wind_blows}
+			x = 3
+			y = 2
+			cost = 5
+		
+			ai_will_do = {
+				factor = 1
+			}
+		
+			available = {
+				has_government = democratic
+			}
+			
+			bypass = {
+		
+			}
+		
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+			search_filters = {FOCUS_FILTER_POLITICAL}
+			completion_reward = {
+				add_political_power = 50
+					}
+				}
+
+focus = {
+	id = USA_a_new_wind_blows
+	icon = GFX_focus_generic_self_management
+	relative_position_id = USA_foundation_of_democracy
+	prerequisite = {focus = USA_foundation_of_democracy }
+	mutually_exclusive = {focus = USA_beacon_of_liberty}
+	x = -3
+	y = 2
+	cost = 5
+				
+	ai_will_do = {
+	factor = 1
+	}
+				
+	available = {
+		has_government = democratic
+}
+					
+	bypass = {
+				
+	}
+				
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+		available_if_capitulated = no
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_stability = -0.05
+		}
+	}
+
+
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
-		x = 14
-		y = 0
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "Man the Guns" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+		relative_position_id = USA_beacon_of_liberty
+		prerequisite = {focus = USA_beacon_of_liberty }
+		x = -2
+		y = 1
+		
 
 		mutually_exclusive = { focus = USA_reestablish_the_gold_standard }
 		cost = 10
@@ -2919,70 +2986,10 @@ focus_tree = {
 	focus = {
 		id = USA_reestablish_the_gold_standard
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 18
-		y = 0
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "Man the Guns" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_limited_intervention
-			}
-		}
+		relative_position_id = USA_beacon_of_liberty
+		prerequisite = { focus = USA_beacon_of_liberty}
+		x = 4
+		y = 1
 		cost = 10
 
 		ai_will_do = {
