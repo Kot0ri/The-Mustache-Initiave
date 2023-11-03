@@ -213,10 +213,11 @@ focus = {
 	focus = {
 		id = USA_suspend_the_presecution
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = -7
-		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal }
-		relative_position_id = USA_continue_the_new_deal
+		x = -3
+		y = 2
+		prerequisite = { focus = USA_a_new_wind_blows}
+		mutually_exclusive = {focus = USA_america_first}
+		relative_position_id = USA_a_new_wind_blows
 		cost = 10
 
 		ai_will_do = {
@@ -1317,6 +1318,7 @@ focus = {
 		id = USA_wpa
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = USA_continue_the_new_deal }
+		prerequisite = { focus = USA_a_new_wind_blows }
 		relative_position_id = USA_continue_the_new_deal
 		x = -4
 		y = 1
@@ -3220,10 +3222,11 @@ focus = {
 	focus = {
 		id = USA_america_first
 		icon = GFX_goal_generic_political_pressure
-		x = 4
+		x =-20
 		y = 1
-		prerequisite = { focus = USA_reestablish_the_gold_standard }
-		relative_position_id = USA_reestablish_the_gold_standard
+		prerequisite = { focus = USA_a_new_wind_blows}
+		mutually_exclusive = {focus = USA_america_first}
+		relative_position_id = USA_accumulated_wealth_tax_act
 		cost = 10
 
 		ai_will_do = {
@@ -3312,7 +3315,6 @@ focus = {
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_extend_the_chinese_exclusion_acts }
-		prerequisite = { focus = USA_labour_management_relations_act }
 		relative_position_id = USA_america_first
 		cost = 10
 
