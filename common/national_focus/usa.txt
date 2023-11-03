@@ -2131,7 +2131,7 @@ focus = {
 			}
 		}
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2387,7 +2387,7 @@ focus = {
 			}
 		}
 
-		cost = 10
+		cost = 15
 		ai_will_do = {
 			factor = 1
 		}
@@ -4659,8 +4659,9 @@ focus = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 42
-		y = 0
+		prerequisite = { focus = USA_beacon_of_liberty}
+		x = 34
+		y = 4
 		offset = {
 			x = -26
 			y = 0
@@ -5487,7 +5488,7 @@ focus = {
 		x = 16
 		y = 0
 		relative_position_id = USA_war_plans_division
-		
+		prerequisite = { focus = USA_beacon_of_liberty}
 		cost = 10
 
 		ai_will_do = {
