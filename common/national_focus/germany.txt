@@ -10597,11 +10597,34 @@ focus_tree = {
 							available_if_capitulated = yes
 							prerequisite = {focus = GER_expand_combat_roles }
 							search_filters = { FOCUS_FILTER_MILITARY }
-							mutually_exclusive = { focus = take_in_foreginers}
+							mutually_exclusive = { focus = GER_take_in_foreginers}
 							completion_reward = {
 						
 								}
 							}
+
+							focus = {
+								id = GER_himmlers_dream
+								icon = GFX_goal_generic_axis_build_infantry
+								x = 0
+								y = 1
+								relative_position_id = GER_keep_purity_of_ranks
+								cost = 5
+								ai_will_do = {
+									factor = 1
+								}
+								available = {
+									has_government = fascism
+								}
+						
+								available_if_capitulated = yes
+								prerequisite = {focus = GER_keep_purity_of_ranks }
+								search_filters = { FOCUS_FILTER_POLITICAL }
+								completion_reward = {
+							
+									}
+								}
+
 							focus = {
 								id = GER_take_in_foreginers
 								icon = GFX_goal_generic_axis_build_infantry
@@ -10624,5 +10647,25 @@ focus_tree = {
 							
 									}
 								}
+								focus = {
+									id = GER_lacken_recruitment_standards
+									icon = GFX_goal_generic_axis_build_infantry
+									x = 0
+									y = 1
+									relative_position_id = GER_take_in_foreginers
+									cost = 5
+									ai_will_do = {
+										factor = 1
+									}
+									available = {
+										has_government = fascism
+									}
+							
+									available_if_capitulated = yes
+									prerequisite = {focus = GER_take_in_foreginers }
+									search_filters = { FOCUS_FILTER_MILITARY }
+									completion_reward = {
+								
+										}
+									}
 }
-	
