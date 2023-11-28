@@ -8541,6 +8541,31 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_a_new_kaiserresich
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = GER_reinstate_imperial_possessions}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = GER_reinstate_imperial_possessions
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_state_core = 28
+	
+		}
+	}
+
+
+	focus = {
 		id = GER_see_to_the_eastern_front
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = GER_return_of_the_kaiser }
