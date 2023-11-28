@@ -10445,5 +10445,184 @@ focus_tree = {
 			}
 		}
 	}
-}
+
+	focus = {
+		id = GER_expand_the_SS
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -1.0
+		y = 10
+		relative_position_id = GER_army_innovation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = fascism
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+	
+			}
+		}
+		focus = {
+			id = GER_take_over_all_policing_duties
+			icon = GFX_goal_generic_axis_build_infantry
+			x = 0
+			y = 1
+			relative_position_id = GER_expand_the_SS
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_government = fascism
+			}
+	
+			available_if_capitulated = yes
+			prerequisite = {focus = GER_expand_the_SS }
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
 		
+				}
+			}
+			focus = {
+				id = GER_form_the_waffen_SS
+				icon = GFX_goal_generic_axis_build_infantry
+				x = 3
+				y = 2
+				relative_position_id = GER_expand_the_SS
+				cost = 5
+				ai_will_do = {
+					factor = 1
+				}
+				available = {
+					has_government = fascism
+				}
+		
+				available_if_capitulated = yes
+				prerequisite = {focus = GER_expand_the_SS }
+				search_filters = { FOCUS_FILTER_MILITARY }
+				completion_reward = {
+			
+					}
+				}
+
+		
+
+			focus = {
+				id = GER_form_the_sonderkommandos
+				icon = GFX_goal_generic_axis_build_infantry
+				x = -1
+				y = 2
+				relative_position_id = GER_expand_the_SS
+				cost = 5
+				ai_will_do = {
+					factor = 1
+				}
+				available = {
+					has_government = fascism
+				}
+		
+				available_if_capitulated = yes
+				prerequisite = {focus = GER_expand_the_SS }
+				search_filters = { FOCUS_FILTER_MILITARY }
+				completion_reward = {
+			
+					}
+				}
+
+				focus = {
+					id = GER_formilize_command_structures
+					icon = GFX_goal_generic_axis_build_infantry
+					x = 1
+					y = 3
+					relative_position_id = GER_expand_the_SS
+					cost = 5
+					ai_will_do = {
+						factor = 1
+					}
+					available = {
+						has_government = fascism
+					}
+			
+					available_if_capitulated = yes
+					prerequisite = {focus = GER_expand_the_SS }
+					prerequisite = {focus = GER_form_the_sonderkommandos }
+					prerequisite = {focus = GER_form_the_waffen_SS }
+					prerequisite = {focus = GER_take_over_all_policing_duties }
+					search_filters = { FOCUS_FILTER_MILITARY }
+					completion_reward = {
+				
+						}
+					}
+
+					focus = {
+						id = GER_expand_combat_roles
+						icon = GFX_goal_generic_axis_build_infantry
+						x = 0
+						y = 2
+						relative_position_id = GER_form_the_waffen_SS
+						cost = 5
+						ai_will_do = {
+							factor = 1
+						}
+						available = {
+							has_government = fascism
+						}
+				
+						available_if_capitulated = yes
+						prerequisite = {focus = GER_form_the_waffen_SS }
+						prerequisite = {focus = GER_formilize_command_structures }
+						search_filters = { FOCUS_FILTER_MILITARY }
+						completion_reward = {
+					
+							}
+						}
+						focus = {
+							id = GER_keep_purity_of_ranks
+							icon = GFX_goal_generic_axis_build_infantry
+							x = -1
+							y = 3
+							relative_position_id = GER_form_the_waffen_SS
+							cost = 5
+							ai_will_do = {
+								factor = 1
+							}
+							available = {
+								has_government = fascism
+							}
+					
+							available_if_capitulated = yes
+							prerequisite = {focus = GER_expand_combat_roles }
+							search_filters = { FOCUS_FILTER_MILITARY }
+							mutually_exclusive = { focus = take_in_foreginers}
+							completion_reward = {
+						
+								}
+							}
+							focus = {
+								id = GER_take_in_foreginers
+								icon = GFX_goal_generic_axis_build_infantry
+								x = 1
+								y = 3
+								relative_position_id = GER_form_the_waffen_SS
+								cost = 5
+								ai_will_do = {
+									factor = 1
+								}
+								available = {
+									has_government = fascism
+								}
+						
+								available_if_capitulated = yes
+								prerequisite = {focus = GER_expand_combat_roles }
+								search_filters = { FOCUS_FILTER_MILITARY }
+								mutually_exclusive = { focus = GER_keep_purity_of_ranks}
+								completion_reward = {
+							
+									}
+								}
+}
+	
