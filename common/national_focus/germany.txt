@@ -1145,6 +1145,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_homeland_defences
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = GER_ostwall }
+		prerequisite = { focus = GER_atlantikwall }
+		available = {
+
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_west_wall
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+	
+					}
+}
+		
+	focus = {
 		id = GER_autarky
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = GER_four_year_plan }
@@ -3435,6 +3456,32 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_increasing_funding_to_the_NSKK
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = GER_soviet_treaty }
+		x = 2
+		y = 1.5
+		relative_position_id = GER_soviet_treaty
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					name = mech_army_bonus
+					technology = mechanised_infantry
+					technology = motorised_infantry
+				}
+			}
+		}
+
 
 	focus = {
 		id = GER_rocketry_focus
