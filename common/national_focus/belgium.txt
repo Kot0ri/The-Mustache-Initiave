@@ -46,7 +46,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BEL_empower_the_monarchy
+		id = BEL_quest_to_empower_the_monarchy
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 4
 		y = 1
@@ -72,6 +72,70 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_conflict_with_parliment
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_quest_to_empower_the_monarchy }
+		relative_position_id = BEL_quest_to_empower_the_monarchy
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_act_independently
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_conflict_with_parliment }
+		relative_position_id = BEL_conflict_with_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			
 		}
@@ -114,7 +178,7 @@ focus_tree = {
 		icon = GFX_goal_generic_treaty
 		x = 2
 		y = 1
-		prerequisite = { focus = BEL_leave_matters_to_parliment focus = BEL_empower_the_monarchy }
+		prerequisite = { focus = BEL_leave_matters_to_parliment focus = BEL_quest_to_empower_the_monarchy }
 		relative_position_id = BEL_leave_matters_to_parliment
 	
 
