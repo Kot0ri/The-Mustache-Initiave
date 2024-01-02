@@ -39,7 +39,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			
 		}
@@ -71,7 +71,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			
 		}
@@ -142,6 +142,38 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BEL_appoint_Overstraeten
+		icon = GFX_goal_generic_treaty
+		x = 2
+		y = 1
+		prerequisite = { focus = BEL_conflict_with_parliment }
+		relative_position_id = BEL_conflict_with_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
 		id = BEL_leave_matters_to_parliment
 		icon = GFX_goal_generic_self_management
 		x = 0
@@ -167,7 +199,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			
 		}
@@ -199,7 +231,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			
 		}
@@ -698,7 +730,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			
 		}
@@ -712,6 +744,37 @@ focus_tree = {
 		y = 0
 
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {
+		id = BEL_infrastructure_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+relative_position_id = BEL_industrial_effort
+prerequisite = { focus= BEL_industrial_effort }
 		cost = 10
 
 		ai_will_do = {
