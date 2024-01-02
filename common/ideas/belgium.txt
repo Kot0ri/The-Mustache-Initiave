@@ -139,6 +139,28 @@ ideas = {
 
 	country = { 
 
+		BEL_leagacy_of_the_great_war	= {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BEL
+				always = yes
+			}
+
+			allowed_civil_war = {
+				tag = BEL
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.20
+				join_faction_tension = 0.10
+				generate_wargoal_tension = 0.25
+				guarantee_tension = 0.10
+			}
+		}
+
 		BEL_defensive_planning	= {
 			picture = tfv_can_conscription_crisis
 
