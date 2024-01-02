@@ -704,4 +704,34 @@ focus_tree = {
 		}
 	}
 
+
+	focus = {
+		id = BEL_industrial_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 25
+		y = 0
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
 }
