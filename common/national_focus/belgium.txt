@@ -174,13 +174,79 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BEL_the_king_and_his_people
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_act_independently }
+		relative_position_id = BEL_act_independently
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+	}
+
+	focus = {
+		id = BEL_disband_parliment
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_the_king_and_his_people
+	}
+		relative_position_id = BEL_the_king_and_his_people
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+	}
+
+	focus = {
 		id = BEL_leave_matters_to_parliment
 		icon = GFX_goal_generic_self_management
 		x = 0
 		y = 1
 		prerequisite = { focus = BEL_leopolds_reign }
 		relative_position_id = BEL_leopolds_reign
-		mutually_exclusive = { focus = BEL_empower_the_monarchy	}
+		mutually_exclusive = { focus = BEL_quest_to_empower_the_monarchy	}
 
 		cost = 10
 
@@ -773,8 +839,8 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 1
-relative_position_id = BEL_industrial_effort
-prerequisite = { focus= BEL_industrial_effort }
+	relative_position_id = BEL_industrial_effort
+	prerequisite = { focus= BEL_industrial_effort }
 		cost = 10
 
 		ai_will_do = {
@@ -792,7 +858,127 @@ prerequisite = { focus= BEL_industrial_effort }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MILITARY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_foreign_investments
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 1
+	relative_position_id = BEL_infrastructure_effort
+	prerequisite = { focus= BEL_infrastructure_effort }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_development_in_the_Congo
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_infrastructure_effort
+	prerequisite = { focus= BEL_infrastructure_effort }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_mine_for_resources
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_development_in_the_Congo
+	prerequisite = { focus= BEL_development_in_the_Congo }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_uranium_deal_with_the_US
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_mine_for_resources
+	prerequisite = { focus= BEL_mine_for_resources }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ruling_party = is_democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			
 		}
