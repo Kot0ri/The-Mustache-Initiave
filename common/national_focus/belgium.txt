@@ -109,6 +109,38 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = BEL_declaration_of_neutrality
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 1
+		prerequisite = { focus = BEL_leave_matters_to_parliment focus = BEL_empower_the_monarchy }
+		relative_position_id = BEL_leave_matters_to_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
 
 
 	focus = {
@@ -144,7 +176,7 @@ focus_tree = {
 	focus = {
 		id = BEL_the_kings_command
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 1.5
+		x = 2
 		y = 1
 		prerequisite = { focus = BEL_leagacy_of_the_great_war }
 		relative_position_id = BEL_leagacy_of_the_great_war
@@ -206,8 +238,8 @@ focus_tree = {
 	focus = {
 		id = BEL_request_Overstraeten_for_cheif_of_staff
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 2
-		y = 1
+		x = 0
+		y = 2
 		prerequisite = { focus = BEL_the_kings_command }
 		relative_position_id = BEL_the_kings_command
 
@@ -361,7 +393,7 @@ focus_tree = {
 	focus = {
 		id = BEL_military_reorganization
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -1.5
+		x = -2
 		y = 1
 		prerequisite = { focus = BEL_leagacy_of_the_great_war }
 		relative_position_id = BEL_leagacy_of_the_great_war
