@@ -181,5 +181,28 @@ ideas = {
 				dig_in_speed_factor = 0.05
 			}
 		}
+
+		BEL_the_kings_command	= {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BEL
+				always = yes
+			}
+
+			allowed_civil_war = {
+				tag = BEL
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain = 0.02
+				exiled_divisions_attack_factor = 0.02
+				exile_manpower_factor = 0.02
+				exiled_government_weekly_manpower = 500
+				org_loss_at_low_org_factor = -0.05
+			}
+		}
 }
 }

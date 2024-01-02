@@ -395,7 +395,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
-			
+			add_ideas = BEL_the_kings_command
 		}
 	}
 
@@ -431,7 +431,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BEL_request_Overstraeten_for_cheif_of_staff
+		id = BEL_request_Overstraeten_for_chief_of_staff
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 2
@@ -612,7 +612,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
-			
+			add_command_power = 10
+			add_
 		}
 	}
 
