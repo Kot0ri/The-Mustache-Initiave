@@ -79,7 +79,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_leave_matters_to_parliment
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_self_management
 		x = 0
 		y = 1
 		prerequisite = { focus = BEL_leopolds_reign }
@@ -111,7 +111,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_declaration_of_neutrality
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_treaty
 		x = 2
 		y = 1
 		prerequisite = { focus = BEL_leave_matters_to_parliment focus = BEL_empower_the_monarchy }
@@ -140,6 +140,39 @@ focus_tree = {
 			
 		}
 	}
+
+	focus = {
+		id = BEL_reaffrim_league_of_nation_ties
+		icon = GFX_goal_generic_support_democracy
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_leave_matters_to_parliment }
+		relative_position_id = BEL_leave_matters_to_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
 
 
 
@@ -206,7 +239,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_intellegence_efforts
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_secret_service_agnecy
 		x = 1
 		y = 1
 		prerequisite = { focus = BEL_the_kings_command }
@@ -454,7 +487,7 @@ focus_tree = {
 
 	focus = {
 		id = BEL_motorization_efforts
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_truck
 		x = -2
 		y = 1
 		prerequisite = { focus = BEL_frontier_cyclists}
@@ -516,11 +549,73 @@ focus_tree = {
 
 	focus = {
 		id = BEL_armoured_program
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_generic_self_propelled_gun
 		x = 0
 		y = 1
 		prerequisite = { focus = BEL_motorization_efforts}
 		relative_position_id = BEL_motorization_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Corps_de_Marine
+		icon = GFX_goal_generic_allies_build_infantry
+		x =-6
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Aéronautique_Militaire_Belge
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
 
 		cost = 10
 
