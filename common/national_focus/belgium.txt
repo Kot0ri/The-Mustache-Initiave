@@ -172,5 +172,345 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = BEL_intellegence_efforts
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 1
+		prerequisite = { focus = BEL_the_kings_command }
+		relative_position_id = BEL_the_kings_command
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_request_Overstraeten_for_cheif_of_staff
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 1
+		prerequisite = { focus = BEL_the_kings_command }
+		relative_position_id = BEL_the_kings_command
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_war = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_fortification_efforts
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_liege_and_namur_fortifcations
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_fortification_efforts }
+		relative_position_id = BEL_fortification_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_reinforce_eben_emael
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_liege_and_namur_fortifcations}
+		relative_position_id = BEL_liege_and_namur_fortifcations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_guard_the_channels
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_reinforce_eben_emael}
+		relative_position_id = BEL_reinforce_eben_emael
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_military_reorganization
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -1.5
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_frontier_cyclists
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_military_reorganization }
+		relative_position_id = BEL_military_reorganization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_motorization_efforts
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -2
+		y = 1
+		prerequisite = { focus = BEL_frontier_cyclists}
+		relative_position_id = BEL_frontier_cyclists
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_artillery_efforts
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_frontier_cyclists}
+		relative_position_id = BEL_frontier_cyclists
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_armoured_program
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_motorization_efforts}
+		relative_position_id = BEL_motorization_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
 
 }
