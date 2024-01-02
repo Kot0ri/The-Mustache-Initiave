@@ -210,8 +210,7 @@ focus_tree = {
 		icon = GFX_goal_generic_treaty
 		x = 0
 		y = 1
-		prerequisite = { focus = BEL_the_king_and_his_people
-	}
+		prerequisite = { focus = BEL_the_king_and_his_people}
 		relative_position_id = BEL_the_king_and_his_people
 
 
