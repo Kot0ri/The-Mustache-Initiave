@@ -53,7 +53,7 @@ focus_tree = {
 		prerequisite = { focus = BEL_leopolds_reign }
 		relative_position_id = BEL_leopolds_reign
 		mutually_exclusive = { focus = BEL_leave_matters_to_parliment	}
-
+		mutually_exclusive = {focus = BEL_revolutionary_ideas}
 		cost = 10
 
 		ai_will_do = {
@@ -246,7 +246,8 @@ focus_tree = {
 		prerequisite = { focus = BEL_leopolds_reign }
 		relative_position_id = BEL_leopolds_reign
 		mutually_exclusive = { focus = BEL_quest_to_empower_the_monarchy	}
-
+		mutually_exclusive = {focus = BEL_revolutionary_ideas}
+		
 		cost = 10
 
 		ai_will_do = {
@@ -334,7 +335,37 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = BEL_revolutionary_ideas
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -4
+		y = 1
+		prerequisite = { focus = BEL_leopolds_reign }
+		relative_position_id = BEL_leopolds_reign
+		mutually_exclusive = { focus = BEL_leave_matters_to_parliment	}
+		mutually_exclusive = { focus = BEL_quest_to_empower_the_monarchy	}
+		cost = 10
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
 
 
 	focus = {
