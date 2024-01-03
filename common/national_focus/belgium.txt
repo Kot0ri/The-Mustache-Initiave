@@ -927,6 +927,96 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BEL_allied_investments
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_foreign_investments
+	prerequisite = { focus= BEL_foreign_investments }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_British_Market
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_allied_investments
+	prerequisite = { focus= BEL_allied_investments }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_French_Market
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 1
+	relative_position_id = BEL_allied_investments
+	prerequisite = { focus= BEL_allied_investments }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
 		id = BEL_development_in_the_Congo
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
