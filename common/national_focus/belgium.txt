@@ -398,6 +398,93 @@ has_government = neutrality
 		}
 	}
 
+	focus = {
+		id = BEL_Belgian_revanchism
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -1
+		y = 1
+		prerequisite = { focus = BEL_revolutionary_ideas }
+		relative_position_id = BEL_revolutionary_ideas
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_deal_with_the_divide
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_Belgian_revanchism }
+		relative_position_id = BEL_Belgian_revanchism
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_polticized_military
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_deal_with_the_divide }
+		relative_position_id = BEL_deal_with_the_divide
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
 
 	focus = {
 		id = BEL_leagacy_of_the_great_war
