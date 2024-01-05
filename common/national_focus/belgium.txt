@@ -675,7 +675,7 @@ has_government = neutrality
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			add_command_power = 10
-			add_
+			
 		}
 	}
 
