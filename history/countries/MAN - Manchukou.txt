@@ -10,6 +10,8 @@ set_technology = {
 
 set_research_slots = 3
 
+add_ideas = MAN_aisin_gioro_puyi
+
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
 	set_country_flag = MAN_northern_bandits
@@ -18,7 +20,6 @@ if = {
 	add_ideas = MAN_banditry
 	add_ideas = MAN_kwantung_veto
 	add_ideas = MAN_low_legitimacy_5
-	add_ideas = MAN_aisin_gioro_puyi
 	recruit_character = MAN_songgotu_zhanshan
 }
 
