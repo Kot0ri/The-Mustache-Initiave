@@ -2861,6 +2861,493 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HUN_reaffirm_territorial_claims_communist
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = HUN_the_revolutionary_council }
+		x = 0
+		y = 3
+		relative_position_id = HUN_the_revolutionary_council
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0.25
+				OR = {
+					YUG = {
+						is_in_faction = yes
+					}
+					ROM = {
+						is_in_faction = yes 
+					}					
+				}
+			}
+			modifier = {
+				factor = 4
+				is_in_faction = yes
+				NOT = {
+					OR = {
+						is_in_faction_with = GER
+						is_in_faction_with = ROM
+						is_in_faction_with = YUG
+					}
+				}
+			}
+		}
+
+		available = {
+			is_puppet = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_state_core = 76
+			add_state_core = 83
+			add_state_core = 84
+			add_state_core = 664
+			add_state_core = 45
+			add_state_core = 764
+			add_state_claim = 82
+		}
+	}
+
+	focus = {
+		id = HUN_demand_transylvania_communist
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus =  HUN_reaffirm_territorial_claims_communist }
+		x = -1
+		y = 1
+		relative_position_id = HUN_reaffirm_territorial_claims_communist
+		will_lead_to_war_with = ROM
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+			ROM = {
+				controls_state = 76
+				controls_state = 83
+				controls_state = 84
+			}
+			is_puppet = no
+			NOT = {
+				is_in_faction_with = ROM
+			}
+			NOT = {
+				has_war_with = ROM
+			}
+			strength_ratio = { tag = ROM ratio > 0.66 }
+			has_army_manpower = { size > 200000 }
+		
+		}
+
+		bypass = {
+			OR = {
+				664 = {
+					OWNER = {
+						has_war_with = ROOT
+					}
+				}
+				NOT = {
+					ROM = {
+						controls_state = 76
+						controls_state = 83
+						controls_state = 84
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {	
+			custom_effect_tooltip = HUN_demands_tt		
+			ROM = { country_event = { id = DOD_hungary.50 } }
+			hidden_effect = {
+				news_event = { id = news.300 }
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_demand_southern_slovakia_communist
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = HUN_reaffirm_territorial_claims_communist }
+		x = 1
+		y = 1
+		relative_position_id = HUN_reaffirm_territorial_claims_communist
+		will_lead_to_war_with = CZE
+		will_lead_to_war_with = SLO
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+			
+			if = {
+				limit = { 
+					country_exists = CZE 
+					664 = { is_owned_by = CZE }
+				}
+				strength_ratio = { tag = CZE ratio > 0.75 }
+			}
+			if = {
+				limit = { 
+					country_exists = SLO 
+					664 = { is_owned_by = SLO }
+				}
+				strength_ratio = { tag = SLO ratio > 0.75 }
+			}
+				
+			
+			has_army_manpower = { size > 120000 }
+		}
+
+		bypass = {
+			OR = {
+				owns_state = 664
+				664 = {
+					OWNER = {
+						has_war_with = ROOT
+					}
+				}
+				AND = {
+					NOT = { CZE = { owns_state = 664 } }
+					NOT = { SLO = { owns_state = 664 } }
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = HUN_demands_tt
+			if = {
+				limit = {
+					CZE = {
+						exists = yes 
+						owns_state = 664
+					}
+				}
+				if = {
+					limit = {
+						CZE = { is_subject = yes }
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = CZE
+						expire = 0
+						generator = { 664 }
+					}
+					else = {
+						CZE = { country_event = DOD_hungary.80 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					664 = { is_owned_by = POL } #exchanged Danzig for Slovakia
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = POL
+					expire = 0
+					generator = { 664 }
+				}
+			}
+			if = {
+				limit = {
+					SLO = { 
+						exists = yes 
+						owns_state = 664
+					}
+				}
+				SLO = { country_event = DOD_hungary.80 }
+			}
+			
+		}
+	}
+
+	focus = {
+		id = HUN_demand_the_vojvodina_communist
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = HUN_demand_transylvania_communist }
+		prerequisite = { focus = HUN_demand_southern_slovakia_communist }
+		x = 0
+		y = 2
+		relative_position_id = HUN_reaffirm_territorial_claims_communist
+		will_lead_to_war_with = YUG
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			strength_ratio = { tag = YUG ratio > 0.75 }
+			has_army_manpower = { size > 175000 }
+		}
+
+		bypass = {
+			OR = {
+				YUG = {
+					exists = no
+				}
+				owns_state = 45
+				45 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+				45 = {
+					OWNER = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = HUN_demands_tt
+			if = {
+				limit = {
+					OR = {
+						has_war_with = YUG
+						45 = {
+							NOT = {
+								is_owned_by = YUG
+								owner = { is_subject_of = YUG }
+							}
+						}
+					}
+				}
+				45 = { add_core_of = HUN }
+				else = {
+					if = {
+						limit = {
+							YUG = { 
+								is_subject = yes 
+								owns_state = 45
+							}
+						}
+						create_wargoal = {
+							type = take_state_focus
+							target = YUG
+							expire = 0
+							generator = { 45 }
+						}
+						else = {
+							if = {
+								limit = {
+									OR = {
+										45 = { is_owned_by = YUG }
+										45 = { owner = { is_subject_of = YUG } }
+									}
+								}
+								YUG = { country_event = DOD_hungary.90 }
+							}
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				news_event = { id = news.306 }
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_claim_overlordship_over_slovakia_communist
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = HUN_demand_southern_slovakia_communist }
+		x = 2
+		y = 2
+		relative_position_id = HUN_reaffirm_territorial_claims_communist
+		will_lead_to_war_with = SLO
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			OR = {
+				SLO = {
+					exists = yes
+					NOT = { is_puppet_of = HUN }
+				}
+				any_other_country = {
+					owns_state = 70
+					owns_state = 71
+					owns_state = 72
+					owns_state = 73
+					NOT = {
+						has_war_with = HUN
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = SLO }
+				strength_ratio = { tag = SLO ratio > 0.75 }
+				NOT = { has_war_with = SLO }
+			}
+			has_army_manpower = { size > 175000 }
+		}
+
+		bypass = {
+			OR = {
+				SLO = {
+					is_subject_of = HUN
+				}
+				AND = {
+					owns_state = 70
+					owns_state = 71
+					owns_state = 72
+					owns_state = 73
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = HUN_demands_tt
+			if = {
+				limit = {
+					70 = {
+						controller = {
+							NOT = {
+								has_war_with = ROOT
+							}
+						}
+					}
+					SLO = { exists = no } 
+					any_other_country = {
+						NOT = {
+							owns_state = 70
+							owns_state = 71
+							owns_state = 72
+							owns_state = 73
+						}
+					}
+				}
+				70 = {
+					controller = {
+						country_event = { id = DOD_hungary.100 hours = 5 } 
+					}
+				}
+			}
+			if = {
+				limit = {
+					SLO = {
+						exists = yes
+						is_puppet = no
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+				SLO = { country_event = { id = DOD_hungary.107 hours = 3 } }
+			}
+			if = {
+				limit = {
+					SLO = {
+						exists = yes
+						is_puppet = yes
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+				SLO = { OVERLORD = { country_event = { id = DOD_hungary.107 hours = 4 } } }
+			}
+			hidden_effect = {
+				news_event = { id = news.309 hours = 8 }
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_proclaim_greater_hungary_communist
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		prerequisite = { focus = HUN_demand_the_vojvodina_communist }
+		x = 0
+		y = 3
+		relative_position_id = HUN_reaffirm_territorial_claims_communist
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+			OR = {
+				owns_state = 664
+				owns_state = 73
+				owns_state = 76
+				owns_state = 84
+				owns_state = 83
+				owns_state = 82
+				owns_state = 45
+			}
+			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			custom_effect_tooltip = HUN_GREATER_tt
+			set_cosmetic_tag = HUN_GREATER
+			add_stability = 0.1
+			hidden_effect = {
+				news_event = { id = news.299 }
+			}
+		}
+	}
+
+	focus = {
 		id = HUN_pressure_romania
 		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = HUN_join_comintern }
@@ -2942,7 +3429,7 @@ focus_tree = {
 	focus = {
 		id = HUN_industrial_revitalization
 		icon = GFX_goal_generic_construction
-		x = 22
+		x = 26
 		y = 0
 
 		cost = 10
@@ -3822,7 +4309,7 @@ focus_tree = {
 	focus = {
 		id = HUN_secret_rearmament
 		icon = GFX_focus_secret_rearmament
-		x = 33
+		x = 37
 		y = 0
 
 		cost = 10
