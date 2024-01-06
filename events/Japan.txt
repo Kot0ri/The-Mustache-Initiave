@@ -223,6 +223,7 @@ country_event = {
 			MAN = { remove_ideas = MAN_kwantung_veto }
 		}
 		load_focus_tree = japan_communist_focus
+		remove_ideas = JAP_hirohito_2
 		start_civil_war = {
 			ruling_party = communism
 			ideology = ROOT
@@ -233,6 +234,7 @@ country_event = {
 				750 751 752
 			}
 		}
+		add_popularity = { ideology = communism popularity = 0.9 }
 		if = {
 			limit = {
 				any_state = {
@@ -252,16 +254,15 @@ country_event = {
 		set_state_controller = 609
 		set_state_controller = 524
 		load_focus_tree = japanese_exiles_focus
-	}
-		remove_ideas = JAP_hirohito_2
+	    }
 	}
 
 
-option = {
-	name = japan.24.d
-	ai_chance = {
-		base = 5
-	}
+    option = {
+	    name = japan.24.d
+	    ai_chance = {
+		    base = 5
+	    }
 	hidden_effect = {
 		if = {
 			limit = {
@@ -321,7 +322,7 @@ country_event = {
 		date = 1944.07.1
 		country_exists = JAP
 		has_government = fascism
-		has_war_with = ENG
+		has_war_with = ENG or USA
 	}
 
 	mean_time_to_happen = {
