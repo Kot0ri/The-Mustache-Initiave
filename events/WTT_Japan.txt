@@ -944,6 +944,27 @@ country_event = {
 			release = KOR
 			set_autonomy = { target = KOR autonomy_state = autonomy_free }
 		}
+		MAN = { puppet = KOR }
+		MAN = {
+			set_state_owner = 745
+			set_state_owner = 609
+			set_state_owner = 524
+			set_state_controller = 745
+			set_state_controller = 609
+			set_state_controller = 524
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.9 }
+			set_cosmetic_tag = MAN_restored
+			load_focus_tree = qing_restoration
+		}
+		MEN = {
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.9 }
+		}
+		KOR = {
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.9 }
+		}
 	}
 }
 
