@@ -1,5 +1,5 @@
 ﻿focus_tree = {
-	id = qing_restoration_focus
+	id = japanese_exiles_focus
 	
 	country = {
 		factor = 0
@@ -51,8 +51,8 @@
 #	}
 
 	focus = {
-		id = MAN_reclamation_campaign
-		icon = GFX_focus_jap_manchurian_project
+		id = MAN_imperial_exile
+		icon = GFX_focus_jap_pacific_guardian
 		x = 6
 		y = 0
 

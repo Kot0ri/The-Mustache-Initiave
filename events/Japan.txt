@@ -222,6 +222,7 @@ country_event = {
 			}
 			MAN = { remove_ideas = MAN_kwantung_veto }
 		}
+		load_focus_tree = japan_communist_focus
 		start_civil_war = {
 			ruling_party = communism
 			ideology = ROOT
@@ -250,7 +251,7 @@ country_event = {
 		set_state_controller = 745
 		set_state_controller = 609
 		set_state_controller = 524
-		load_focus_tree = qing_restoration
+		load_focus_tree = japanese_exiles_focus
 	}
 		remove_ideas = JAP_hirohito_2
 	}

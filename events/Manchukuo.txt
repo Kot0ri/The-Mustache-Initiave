@@ -1,0 +1,6 @@
+﻿###########################
+# Manchukuo Events
+###########################
+
+add_namespace = manchukuo
+

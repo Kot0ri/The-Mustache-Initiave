@@ -907,6 +907,7 @@ country_event = {
 	
 	option = {
 		name = wtt_japan.114.a
+		load_focus_tree = japan_democratic_focus
 		if = {
 			limit = {
 				MAN = { is_subject_of = ROOT }
@@ -955,7 +956,7 @@ country_event = {
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 			add_popularity = { ideology = neutrality popularity = 0.9 }
 			set_cosmetic_tag = MAN_restored
-			load_focus_tree = qing_restoration
+			load_focus_tree = qing_restoration_focus
 		}
 		MEN = {
 			set_politics = { ruling_party = neutrality elections_allowed = no }
