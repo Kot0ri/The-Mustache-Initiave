@@ -957,6 +957,7 @@ country_event = {
 			add_popularity = { ideology = neutrality popularity = 0.9 }
 			set_cosmetic_tag = MAN_restored
 			load_focus_tree = qing_restoration_focus
+			remove_ideas = MAN_banditry
 		}
 		MEN = {
 			set_politics = { ruling_party = neutrality elections_allowed = no }

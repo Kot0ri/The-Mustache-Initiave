@@ -259,7 +259,7 @@ country_event = {
 
 
     option = {
-	    name = japan.24.d
+	    name = japan.24.e
 	    ai_chance = {
 		    base = 5
 	    }
