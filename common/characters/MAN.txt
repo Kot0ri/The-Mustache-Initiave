@@ -58,7 +58,7 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 		}
-	}
+	
 	MAN_aisin_gioro_xiqia={
 		name=MAN_aisin_gioro_xiqia
 		portraits={
