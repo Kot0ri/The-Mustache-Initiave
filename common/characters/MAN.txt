@@ -407,4 +407,4 @@ characters={
 	# Generic War Industrialist generated in generic_advisors file
 
 
-}
+

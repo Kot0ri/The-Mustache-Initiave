@@ -412,6 +412,7 @@ characters={
 			expire="1960.1.1.1"
 				id=-1
 		}					
+	}
 
 	JAP_seishiro_itagaki={
 		name=JAP_seishiro_itagaki
