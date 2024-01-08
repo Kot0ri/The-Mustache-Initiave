@@ -3341,6 +3341,9 @@ focus_tree = {
 			custom_effect_tooltip = HUN_GREATER_tt
 			set_cosmetic_tag = HUN_GREATER
 			add_stability = 0.1
+			add_state_core = 73
+			add_state_core = 71
+			add_state_core = 70
 			hidden_effect = {
 				news_event = { id = news.299 }
 			}
@@ -4230,7 +4233,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = HUN_synthetic_industry
 				bonus = 3.0
-				uses = 1
+				uses = 3
 				category = synth_resources
 			}
 		}
@@ -4269,10 +4272,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_synthetic_industry_AF1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
