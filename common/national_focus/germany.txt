@@ -2224,6 +2224,10 @@ focus_tree = {
 			factor = 1
 		}
 
+		available = {
+			has_war = yes
+		}
+
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER  FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
@@ -5969,6 +5973,29 @@ focus_tree = {
 				category = ca_tech
 			}
 		}
+	}
+
+	focus = {
+		id = GER_Kreigsmarine_field_command
+		text = naval_effort
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = GER_naval_rearmament }
+		x = 1
+		y = 2
+		relative_position_id = GER_naval_rearmament
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = yes
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+		
+	}
 	}
 
 	focus = {
