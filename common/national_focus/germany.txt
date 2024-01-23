@@ -10546,6 +10546,93 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_prepare_a_military_coup
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -6.0
+		y = 10
+		relative_position_id = GER_army_innovation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = fascism
+			has_government = communism
+	
+		}
+		allow_branch = {
+			has_government = fascism
+			has_government = communism
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		mutually_exclusive = {
+			focus = GER_expand_the_SS
+		}
+		completion_reward = {
+	
+			}
+		}
+
+		focus = {
+			id = GER_recruit_memebers_of_high_command
+			icon = GFX_goal_generic_axis_build_infantry
+			x = -1.0
+			y = 1
+			relative_position_id = GER_prepare_a_military_coup
+			prerequisite = {focus = GER_prepare_a_military_coup}
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_government = fascism
+				has_government = communism
+		
+			}
+			allow_branch = {
+			
+			}
+	
+			available_if_capitulated = yes
+			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
+		
+			completion_reward = {
+		
+				}
+			}
+
+			focus = {
+				id = GER_junior_officer_recruiment
+				icon = GFX_goal_generic_axis_build_infantry
+				x = 1.0
+				y = 1
+				relative_position_id = GER_prepare_a_military_coup
+				prerequisite = {focus = GER_prepare_a_military_coup}
+				cost = 5
+				ai_will_do = {
+					factor = 1
+				}
+				available = {
+					has_government = fascism
+					has_government = communism
+			
+				}
+				allow_branch = {
+				
+				}
+		
+				available_if_capitulated = yes
+				search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
+			
+				completion_reward = {
+			
+					}
+				}
+
+	focus = {
 		id = GER_expand_the_SS
 		icon = GFX_goal_generic_axis_build_infantry
 		x = -1.0
@@ -10558,6 +10645,12 @@ focus_tree = {
 		available = {
 			has_government = fascism
 		}
+		allow_branch = {
+			has_government = fascism
+		}
+		mutually_exclusive = {
+			focus = GER_prepare_a_military_coup
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10565,6 +10658,7 @@ focus_tree = {
 	
 			}
 		}
+
 		focus = {
 			id = GER_take_over_all_policing_duties
 			icon = GFX_goal_generic_axis_build_infantry
@@ -10656,6 +10750,50 @@ focus_tree = {
 				
 						}
 					}
+
+					focus = {
+						id = GER_rivialry_with_the_military
+						icon = GFX_goal_generic_axis_build_infantry
+						x = -2
+						y = 1
+						relative_position_id = GER_formilize_command_structures
+						cost = 5
+						ai_will_do = {
+							factor = 1
+						}
+						available = {
+							has_government = fascism
+						}
+				
+						available_if_capitulated = no
+						prerequisite = {focus = GER_formilize_command_structures }
+						search_filters = { FOCUS_FILTER_POLITICAL }
+						completion_reward = {
+					
+							}
+						}
+
+						focus = {
+							id = GER_prepare_a_coup
+							icon = GFX_goal_generic_axis_build_infantry
+							x = 0
+							y = 1
+							relative_position_id = GER_rivialry_with_the_military
+							cost = 5
+							ai_will_do = {
+								factor = 1
+							}
+							available = {
+								has_government = fascism
+							}
+					
+							available_if_capitulated = no
+							prerequisite = {focus = GER_rivialry_with_the_military }
+							search_filters = { FOCUS_FILTER_POLITICAL }
+							completion_reward = {
+						
+								}
+							}
 
 					focus = {
 						id = GER_expand_combat_roles
