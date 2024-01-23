@@ -10631,6 +10631,33 @@ focus_tree = {
 			
 					}
 				}
+				focus = {
+					id = GER_Valkyrie_plot
+					icon = GFX_goal_generic_axis_build_infantry
+					x = 0
+					y = 1
+					relative_position_id = GER_junior_officer_recruiment
+					prerequisite = {focus = GER_junior_officer_recruiment}
+					cost = 5
+					ai_will_do = {
+						factor = 1
+					}
+					available = {
+						has_government = fascism
+						has_government = communism
+				
+					}
+					allow_branch = {
+					
+					}
+			
+					available_if_capitulated = yes
+					search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
+				
+					completion_reward = {
+				
+						}
+					}
 
 	focus = {
 		id = GER_expand_the_SS
