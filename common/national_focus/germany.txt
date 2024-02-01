@@ -2897,7 +2897,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		available = {
+			has_war = yes
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -3126,6 +3128,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_war_with_major = yes
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL}
@@ -3188,6 +3193,9 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			has_war = no
 		}
 
 		available_if_capitulated = yes
@@ -3289,7 +3297,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		available = {
+			has_war = yes
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH Focus}
 		completion_reward = {
@@ -3390,7 +3400,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		available = {
+			has_war_with_major = yes
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH Focus}
 		completion_reward = {
@@ -3616,7 +3628,7 @@ focus_tree = {
 			}
 		}
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = GER_mol_rib_pact
 		cost = 10
 		ai_will_do = {
@@ -4037,7 +4049,7 @@ focus_tree = {
 			is_subject = no
 		}
 		x = 1
-		y = 4
+		y = 5
 		relative_position_id = GER_anti_comitern_pact
 		cost = 10
 		historical_ai = {
@@ -10649,13 +10661,42 @@ focus_tree = {
 					}
 				}
 
+				
 				focus = {
-					id = GER_Valkyrie_plot
+					id = GER_garner_support_from_objecters
 					icon = GFX_goal_generic_axis_build_infantry
 					x = 0
 					y = 1
 					relative_position_id = GER_junior_officer_recruiment
 					prerequisite = {focus = GER_junior_officer_recruiment}
+					cost = 5
+					ai_will_do = {
+						factor = 1
+					}
+					available = {
+						has_government = fascism
+						has_government = communism
+				
+					}
+					allow_branch = {
+					
+					}
+			
+					available_if_capitulated = yes
+					search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
+				
+					completion_reward = {
+				
+						}
+					}
+
+				focus = {
+					id = GER_Valkyrie_plot
+					icon = GFX_goal_generic_axis_build_infantry
+					x = 0
+					y = 1
+					relative_position_id = GER_garner_support_from_objecters
+					prerequisite = {focus = GER_garner_support_from_objecters}
 					cost = 5
 					ai_will_do = {
 						factor = 1
