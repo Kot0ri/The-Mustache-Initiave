@@ -5438,6 +5438,7 @@ focus_tree = {
 	focus = {
 		id = GER_operation_sonnenblume
 		icon = GFX_goal_generic_major_alliance
+		cost = 2
 		x = 1
 		y = 2
 		prerequisite = { focus = GER_italy_ally }
@@ -10647,6 +10648,7 @@ focus_tree = {
 			
 					}
 				}
+
 				focus = {
 					id = GER_Valkyrie_plot
 					icon = GFX_goal_generic_axis_build_infantry
@@ -10674,6 +10676,34 @@ focus_tree = {
 				
 						}
 					}
+
+					focus = {
+						id = GER_garner_more_support_in_veteran_divisons
+						icon = GFX_goal_generic_axis_build_infantry
+						x = 0
+						y = 1
+						relative_position_id = GER_recruit_memebers_of_high_command
+						prerequisite = {focus = GER_recruit_memebers_of_high_command}
+						cost = 5
+						ai_will_do = {
+							factor = 1
+						}
+						available = {
+							has_government = fascism
+							has_government = communism
+					
+						}
+						allow_branch = {
+						
+						}
+				
+						available_if_capitulated = yes
+						search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
+					
+						completion_reward = {
+					
+							}
+						}
 
 	focus = {
 		id = GER_expand_the_SS
