@@ -10841,6 +10841,30 @@ focus_tree = {
 					}
 				}
 
+				
+			focus = {
+				id = GER_form_the_werewolfs
+				icon = GFX_goal_generic_axis_build_infantry
+				x = 0
+				y = 1
+				relative_position_id = GER_form_the_sonderkommandos
+				cost = 5
+				ai_will_do = {
+					factor = 1
+				}
+				available = {
+					has_government = fascism
+					has_war_with_major = yes
+				}
+		
+				available_if_capitulated = yes
+				prerequisite = {focus = GER_form_the_sonderkommandos }
+				search_filters = { FOCUS_FILTER_MILITARY }
+				completion_reward = {
+			
+					}
+				}
+
 				focus = {
 					id = GER_formilize_command_structures
 					icon = GFX_goal_generic_axis_build_infantry
