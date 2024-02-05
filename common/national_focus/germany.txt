@@ -3495,6 +3495,7 @@ focus_tree = {
 					technology = mechanised_infantry
 					technology = motorised_infantry
 				}
+				add_ideas = GER_NSSK_expansion
 			}
 		}
 
