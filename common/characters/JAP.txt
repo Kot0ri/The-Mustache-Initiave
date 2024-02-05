@@ -23,7 +23,7 @@ characters={
 		}
 		country_leader={
 			ideology=showa_statism
-			traits={ military_officer }
+			traits={ military_officer militarist_democrat }
 			expire="1989.1.1.1"
 			id=-1
 		}

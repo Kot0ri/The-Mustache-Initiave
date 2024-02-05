@@ -11,7 +11,7 @@ focus_tree = {
 
 
 
-default = no
+default = yes
 
 continuous_focus_position = { x = 20 y = 1200 }
 

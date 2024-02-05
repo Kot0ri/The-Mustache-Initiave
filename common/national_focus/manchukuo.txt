@@ -6,12 +6,11 @@
 		modifier = {
 			add = 10
 			tag = MAN
-			has_dlc = "Waking the Tiger"
 		}
 	}
 	
 
-	default = no
+	default = yes
 
 	continuous_focus_position = { x = 20 y = 1600 }
 
@@ -355,7 +354,7 @@
 	}
 
 	focus = {
-		id = MAN_imperial_judicial_court_system
+		id = MAN_rise_of_the_manchurian_sun
 		icon = GFX_focus_research
 		prerequisite = { focus = MAN_code_of_manchurian_laws }
 		x = 0
@@ -1379,7 +1378,7 @@
 		y = 4
 		relative_position_id = MAN_modernise_the_industrial_sector
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -1443,7 +1442,6 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
 		}
 	}
 
@@ -1510,7 +1508,6 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
 		}
 	}
 
@@ -1545,6 +1542,7 @@
 	
 		completion_reward = {
 			puppet = MEN
+			add_political_power = 200
 		}
 	}
 
@@ -1556,7 +1554,7 @@
 		y = 1
 		relative_position_id = MAN_gather_the_clans
 
-		cost = 3
+		cost = 5
 	
 		ai_will_do = {
 			factor = 1
@@ -1623,7 +1621,6 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
 		}
 	}
 
@@ -1834,7 +1831,7 @@
 		y = 2
 		relative_position_id = MAN_isolate_the_kwantung_army
 
-		cost = 3
+		cost = 5
 	
 		ai_will_do = {
 			factor = 1
@@ -1858,6 +1855,9 @@
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 			add_timed_idea = { idea = MAN_qing_nostalgia days = 90 }
 			remove_ideas = MAN_aisin_gioro_puyi
+			set_capital = {
+				state = 716
+			}
 		}
 	}
 
@@ -1865,7 +1865,7 @@
 		id = MAN_dissolve_the_concordia_association
 		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_install_imperial_government }
-		x = -1.5
+		x = -1
 		y = 1
 		relative_position_id = MAN_install_imperial_government
 
@@ -1899,7 +1899,7 @@
 		id = MAN_recall_pujie_from_japan
 		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_install_imperial_government }
-		x = 1.5
+		x = 1
 		y = 1
 		relative_position_id = MAN_install_imperial_government
 
@@ -1957,7 +1957,7 @@
 		
 	
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = -0.1
 		}
 	}
 
@@ -1965,11 +1965,13 @@
 		id = MAN_restore_imperial_integrity
 		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_purge_the_council_of_general_affairs }
+		prerequisite = { focus = MAN_dissolve_the_concordia_association }
+		prerequisite = { focus = MAN_recall_pujie_from_japan }
 		x = 0
 		y = 1
 		relative_position_id = MAN_purge_the_council_of_general_affairs
 
-		cost = 3
+		cost = 5
 	
 		ai_will_do = {
 			factor = 1
