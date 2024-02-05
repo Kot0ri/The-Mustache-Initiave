@@ -710,7 +710,7 @@ ideas = {
 			}
 		}
 
-		GER_NSSK_expansion = {
+		GER_NSKK_expansion = {
 			allowed = {
 				always = no
 			}
