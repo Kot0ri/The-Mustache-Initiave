@@ -94,6 +94,8 @@ leader_traits = {
 		}
 	}
 
+	##Custom Traits##
+
 	emperor_showa = {
 		random = no
 		stability_factor = 0.6 #FOR THE EMPERAH
@@ -105,7 +107,43 @@ leader_traits = {
 
 	emperor_kangde = {
 		random = no
-		stability_factor = 0.4 #HM PUYI
+		stability_factor = 0.4 #HM PUYI (Manchukuo Path)
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	son_of_heaven = {
+		random = no
+		stability_factor = 0.4 #HM PUYI (Base Trait)
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lord_of_ten_thousand_years = {
+		random = no
+		stability_factor = 0.4 #HM PUYI (Base Trait)
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	xuantong_emperor = {
+		random = no
+		stability_factor = 0.4 #HM PUYI (Qing Traditonalism Path)
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	monarch_reformer = {
+		random = no
+		stability_factor = 0.4 #HM PUYI (Manchurian Constitutionalism Path)
 
 		ai_will_do = {
 			factor = 1
@@ -114,7 +152,7 @@ leader_traits = {
 
 	militarist_democrat = {
 		random = no
-		democratic_acceptance = 100
+		democratic_acceptance = 100 ##Okada Keisuke
 		democratic_drift = 0.02
 
 		ai_will_do = {
@@ -130,6 +168,8 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	##End Of Custom Traits##
 
 	ww_one_trauma = {
 		random = no

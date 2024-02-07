@@ -1480,7 +1480,7 @@
 	}
 
 	focus = {
-		id = MAN_eradicate_fascism
+		id = MAN_anti_japanese_laws
 		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_lobby_for_international_recognition }
 		x = -1
@@ -1514,7 +1514,7 @@
 	focus = {
 		id = MAN_royal_visit_to_chahar
 		icon = GFX_focus_jap_manchurian_project
-		prerequisite = { focus = MAN_eradicate_fascism }
+		prerequisite = { focus = MAN_anti_japanese_laws }
 		prerequisite = { focus = MAN_appeal_to_white_russians }
 		x = -1
 		y = 1
@@ -1700,7 +1700,7 @@
 	}
 
 	focus = {
-		id = MAN_support_the_manchukuo_imperial_guards
+		id = MAN_empower_the_imperial_guards
 		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_reassert_a_royalist_agenda }
 		x = -1
@@ -1776,7 +1776,7 @@
 	focus = {
 		id = MAN_recruit_anti-japanese_holdouts
 		icon = GFX_focus_jap_manchurian_project
-		prerequisite = { focus = MAN_support_the_manchukuo_imperial_guards }
+		prerequisite = { focus = MAN_empower_the_imperial_guards }
 		prerequisite = { focus = MAN_enforce_a_manchurian_identity }
 		x = -1
 		y = 1
@@ -1825,7 +1825,7 @@
 		id = MAN_install_imperial_government
 		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_isolate_the_kwantung_army }
-		prerequisite = { focus = MAN_eradicate_fascism }
+		prerequisite = { focus = MAN_anti_japanese_laws }
 		prerequisite = { focus = MAN_enforce_a_manchurian_identity }
 		x = 0
 		y = 2
@@ -1962,7 +1962,7 @@
 	}
 
 	focus = {
-		id = MAN_restore_imperial_integrity
+		id = MAN_restore_manchurian_integrity
 		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = MAN_purge_the_council_of_general_affairs }
 		prerequisite = { focus = MAN_dissolve_the_concordia_association }

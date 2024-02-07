@@ -1,0 +1,236 @@
+
+MAN_power_balance = {
+	initial_value = 0.35
+	left_side = MAN_imperial_household_side
+	right_side = MAN_kwantung_army_side
+	decision_category = MAN_balance_of_power_category
+	
+
+	### Neutral status
+	range = {
+		id = MAN_balance_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+		}
+		on_activate = {
+
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	### Puyi
+	side = {
+		id = MAN_imperial_household_side	
+		icon = GFX_focus_jap_manchurian_project
+
+		range = {
+			id = MAN_imperial_household_low_control_range
+			min = -0.3
+			max = -0.1
+			modifier = {
+				political_advisor_cost_factor = -0.1
+			}
+			on_activate = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader = {
+								character = MAN_aisin_gioro_puyi
+							}
+						}
+					}
+					promote_character = {
+						character = MAN_aisin_gioro_puyi
+						ideology = neutrality
+					}
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = MAN_imperial_household_medium_control_range
+			min = -0.6
+			max = -0.3
+			modifier = {
+				political_advisor_cost_factor = -0.15
+				offensive_war_stability_factor = -0.1
+				war_support_factor = -0.05
+			}
+			on_activate = {
+				custom_effect_tooltip = ITA_bop_cap_for_colonies_impact_tt
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = MAN_imperial_household_high_control_range
+			min = -0.9
+			max = -0.6
+			modifier = {
+				political_advisor_cost_factor = -0.2
+				offensive_war_stability_factor = -0.15
+				war_support_factor = -0.1
+			}
+			on_activate = {
+				#Depose the Duce or whoever is in charge because the dude sucks at it
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader = {
+								character = ITA_grand_council
+								ruling_only = yes
+							}
+						}
+						NOT = { has_completed_focus = ITA_crush_opposition }
+					}
+					hidden_effect = {
+						country_event = BBA_italy_council_deposes_duce.1
+					}
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = MAN_imperial_household_total_control_range
+			min = -1
+			max = -0.9
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				offensive_war_stability_factor = -0.2
+				war_support_factor = -0.15
+			}
+			on_activate = {
+				if = {
+					limit = {
+						NOT = { has_completed_focus = ITA_crush_opposition }
+					}
+					hidden_effect = {
+						country_event = BBA_italy_civil_war.1
+					}
+					
+					effect_tooltip = {
+						start_civil_war = {
+							ideology = neutrality
+							size = 0.5
+						}
+					}
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}
+
+	### Kwantung Army
+	side = {
+		id = MAN_kwantung_army_side	
+		icon = GFX_focus_jap_pacific_guardian
+
+		range = {
+			id = MAN_kwantung_army_low_control_range
+			min = 0.1
+			max = 0.3
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.01
+				stability_factor = 0.01
+			}
+			on_activate = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader = {
+								character = MAN_songgotu_zhanshan
+							}
+						}
+					}
+					promote_character = {
+						character = MAN_songgotu_zhanshan
+						ideology = fascism
+					}
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}	
+	}
+
+	range = {
+		id = MAN_kwantung_army_medium_control_range
+		min = 0.3
+		max = 0.6
+		modifier = {
+			political_power_factor = 0.07
+			war_support_factor = 0.02
+			stability_factor = 0.02
+		}
+		on_activate = {
+			
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	range = {
+		id = MAN_kwantung_army_high_control_range
+		min = 0.6
+		max = 0.9
+		modifier = {
+			political_power_factor = 0.1
+			war_support_factor = 0.03
+			stability_factor = 0.03
+			experience_gain_army = -0.05
+			experience_gain_air = -0.05
+			experience_gain_navy = -0.05
+		}
+		on_activate = {
+			
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	range = {
+		id = MAN_kwantung_army_total_control_range
+		min = 0.9
+		max = 1
+		modifier = {
+			political_power_factor = 0.15
+			war_support_factor = 0.05
+			stability_factor = 0.05
+			experience_gain_army = -0.05
+			experience_gain_air = -0.05
+			experience_gain_navy = -0.05
+		}
+		on_activate = {
+			set_power_balance_gfx = {
+				id = MAN_power_balance
+				side = MAN_kwantung_army_side
+				gfx = GFX_focus_jap_pacific_guardian
+			}
+		}
+		on_deactivate = {
+			set_power_balance_gfx = {
+				id = MAN_power_balance
+				side = MAN_imperial_household_side
+				gfx = GFX_focus_jap_manchurian_project
+			}
+		}
+	}
+
+}

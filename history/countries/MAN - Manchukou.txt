@@ -24,6 +24,7 @@ if = {
 }
 
 recruit_character = MAN_aisin_gioro_puyi
+recruit_character = MAN_empress_wanrong
 recruit_character = MAN_zhang_haipeng
 recruit_character = MAN_zhang_jinghui
 recruit_character = MAN_aisin_gioro_xiqia
@@ -64,6 +65,12 @@ set_convoys = 5
 }
 761 = { #Hulunbuir
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+
+set_power_balance = {
+    id = MAN_power_balance
+	right_side = default_right_side
+    set_value = 0.3
 }
 
 1939.1.1 = {

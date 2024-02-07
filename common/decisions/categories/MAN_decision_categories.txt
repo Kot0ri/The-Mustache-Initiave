@@ -22,7 +22,21 @@ MAN_war_preparations = {
 	}
 
 	visible = {
-		has_completed_focus = MAN_assertiveness
+		has_completed_focus = MAN_gather_the_clans
 	}
 
+}
+
+MAN_balance_of_power_category = {
+	icon = GFX_decision_category_power_struggle
+	
+	allowed = {
+		original_tag = MAN
+	}
+	
+	priority = 90
+	
+	visible = {
+		
+	}
 }

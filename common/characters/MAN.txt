@@ -400,7 +400,31 @@ characters={
 		}
 	}
 	### POLITICAL ADVISORS ###
-
+	MAN_empress_wanrong={
+		name=MAN_gobulo_wanrong
+		portraits={
+			civilian = {
+				large="GFX_portrait_man_yoshiko_kawashima"
+				small="GFX_idea_MAN_yoshiko_kawashima"
+			}
+		}
+		gender = female
+		advisor = {
+			slot = political_advisor
+			idea_token = MAN_gobulo_wanrong
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_completed_focus = MAN_restore_manchurian_integrity
+			}
+			cost = 150
+			traits = { economist }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 	# Girgory Semyonov in Soviet file
 	# Generic Captain of Industry generated in generic_advisors file
 	# Generic Fortification Engineer generated in generic_advisors file
