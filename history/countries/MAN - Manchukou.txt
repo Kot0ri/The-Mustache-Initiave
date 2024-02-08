@@ -70,7 +70,7 @@ set_convoys = 5
 set_power_balance = {
     id = MAN_power_balance
 	right_side = default_right_side
-    set_value = 0.3
+    set_value = 0.6
 }
 
 1939.1.1 = {
