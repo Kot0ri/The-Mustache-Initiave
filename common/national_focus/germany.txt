@@ -2882,6 +2882,7 @@ focus_tree = {
 					technology = antitank3
 					technology = antiair5
 				}
+				add_ideas = GER_Heavy_flak
 			}
 		}
 	}
@@ -10766,6 +10767,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = fascism
+			has_completed_focus = GER_rhineland
 		}
 		allow_branch = {
 			has_government = fascism

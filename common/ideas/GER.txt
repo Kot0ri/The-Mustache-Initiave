@@ -737,6 +737,30 @@ ideas = {
 			}
 		}
 
+		GER_Heavy_flak = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			equipment_bonus = {
+				anti_air_equipment_3 = {
+					hg_armor_piercing = 0.15
+				}
+				
+			}
+		}
+
 		GER_pool_technical_know_how = {
 			allowed = {
 				always = no
