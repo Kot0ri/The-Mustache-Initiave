@@ -21,6 +21,7 @@ recruit_character = MEN_yonimitsu_kasahara
 recruit_character = MEN_nalan_kang_an
 recruit_character = MEN_songgotu_zhanshan
 recruit_character = MEN_megata_toshiro
+recruit_character = MEN_serengdongrub
 
 1939.1.1 = {
 

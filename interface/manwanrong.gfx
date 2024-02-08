@@ -1,0 +1,91 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_report_event_forbidden"
+		texturefile = "gfx/event_pictures/report_event_forbidden.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_gobulo_wanrong"
+		texturefile = "gfx/interface/ideas/idea_man_gobulo_wanrong.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_aisin_gioro_pujie"
+		texturefile = "gfx/interface/ideas/idea_man_aisin_gioro_pujie.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_yoshiko_kawashima"
+		texturefile = "gfx/interface/ideas/idea_man_yoshiko_kawashima.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_zhang_jinghui"
+		texturefile = "gfx/interface/ideas/idea_man_zhang_jinghui.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_aisin_gioro_xiqia"
+		texturefile = "gfx/interface/ideas/idea_man_aisin_gioro_xiqia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_zhang_haipeng"
+		texturefile = "gfx/interface/ideas/idea_man_zhang_haipeng.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_wanrong_opium"
+		texturefile = "gfx/interface/ideas/idea_man_wanrong_opium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_man_Generic_general"
+		texturefile = "gfx/leaders/MAN/Portrait_man_Generic_general.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_man_Urzhin_Garmaev"
+		texturefile = "gfx/leaders/MAN/portrait_man_Urzhin_Garmaev.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_man_Aisin_Gioro_Pujie"
+		texturefile = "gfx/leaders/MAN/portrait_man_Aisin_Gioro_Pujie.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_yoshiko_kawashima_general"
+		texturefile = "gfx/leaders/MAN/portrait_yoshiko_kawashima_general.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_li_shouxin"
+		texturefile = "gfx/leaders/MEN/portrait_MEN_Li_Shouxin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_man_cold"
+		texturefile = "gfx/interface/ideas/idea_man_cold.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_MAN_capital"
+		texturefile = "gfx/interface/goals/goal_MAN_capital.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_MAN_flag_qing"
+		texturefile = "gfx/interface/goals/goal_MAN_flag_qing.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_focus_attack_soviet"
+		texturefile = "gfx/interface/goals/focus_attack_soviet.dds"
+	}
+}
+
+#portrait_MEN_Li_Shouxin
+
+focus_attack_soviet

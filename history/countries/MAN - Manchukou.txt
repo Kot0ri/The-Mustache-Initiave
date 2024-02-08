@@ -41,6 +41,22 @@ recruit_character = MAN_hesehn_tiemei
 recruit_character = MAN_xian_yuan
 recruit_character = MAN_guan_xingde
 recruit_character = MAN_megata_toshiro
+##Add later
+recruit_character = MAN_ma_zhanshan
+recruit_character = MAN_zheng_xiaoxu
+recruit_character = MAN_yu_zhishan
+recruit_character = MAN_sun_quichang
+recruit_character = MAN_ruan_zhenduo
+recruit_character = MAN_lu_ronghuan
+recruit_character = MAN_yuan_jinkai
+recruit_character = MAN_zang_shiyi
+recruit_character = MAN_zhou_baozhong
+recruit_character = MAN_feng_zhongyun
+recruit_character = MAN_Peng_Shuzhi
+recruit_character = MAN_aisin_gioro_pujie
+recruit_character = MAN_aisin_gioro_zaixun
+recruit_character = MAN_aisin_gioro_zaitao
+#recruit_character = JAP_kenji_doihara
 if = {
 	limit = { has_dlc = "No Step Back" }
 	recruit_character = SOV_grigory_semyonov
