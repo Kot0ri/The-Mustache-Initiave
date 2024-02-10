@@ -104,7 +104,118 @@ focus = {
 	
 
 	completion_reward = {
-		add_stability = 0.1
+		army_experience = 25
+	}
+}
+
+focus = {
+	id = JAP_army_modernization_effort
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_imperial_japanese_army }
+	x = 1
+	y = 1
+	relative_position_id = JAP_imperial_japanese_army
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.3
+			uses = 2
+			category = land_doctrine
+		}
+	}
+}
+
+focus = {
+	id = JAP_improve_weapons_designs
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_army_modernization_effort }
+	x = 0
+	y = 1
+	relative_position_id = JAP_army_modernization_effort
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = infantry_tech
+		}
+	}
+}
+
+focus = {
+	id = JAP_mechanization_project
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_improve_weapons_designs }
+	x = 0
+	y = 1
+	relative_position_id = JAP_improve_weapons_designs
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = infantry_tech
+		}
 	}
 }
 
@@ -135,7 +246,7 @@ focus = {
 	
 
 	completion_reward = {
-		add_stability = 0.1
+		air_experience = 25
 	}
 }
 
@@ -143,6 +254,7 @@ focus = {
 	id = JAP_imperial_japanese_army_air_service
 	icon = GFX_focus_jap_pacific_guardian
 	prerequisite = { focus = JAP_imperial_japanese_air_service }
+	prerequisite = { focus = JAP_army_modernization_effort }
 	x = -1
 	y = 1
 	relative_position_id = JAP_imperial_japanese_air_service
@@ -232,7 +344,7 @@ focus = {
 	
 
 	completion_reward = {
-		add_stability = 0.1
+		air_experience = 25
 	}
 }
 
