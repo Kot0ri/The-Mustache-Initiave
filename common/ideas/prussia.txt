@@ -28,7 +28,7 @@ ideas = {
 				max_command_power = 25
 				justify_war_goal_time = -0.5
 			}
-	}
+	
 	
 		PRE_Legacy_of_the_Teutonic_Order	= {
 			picture = tfv_can_conscription_crisis
@@ -48,7 +48,7 @@ ideas = {
 				army_cavalry_attack_factor = 0.5
 				army_cavalry_breakthrough_factor = 0.5
 			}
-
+		
 			PRE_Hohenzollern_Legacy	= {
 				picture = tfv_can_conscription_crisis
 	
@@ -439,4 +439,5 @@ ideas = {
 		}
 
 	}
+}
 }
