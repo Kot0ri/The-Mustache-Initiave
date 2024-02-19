@@ -318,6 +318,106 @@ focus = {
 }
 
 focus = {
+	id = JAP_improve_carrier_fighters
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_imperial_japanese_navy_air_service }
+	x = 0
+	y = 2
+	relative_position_id = JAP_imperial_japanese_navy_air_service
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_strike_aircraft
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_imperial_japanese_navy_air_service }
+	prerequisite = { focus = JAP_imperial_japanese_army_air_service }
+	x = -1
+	y = 1
+	relative_position_id = JAP_imperial_japanese_navy_air_service
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_improve_bombing_capabilites
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_imperial_japanese_army_air_service }
+	x = 0
+	y = 2
+	relative_position_id = JAP_imperial_japanese_army_air_service
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
 	id = JAP_imperial_japanese_navy
 	icon = GFX_focus_jap_pacific_guardian
 	x = 26
