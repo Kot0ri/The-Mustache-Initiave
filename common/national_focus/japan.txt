@@ -105,6 +105,82 @@ focus = {
 
 	completion_reward = {
 		army_experience = 25
+		set_technology = { bicycle_infantry = 1 }
+	}
+}
+
+focus = {
+	id = JAP_army_expansion_law
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { focus = JAP_imperial_japanese_army }
+	x = -1
+	y = 1
+	relative_position_id = JAP_imperial_japanese_army
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			has_completed_focus = JAP_support_the_kodoha_faction
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+
+	completion_reward = {
+		army_experience = 30
+		add_manpower = 50000
+		custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = hajime_sugiyama
+	}
+}
+
+focus = {
+	id = JAP_supremacy_of_will
+	icon = GFX_goal_demand_sudetenland
+	prerequisite = { focus = JAP_army_expansion_law }
+	x = 0
+	y = 1
+	relative_position_id = JAP_army_expansion_law
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			has_completed_focus = JAP_support_the_kodoha_faction
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+
+	completion_reward = {
+		add_ideas = JAP_superior_will
 	}
 }
 
@@ -280,7 +356,12 @@ focus = {
 	
 
 	completion_reward = {
-		add_stability = 0.1
+		add_tech_bonus = {
+			name = JAP_fighter_modernization
+			bonus = 1.0
+			uses = 1
+			category = cat_heavy_fighter	
+		}
 	}
 }
 
@@ -313,7 +394,12 @@ focus = {
 	
 
 	completion_reward = {
-		add_stability = 0.1
+		add_tech_bonus = {
+			name = JAP_fighter_modernization
+			bonus = 1.0
+			uses = 1
+			category = light_fighter		
+		}
 	}
 }
 
@@ -346,12 +432,86 @@ focus = {
 	
 
 	completion_reward = {
-		add_stability = 0.1
+		IF = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}	
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = JAP_mitsubishi_organization
+			mio:JAP_mitsubishi_organization = {
+				add_mio_funds = 1500
+			}
+		}
+		ELSE = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = mitsubishi
+		}
 	}
 }
 
 focus = {
-	id = JAP_strike_aircraft
+	id = JAP_the_zero
+	icon = GFX_focus_jap_zero
+	prerequisite = { focus = JAP_improve_carrier_fighters}
+	x = 0
+	y = 1
+	relative_position_id = JAP_improve_carrier_fighters
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			has_completed_focus = JAP_purge_the_kodoha_faction
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		has_tech = cv_fighter2
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		custom_effect_tooltip = JAP_the_zero_tt
+		hidden_effect = { 
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				set_technology = { cv_fighter2 = 1 } 
+			}
+			else = {
+				create_equipment_variant = {
+					name = "A6M Zero-Sen"
+					type = cv_small_plane_airframe_2
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+					modules = {
+						fixed_main_weapon_slot = light_mg_2x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = drop_tanks
+						special_type_slot_2 = fuel_tanks_small
+					}
+					icon = "GFX_JAP_cv_fighter2_medium"
+				}
+			}
+		}
+	}
+}
+
+focus = {
+	id = JAP_strike_aircraft_development
 	icon = GFX_focus_jap_pacific_guardian
 	prerequisite = { focus = JAP_imperial_japanese_navy_air_service }
 	prerequisite = { focus = JAP_imperial_japanese_army_air_service }
@@ -381,6 +541,75 @@ focus = {
 
 	completion_reward = {
 		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_unified_fighter_development
+	icon = GFX_goal_generic_air_fighter
+	prerequisite = { focus = JAP_strike_aircraft_development }
+	x = 0
+	y = 3
+	relative_position_id = JAP_strike_aircraft_development
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		remove_ideas = JAP_duplicate_research_efforts
+	}
+}
+
+focus = {
+	id = JAP_jet_prototypes
+	icon = GFX_goal_generic_build_airforce
+	prerequisite = { focus = JAP_unified_fighter_development }
+	x = 0
+	y = 1
+	relative_position_id = JAP_unified_fighter_development 
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		add_tech_bonus = {
+			name = JAP_jet_prototypes
+			bonus = 1.0
+			uses = 2
+			category = jet_technology
+		}
 	}
 }
 
