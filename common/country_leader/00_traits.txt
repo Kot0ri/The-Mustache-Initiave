@@ -426,6 +426,24 @@ leader_traits = {
 		}
 	}
 
+	Conductor = {
+		random = no
+		weekly_manpower = 200
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	king_of_culture = {
+		random = no
+		weekly_manpower = 200
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	indomitable_perseverance = { # Ground units get 4 more Morale
 		random = no

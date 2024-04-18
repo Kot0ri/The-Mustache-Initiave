@@ -46,9 +46,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PRE_PREssian_Militarism
+		id = PRE_Prussian_Militarism
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 15
+		x = 20
 		y = 0
 
 

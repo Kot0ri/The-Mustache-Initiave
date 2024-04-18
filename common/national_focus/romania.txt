@@ -2081,6 +2081,42 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ROM_personality_cult
+		icon = GFX_focus_rom_parties_end
+		prerequisite = { focus = ROM_militarize_the_sentinels }
+	
+		x = -2
+		y = 2
+		relative_position_id = ROM_his_majestys_loyal_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = neutrality
+			custom_trigger_tooltip = {
+				tooltip = ROM_carol_current_leader_trigger
+				has_country_leader = { id = 550 }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_country_leader_trait = king_of_culture
+		}
+	}
+
+	focus = {
 		id = ROM_revise_the_constitution
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = ROM_institute_royal_dictatorship }
@@ -2712,12 +2748,74 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ROM_the_conductor
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ROM_iron_guard }
+		x = 0			
+		y = 1
+		relative_position_id = ROM_iron_guard
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+			has_country_leader = ROM_ion_antonescu
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_country_leader_trait = Conductor
+		}
+	}
+
+	focus = {
+		id = ROM_Axis_Alignment
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = ROM_the_conductor focus = ROM_national_christian_party}
+		x = 1			
+		y = 2
+		relative_position_id = ROM_iron_guard
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_research_slot = 1
+		}
+	}
+
+	focus = {
 		id = ROM_force_abdication
 		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = ROM_iron_guard focus = ROM_securitate focus = ROM_national_christian_party }
 		mutually_exclusive = { focus = ROM_handle_the_king }
 		x = 1				
-		y = 2
+		y = 3
 		relative_position_id = ROM_appoint_soviet_friendly_government
 
 		cost = 10
