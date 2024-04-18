@@ -503,6 +503,7 @@ leader_traits = {
 		}
 	}
 
+
 	tenacious_defender = {
 		random = no
 
@@ -4032,6 +4033,29 @@ leader_traits = {
 		}
 	}
 
+	anti_fascist_power_player = {
+		sprite = 13
+		political_power_gain = 0.02
+		non_core_manpower = 0.02
+		fascism_acceptance = -25
+		consumer_goods_factor = -0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	nostalga_of_1915 = {
+		sprite = 13
+		ai_join_ally_desire_factor = 0.15
+		recruitable_population_factor = 0.05
+		neutrality_acceptance = 25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	compassionate_gentleman = {
 		random = yes
 		sprite = 13
@@ -5979,6 +6003,18 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	germophile_industrialist = {
+		random = no
+		political_power_gain = -0.02
+		consumer_goods_factor = -0.02
+		fascism_acceptance = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 
 	the_council_on_the_management_of_turkish_debt = {
 		random = no

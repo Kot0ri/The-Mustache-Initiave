@@ -7668,6 +7668,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BUL_remember_the_central_powers
+
+		prerequisite = { focus = BUL_guardians_of_the_balkans }
+
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = BUL_guardians_of_the_balkans
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			has_government = neutrality
+		}
+		
+		search_filters = {FOCUS_FILTER_Politics }
+		completion_reward = {
+			add_country_leader_trait =  nostalga_of_1915
+		}
+	}
+
+	focus = {
 		id = BUL_consolidate_dominance_of_the_seas
 
 		prerequisite = { focus = BUL_guardians_of_the_balkans focus = BUL_join_the_allies }
@@ -8882,6 +8903,14 @@ focus_tree = {
 			add_war_support = 0.1
 			add_stability = -0.1
 			add_ideas = BUL_total_war
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1000
+			}
 
 			#If ROM is not an ally, then Bulgaria can go for it
 			if = {

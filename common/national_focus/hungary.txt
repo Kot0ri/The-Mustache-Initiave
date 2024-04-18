@@ -5101,6 +5101,97 @@ focus_tree = {
 				uses = 1
 				category = cat_mobile_warfare
 			}
+			create_equipment_variant = {
+				name = "38M Toldi I"
+				type = light_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_auto_cannon
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 1
+					tank_nsb_armor_upgrade = 1
+				}
+				icon = "GFX_HUN_basic_medium_tank_medium"
+			}
+			create_equipment_variant = {
+				name = "38M Toldi I (A20)"
+				type = light_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 1
+					tank_nsb_armor_upgrade = 1
+				}
+				icon = "GFX_HUN_basic_light_tank_medium"
+			}
+			create_equipment_variant = {
+				name = "42M Toldi II (B20)"
+				type = light_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon_2
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 3
+					tank_nsb_armor_upgrade = 1
+				}
+				icon = "GFX_HUN_basic_light_tank_medium"
+			}
+			create_equipment_variant = {
+				name = "42M Toldi II (B40)"
+				type = light_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon_2
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 3
+					tank_nsb_armor_upgrade = 3
+				}
+				icon = "GFX_HUN_basic_light_tank_medium"
+			}
+			create_equipment_variant = {
+				name = "43M Toldi III (C40)"
+				type = light_tank_chassis_3
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon_2
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+					special_type_slot_2 = armor_skirts
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 4
+				}
+				icon = "GFX_HUN_basic_light_tank_medium"
+			}
 		}
 	}
 
@@ -5395,6 +5486,42 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_to_tech_sharing_group = HUN_joint_tank_development_group
+			create_equipment_variant = {
+				name = "43M Toldi Páncélvadász"
+				type = light_tank_chassis_3
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_3
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 3
+					tank_nsb_armor_upgrade = 3
+				}
+				icon = "GFX_HUN_basic_light_tank_medium"
+			}
+			create_equipment_variant = {
+				name = "42M Toldi IIB (R) "
+				type = light_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_rocket_launcher
+					turret_type_slot = tank_light_fixed_superstructure_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 3
+					tank_nsb_armor_upgrade = 2
+				}
+				icon = "GFX_HUN_basic_light_tank_medium"
+			}
 			every_other_country = {
 				limit = {
 					is_in_faction_with = HUN
@@ -5825,6 +5952,24 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
 		completion_reward = {
+			create_equipment_variant = {
+				name = "Straussler V-4/40"
+				type = amphibious_tank_chassis
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 1
+					tank_nsb_armor_upgrade = 1
+				}
+				icon = "GFX_HUN_amphibious_tank"
+			}
 	}
 }
 

@@ -63,7 +63,7 @@ characters={
 				original_tag = ROM
 			}
 			traits = {
-				prince_of_terror 
+				anti_fascist_power_player
 			}
 		}
 
@@ -72,7 +72,17 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
 	}
+
 
 	ROM_octavian_goga={
 		name=ROM_octavian_goga
@@ -141,6 +151,59 @@ characters={
 		}
 	}
 
+	ROM_ioan_dumitrache={
+		name=ROM_ioan_dumitrache
+		portraits={
+			army={
+				large="GFX_Portrait_romania_ioan_mihail_racovita"
+				small="GFX_idea_ROM_ioan_mihail_racovita"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+
+	ROM_mihail_lascăr={
+		name=ROM_mihail_lascăr
+		portraits={
+			army={
+				large="GFX_Portrait_romania_ioan_mihail_racovita"
+				small="GFX_idea_ROM_ioan_mihail_racovita"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+
+	ROM_gheorghe_răscănescu={
+		name=ROM_gheorghe_răscănescu
+		portraits={
+			army={
+				large="GFX_Portrait_romania_ioan_mihail_racovita"
+				small="GFX_idea_ROM_ioan_mihail_racovita"
+			}
+		}
+		corps_commander={
+			traits={  }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
 
 	### THEORISTS ###
 
@@ -485,6 +548,46 @@ characters={
 
 	# Calinescu up there
 
+	ROM_ion_gigurtu={
+		name=ROM_ion_gigurtu
+		portraits={
+			army={
+				small="GFX_idea_ROM_ion_antonescu"
+				large="GFX_Portrait_romania_ion_antonescu"
+			}
+			civilian={
+				large="GFX_Portrait_romania_ion_antonescu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			available = {
+				is_in_faction = no
+			}
+			idea_token = ROM_ion_gigurtu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				germophile_industrialist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		field_marshal={
+			traits={  }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+
+
 	ROM_iuliu_maniu={
 		name=ROM_iuliu_maniu
 		portraits={
@@ -608,6 +711,26 @@ characters={
 		}
 	}
 
+	ROM_virgil_madgearu={
+		name=ROM_virgil_madgearu
+		portraits={
+			army={
+				small="GFX_idea_ROM_nicolae_malaxa"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_mihail_manoilescu
+			allowed = {
+				original_tag = ROM
+				has_dlc = "Death or Dishonor"
+			}
+			traits = {
+				defender_of_the_peasantry 
+			}
+		}
+	}
+
 	ROM_petru_groza={
 		name=ROM_petru_groza
 		portraits={
@@ -667,4 +790,29 @@ characters={
 			}
 		}
 	}
+		ROM_hora_sima={
+			name=ROM_hora_sima
+			portraits={
+				army={
+					small="GFX_idea_ROM_mihail_sturdza"
+				}
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = ROM_hora_sima
+				available = {
+					is_in_faction = no
+				}
+				allowed = {
+					original_tag = ROM
+				}
+				traits = {
+					fascist_demagogue 
+				}
+				ai_will_do = {
+					factor = 0.000
+				}
+			}
+	}
+
 }
