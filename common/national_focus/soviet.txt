@@ -16798,7 +16798,7 @@ ai_will_do = {
 		prerequisite = { 
 			focus = SOV_romanov_reconstruction 
  		}
-		x = -5
+		x = -7
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
 		cost = 10
@@ -17224,10 +17224,48 @@ ai_will_do = {
 	}
 
 	focus = {
+		id = SOV_emperors_allaince
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SOV_romanov_reconstruction }
+		mutually_exclusive = {	focus = SOV_the_triple_entente}
+		x = -5
+		y = 2
+		relative_position_id = SOV_romanov_reconstruction 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			is_in_faction_with = GER
+			GER = { is_faction_leader = yes }
+		}
+		available_if_capitulated = no
+
+		search_filters = {}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			has_government = neutrality
+			GER = {
+				is_faction_leader = yes
+				has_government = neutrality
+			}
+		}
+
+		completion_reward = {
+			GER = {
+			
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_the_triple_entente
 		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = SOV_westward_bound }
 		prerequisite = { focus = SOV_romanov_reconstruction }
+		mutually_exclusive = {	focus = SOV_emperors_allaince}
 		x = -4
 		y = 1
 		relative_position_id = SOV_westward_bound
@@ -17817,7 +17855,7 @@ ai_will_do = {
 		id = SOV_eastern_expansion
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = SOV_pacify_the_rim }
-		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor }
+		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor focus = SOV_romanov_reconstruction }
 		x = 5
 		y = 1
 		relative_position_id = SOV_pacify_the_rim
@@ -17893,7 +17931,6 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_expansion
-		mutually_exclusive = { focus = SOV_into_central_asia }
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -18009,7 +18046,6 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_eastern_expansion
-		mutually_exclusive = { focus = SOV_intervention_in_the_americas }
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -18377,6 +18413,7 @@ ai_will_do = {
 		available = {
 			is_subject = no
 			is_in_faction = no
+			has_government = fascism
 			GER = {
 				is_faction_leader = yes
 				has_government = fascism
