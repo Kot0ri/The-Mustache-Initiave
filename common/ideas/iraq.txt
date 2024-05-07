@@ -1,2 +1,40 @@
 ideas = {
+	country = {
+		british_resentments = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_acceptance = -0.20
+			}
+		}
+}
+
+country = {
+	cradle_of_civilization = {
+		
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			political_power_gain = 0.05
+			max_fuel = 0.5
+		}
+	}
+}
 }
