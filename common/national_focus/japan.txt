@@ -690,7 +690,10 @@ focus = {
 	}
 
 	available = {
-
+		OR = {
+			has_government = fascism
+			has_government = neutrality
+		}
 	}
 
 	bypass = {
