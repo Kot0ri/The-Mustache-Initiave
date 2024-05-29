@@ -10595,12 +10595,10 @@ focus_tree = {
 		}
 		available = {
 			has_government = fascism
-			has_government = communism
 	
 		}
 		allow_branch = {
 			has_government = fascism
-			has_government = communism
 			has_war = yes
 		}
 
