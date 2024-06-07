@@ -178,6 +178,25 @@ ideas = {
 			}
 		}
 
+		FRA_infantry_tanks = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				tag = FRA #stays with main country
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				army_armor_speed_factor = -0.04
+				army_armor_defence_factor = 0.06
+			}
+		}
+
 		FRA_devalue_the_franc = {
 			picture = generic_foreign_capital
 			allowed = {

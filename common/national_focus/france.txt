@@ -1145,6 +1145,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_ideas = FRA_infantry_tanks
 			IF = {
 				limit = { has_dlc = "Arms Against Tyranny" }
 				mio:FRA_renault_organization = {

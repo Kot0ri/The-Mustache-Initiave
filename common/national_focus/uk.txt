@@ -603,7 +603,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -622,7 +622,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = shadow_scheme_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1367,7 +1367,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = general_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -7482,7 +7482,6 @@ focus_tree = {
 	focus = {
 		id = ENG_global_defense
 		prerequisite = { focus = ENG_steady_as_she_goes }
-		mutually_exclusive = { focus = ENG_home_defence }
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
@@ -7495,7 +7494,6 @@ focus_tree = {
 				}
 				NOT = {
 					OR = {
-						has_completed_focus = ENG_home_defence
 						has_completed_focus = ENG_a_change_in_course
 					}
 				}
@@ -8134,7 +8132,6 @@ focus_tree = {
 	focus = {
 		id = ENG_home_defence
 		prerequisite = { focus = ENG_steady_as_she_goes }
-		mutually_exclusive = { focus = ENG_global_defense }
 		icon = GFX_focus_generic_home_defense
 		x = 5
 		y = 1
@@ -8172,7 +8169,6 @@ focus_tree = {
 				}
 				NOT = {
 					OR = {
-						has_completed_focus = ENG_global_defense
 						has_completed_focus = ENG_a_change_in_course
 					}
 				}
