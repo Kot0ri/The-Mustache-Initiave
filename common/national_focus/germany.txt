@@ -4887,6 +4887,25 @@ focus_tree = {
 			show_ideas_tooltip = ritter_von_greim
 		}
 	}
+
+	focus = {
+		id = GER_Reichsluftfahrtministerium
+		icon = GFX_focus_generic_air_research_boost
+		prerequisite = { focus = GER_expanding_the_luftwaffe }
+
+		x = 5
+		y = 1
+		relative_position_id = GER_expanding_the_luftwaffe
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			
+		}
+	}
 	
 	focus = {
 		id = GER_aeronautical_research_institute
