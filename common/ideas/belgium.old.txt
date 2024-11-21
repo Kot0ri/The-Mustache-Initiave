@@ -1,0 +1,208 @@
+ideas = {
+	# MILITARY
+
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		renault_bel = {
+			picture = renault
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+				# Renault FT
+			}
+		}
+
+		vickers_armstrong_bel = {
+			picture = generic_tank_manufacturer_2
+		
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			modifier = {
+				
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+	
+		designer = yes
+		
+		avions_fairey = {
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# Tipsy B, firefly, fairey fox
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		renard = {
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# Tipsy B, firefly, fairey fox
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		cockerill = { 
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+						
+			traits = { naval_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		fn_herstol = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	country = { 
+
+		BEL_leagacy_of_the_great_war	= {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BEL
+				always = yes
+			}
+
+			allowed_civil_war = {
+				tag = BEL
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.20
+				join_faction_tension = 0.10
+				generate_wargoal_tension = 0.25
+				guarantee_tension = 0.10
+			}
+		}
+
+		BEL_defensive_planning	= {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BEL
+				always = yes
+			}
+
+			allowed_civil_war = {
+				tag = BEL
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				recon_factor_while_entrenched = 0.02
+				land_bunker_effectiveness_factor = 0.15
+				dig_in_speed_factor = 0.05
+			}
+		}
+
+		BEL_the_kings_command	= {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BEL
+				always = yes
+			}
+
+			allowed_civil_war = {
+				tag = BEL
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain = 0.02
+				exiled_divisions_attack_factor = 0.02
+				exile_manpower_factor = 0.02
+				exiled_government_weekly_manpower = 500
+				org_loss_at_low_org_factor = -0.05
+			}
+		}
+}
+}

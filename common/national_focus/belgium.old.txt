@@ -1,0 +1,1535 @@
+focus_tree = {
+	id = belgian_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BEL
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+
+	focus = {
+		id = BEL_leopolds_reign
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 15
+		y = 0
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_quest_to_empower_the_monarchy
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 1
+		prerequisite = { focus = BEL_leopolds_reign }
+		relative_position_id = BEL_leopolds_reign
+		mutually_exclusive = { focus = BEL_leave_matters_to_parliment	}
+		mutually_exclusive = {focus = BEL_revolutionary_ideas}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_conflict_with_parliment
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_quest_to_empower_the_monarchy }
+		relative_position_id = BEL_quest_to_empower_the_monarchy
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_act_independently
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_conflict_with_parliment }
+		relative_position_id = BEL_conflict_with_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_appoint_Overstraeten
+		icon = GFX_goal_generic_treaty
+		x = 2
+		y = 1
+		prerequisite = { focus = BEL_conflict_with_parliment }
+		relative_position_id = BEL_conflict_with_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_a_new_military
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 2
+		prerequisite = { focus = BEL_appoint_Overstraeten }
+		relative_position_id = BEL_appoint_Overstraeten
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+has_government = neutrality
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_the_king_and_his_people
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_act_independently }
+		relative_position_id = BEL_act_independently
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+	}
+
+	focus = {
+		id = BEL_disband_parliment
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_the_king_and_his_people}
+		relative_position_id = BEL_the_king_and_his_people
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+	}
+
+	focus = {
+		id = BEL_leave_matters_to_parliment
+		icon = GFX_goal_generic_self_management
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_leopolds_reign }
+		relative_position_id = BEL_leopolds_reign
+		mutually_exclusive = { focus = BEL_quest_to_empower_the_monarchy	}
+		mutually_exclusive = {focus = BEL_revolutionary_ideas}
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_declaration_of_neutrality
+		icon = GFX_goal_generic_treaty
+		x = 2
+		y = 1
+		prerequisite = { focus = BEL_leave_matters_to_parliment focus = BEL_quest_to_empower_the_monarchy }
+		relative_position_id = BEL_leave_matters_to_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_reaffrim_league_of_nation_ties
+		icon = GFX_goal_generic_support_democracy
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_leave_matters_to_parliment }
+		relative_position_id = BEL_leave_matters_to_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_revolutionary_ideas
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -4
+		y = 1
+		prerequisite = { focus = BEL_leopolds_reign }
+		relative_position_id = BEL_leopolds_reign
+		mutually_exclusive = { focus = BEL_leave_matters_to_parliment	}
+		mutually_exclusive = { focus = BEL_quest_to_empower_the_monarchy	}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Red_Shift
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 1
+		prerequisite = { focus = BEL_revolutionary_ideas }
+		relative_position_id = BEL_revolutionary_ideas
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Belgian_revanchism
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -1
+		y = 1
+		prerequisite = { focus = BEL_revolutionary_ideas }
+		relative_position_id = BEL_revolutionary_ideas
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_deal_with_the_divide
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_Belgian_revanchism }
+		relative_position_id = BEL_Belgian_revanchism
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_polticized_military
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_deal_with_the_divide }
+		relative_position_id = BEL_deal_with_the_divide
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Prepare_to_march
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_polticized_military }
+		relative_position_id = BEL_polticized_military
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Annex_Luxemburg
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_Prepare_to_march }
+		relative_position_id = BEL_Prepare_to_march
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Invade_Germany
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_Annex_Luxemburg}
+		relative_position_id = BEL_Annex_Luxemburg
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {
+		id = BEL_Dutch_Ultimatetium
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -2
+		y = 1
+		prerequisite = { focus = BEL_Prepare_to_march }
+		relative_position_id = BEL_Prepare_to_march
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Invade_France
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_Dutch_Ultimatetium }
+		relative_position_id = BEL_Dutch_Ultimatetium
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	
+
+
+	focus = {
+		id = BEL_leagacy_of_the_great_war
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = BEL_leagacy_of_the_great_war
+		}
+	}
+
+	focus = {
+		id = BEL_the_kings_command
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			add_ideas = BEL_the_kings_command
+		}
+	}
+
+	focus = {
+		id = BEL_intellegence_efforts
+		icon = GFX_goal_generic_secret_service_agnecy
+		x = 1
+		y = 1
+		prerequisite = { focus = BEL_the_kings_command }
+		relative_position_id = BEL_the_kings_command
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_request_Overstraeten_for_chief_of_staff
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 2
+		prerequisite = { focus = BEL_the_kings_command }
+		relative_position_id = BEL_the_kings_command
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_war = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_fortification_efforts
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			add_ideas = BEL_defensive_planning
+		}
+	}
+
+	focus = {
+		id = BEL_liege_and_namur_fortifcations
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_fortification_efforts }
+		relative_position_id = BEL_fortification_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_reinforce_eben_emael
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_liege_and_namur_fortifcations}
+		relative_position_id = BEL_liege_and_namur_fortifcations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_guard_the_channels
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_reinforce_eben_emael}
+		relative_position_id = BEL_reinforce_eben_emael
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_defense_of_Brussels
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_guard_the_channels}
+		relative_position_id = BEL_guard_the_channels
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_military_reorganization
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -2
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			add_command_power = 10
+			
+		}
+	}
+
+	focus = {
+		id = BEL_frontier_cyclists
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_military_reorganization }
+		relative_position_id = BEL_military_reorganization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_motorization_efforts
+		icon = GFX_goal_generic_truck
+		x = -2
+		y = 1
+		prerequisite = { focus = BEL_frontier_cyclists}
+		relative_position_id = BEL_frontier_cyclists
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_artillery_efforts
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_frontier_cyclists}
+		relative_position_id = BEL_frontier_cyclists
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_utilize_rail_networks
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_artillery_efforts}
+		prerequisite = { focus = BEL_reinforce_eben_emael}
+		relative_position_id = BEL_artillery_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_armoured_program
+		icon = GFX_goal_generic_self_propelled_gun
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_motorization_efforts}
+		relative_position_id = BEL_motorization_efforts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Corps_de_Marine
+		icon = GFX_goal_generic_allies_build_infantry
+		x =-6
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Recruit_merchant_vessels
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_Corps_de_Marine }
+		relative_position_id = BEL_Corps_de_Marine
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_Aéronautique_Militaire_Belge
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 1
+		prerequisite = { focus = BEL_leagacy_of_the_great_war }
+		relative_position_id = BEL_leagacy_of_the_great_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_coordination_with_allied_forces
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_Aéronautique_Militaire_Belge }
+		relative_position_id = BEL_Aéronautique_Militaire_Belge
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+is_in_faction = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_industrial_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 25
+		y = 0
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		
+		}
+	}
+
+	
+	focus = {
+		id = BEL_infrastructure_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_industrial_effort
+	prerequisite = { focus= BEL_industrial_effort }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_foreign_investments
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 1
+	relative_position_id = BEL_infrastructure_effort
+	prerequisite = { focus= BEL_infrastructure_effort }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_allied_investments
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_foreign_investments
+	prerequisite = { focus= BEL_foreign_investments }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_British_Market
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_allied_investments
+	prerequisite = { focus= BEL_allied_investments }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_French_Market
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 1
+	relative_position_id = BEL_allied_investments
+	prerequisite = { focus= BEL_allied_investments }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_development_in_the_Congo
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_infrastructure_effort
+	prerequisite = { focus= BEL_infrastructure_effort }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_mine_for_resources
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_development_in_the_Congo
+	prerequisite = { focus= BEL_development_in_the_Congo }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 295
+			}
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 295
+			}
+		}
+	}
+
+	focus = {
+		id = BEL_uranium_deal_with_the_US
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+	relative_position_id = BEL_mine_for_resources
+	prerequisite = { focus= BEL_mine_for_resources }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+}
