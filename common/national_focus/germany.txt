@@ -1150,10 +1150,7 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = {
-				localization_key = building_state_modifier|dam
-				INDENT = "    "
-			}
+			
 		}
 	}
 	
@@ -3019,6 +3016,28 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_Restore_Nobles_Command_of_Military
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = GER_army_innovation }
+		x = 0
+		y = 2
+		relative_position_id = GER_the_prussian_legacy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+		add_command_power = 20
+			}
+		}
 	
 	focus = {
 		id = GER_improve_motorized_troops
@@ -3471,6 +3490,29 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_Prinzenerlaß
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = GER_army_innovation focus= GER_Preperations_for_rhineland}
+		x = 0
+		y = 2
+		relative_position_id = GER_adopt_new_panzer_doctrine
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = fascism
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+		add_command_power = 25
+		army_experience = 25
+			}
+		}
 	
 	focus = {
 		id = GER_salvage_captured_equipment
@@ -12482,7 +12524,6 @@ focus_tree = {
 				has_war_with = ENG
 				NOT = { country_exists = ENG }
 				is_ally_with = ENG
-				has_subject = RGB
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -37254,4 +37295,5 @@ focus_tree = {
 #			}
 #		}
 #	}
+}
 }
