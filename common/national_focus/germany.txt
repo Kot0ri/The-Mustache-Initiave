@@ -3020,7 +3020,7 @@ focus_tree = {
 	focus = {
 		id = GER_Restore_Nobles_Command_of_Military
 		icon = GFX_goal_generic_axis_build_infantry
-		prerequisite = { focus = GER_army_innovation }
+		prerequisite = { focus = GER_the_prussian_legacy }
 		x = 0
 		y = 2
 		relative_position_id = GER_the_prussian_legacy
@@ -3494,7 +3494,7 @@ focus_tree = {
 	focus = {
 		id = GER_Prinzenerlaß
 		icon = GFX_goal_generic_axis_build_infantry
-		prerequisite = { focus = GER_army_innovation focus= GER_Preperations_for_rhineland}
+		prerequisite = { focus = GER_adopt_new_panzer_doctrine }
 		x = 0
 		y = 2
 		relative_position_id = GER_adopt_new_panzer_doctrine
@@ -5429,7 +5429,7 @@ focus_tree = {
 		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = GER_expanding_the_luftwaffe }
 
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_expanding_the_luftwaffe
 		cost = 5
@@ -5476,6 +5476,31 @@ focus_tree = {
 			show_unit_leaders_tooltip = GER_kurt_student
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = kurt_student
+		}
+	}
+
+	focus = {
+		id = GER_luftwaffe_field_command
+		prerequisite = { focus = GER_expanding_the_luftwaffe }
+		x = 1
+		y = 1
+		relative_position_id = GER_expanding_the_luftwaffe
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = yes
+			or = {
+				has_country_leader = GER_hermann_goring
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER  FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+		
 		}
 	}
 	
@@ -8019,6 +8044,32 @@ focus_tree = {
 
 			add_ideas = GER_seeherrschaft_ns
 		}
+	}
+
+	focus = {
+		id = GER_Kreigsmarine_field_command
+		text = naval_effort
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = GER_plan_z }
+		x = 0
+		y = 1
+		relative_position_id = GER_plan_z
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = yes
+			or = {
+				has_country_leader = GER_karl_donitz
+			}
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+		
+	}
 	}
 	
 
