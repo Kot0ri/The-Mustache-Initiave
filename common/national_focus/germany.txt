@@ -4893,7 +4893,7 @@ focus_tree = {
 		icon = GFX_focus_generic_air_research_boost
 		prerequisite = { focus = GER_expanding_the_luftwaffe }
 
-		x = 5
+		x = 2
 		y = 1
 		relative_position_id = GER_expanding_the_luftwaffe
 		cost = 5
@@ -4903,7 +4903,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			
+			air_experience = 25
 		}
 	}
 	
@@ -10767,6 +10767,57 @@ focus_tree = {
 				}
 			}
 
+		}
+	}
+
+	focus = {
+		id = GER_Ministerrat für die Reichsverteidigung
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = GER_reassert_eastern_claims }
+		x = 2
+		y = 1
+		relative_position_id = GER_reassert_eastern_claims
+
+		cost = 10
+
+		available = {
+			has_war = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_Dreierausschuß
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = GER_Ministerrat für die Reichsverteidigung }
+		x = 0
+		y = 2
+		relative_position_id = GER_Ministerrat für die Reichsverteidigung
+
+		cost = 10
+
+		available = {
+			has_war = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
 		}
 	}
 
