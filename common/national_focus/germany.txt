@@ -10771,7 +10771,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_Ministerrat für die Reichsverteidigung
+		id = GER_Ministerrat_für_die_Reichsverteidigung
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = GER_reassert_eastern_claims }
 		x = 2
@@ -10798,10 +10798,10 @@ focus_tree = {
 	focus = {
 		id = GER_Dreierausschuß
 		icon = GFX_focus_generic_fascist_propaganda
-		prerequisite = { focus = GER_Ministerrat für die Reichsverteidigung }
+		prerequisite = { focus = GER_Ministerrat_für_die_Reichsverteidigung }
 		x = 0
 		y = 2
-		relative_position_id = GER_Ministerrat für die Reichsverteidigung
+		relative_position_id = GER_Ministerrat_für_die_Reichsverteidigung
 
 		cost = 10
 
@@ -25447,7 +25447,7 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = GER_the_monarchy_compromise_ww }
 
-		x = -4
+		x = -5
 		y = 1
 		relative_position_id = GER_the_monarchy_compromise_ww
 
@@ -26432,7 +26432,7 @@ focus_tree = {
 		prerequisite = { focus = GER_revive_the_kaiserreich_ww }
 		mutually_exclusive = { focus = GER_return_of_the_kaiser_ww }
 
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 		cost = 2
@@ -26479,11 +26479,106 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_invite_scientists_back
+		id = GER_restore_imperial_culture_of_art_and_science
 		icon = GFX_focus_generic_university_2
 		prerequisite = { focus = GER_return_of_the_kaiser_ww }
 
 		x = 0
+		y = 1
+		relative_position_id = GER_return_of_the_kaiser_ww
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_restore_national_pride
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = GER_restore_imperial_culture_of_art_and_science }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_restore_imperial_culture_of_art_and_science
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_peace_kaiser
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = GER_restore_national_pride }
+
+		x = 0
+		y = 2
+		relative_position_id = GER_restore_national_pride
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_encoruage_tradtional_family_values
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = GER_restore_national_pride }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_restore_national_pride
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_improve_workers_rights
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = GER_restore_national_pride }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_restore_national_pride
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_invite_scientists_back
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
+
+		x = 2
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser_ww
 		cost = 5
@@ -26633,7 +26728,7 @@ focus_tree = {
 		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
 
 		x = 6
-		y = 1
+		y = 2
 		relative_position_id = GER_return_of_the_kaiser_ww
 		cost = 10
 		available = {
@@ -26848,11 +26943,11 @@ focus_tree = {
 
 		icon = GFX_focus_generic_stockpile_fuel
 
-		prerequisite = { focus = GER_military_dictatorship }
+		prerequisite = { focus = GER_military_dictatorship focus = GER_return_of_the_kaiser_ww }
 
-		x = 2
+		x = 0
 		y = 1
-		relative_position_id = GER_return_of_the_kaiser_ww
+		relative_position_id = GER_military_dictatorship
 
 		cost = 5
 
@@ -26951,7 +27046,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 
-		x = 4
+		x = 7
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser_ww
 
@@ -27038,7 +27133,7 @@ focus_tree = {
 		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
 
 		x = 8
-		y = 1
+		y = 2
 		relative_position_id = GER_return_of_the_kaiser_ww
 
 		cost = 5
@@ -27172,7 +27267,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_the_monarchy_compromise_ww focus = GER_revive_the_kaiserreich_ww }
 
-		x = 1
+		x = 0
 		y = 5
 		relative_position_id = GER_the_monarchy_compromise_ww
 
@@ -31364,7 +31459,7 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_carte_blanche_for_alsace_and_french_colonies_ww }
 
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = GER_demand_the_return_of_southern_jutland
 		cost = 10
 
@@ -37533,7 +37628,7 @@ focus_tree = {
 		}
 	}
 
-
+}
 
 ######################################
 ######### INNER CIRCLE DEBUG #########
@@ -37619,4 +37714,4 @@ focus_tree = {
 #			}
 #		}
 #	}
-}
+
