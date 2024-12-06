@@ -4893,7 +4893,7 @@ focus_tree = {
 		icon = GFX_focus_generic_air_research_boost
 		prerequisite = { focus = GER_expanding_the_luftwaffe }
 
-		x = 2
+		x = 5
 		y = 1
 		relative_position_id = GER_expanding_the_luftwaffe
 		cost = 5
@@ -5390,6 +5390,39 @@ focus_tree = {
 					#unlock_mio_trait_tooltip = 
 					#unlock_mio_trait_tooltip = 
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_modernize_attack_craft
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = GER_dive_bombers}
+
+		x = 0
+		y = 1
+		relative_position_id = GER_dive_bombers
+		cost = 10
+		available = {
+			has_completed_focus = GER_fighter_modernization_effort
+			has_completed_focus = GER_solve_the_logistical_bottlenecks
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Fw 190 F-2 A-5/U3"
+				type = cv_small_plane_airframe_2
+				design_team = mio:GER_focke_wulf_organization
+				parent_version = 0
+				modules = {
+					main_armament_slot = aircraft_cannon_2_2x
+					fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+					engine_type_slot = engine_3_1x
+				}
+				
+				icon = "GFX_GER_fighter2_medium"
 			}
 		}
 	}
@@ -21184,6 +21217,85 @@ focus_tree = {
 			hidden_effect = {
 				clr_country_flag = GER_loyalty_to_the_fuhrer_flag
 			}
+		}
+	}
+
+	focus = {
+		id = GER_dawn_of_the_black_sun
+		icon = GFX_focus_GER_ascension_of_himmler
+		prerequisite = { focus = GER_a_strong_successor }
+		x = 1
+		y = 1
+		relative_position_id = GER_a_strong_successor
+		cost = 5
+		available = {
+			has_country_leader = GER_heinrich_himmler
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_reich_aristocracy
+		icon = GFX_focus_GER_ascension_of_goring
+		prerequisite = { focus = GER_a_strong_successor }
+		x = -1
+		y = 1
+		relative_position_id = GER_a_strong_successor
+		cost = 5
+		available = {
+			has_country_leader = GER_hermann_goring
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_luftwaffe_prioritization
+		icon = GFX_focus_GER_ascension_of_goring
+		prerequisite = { focus = GER_reich_aristocracy }
+		x = 0
+		y = 1
+		relative_position_id = GER_reich_aristocracy
+		cost = 5
+		available = {
+			has_country_leader = GER_hermann_goring
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_Wirtschaftlicher_Aufbruch
+		icon = GFX_focus_GER_ascension_of_goring
+		prerequisite = { focus = GER_luftwaffe_prioritization }
+		x = 0
+		y = 1
+		relative_position_id = GER_luftwaffe_prioritization
+		cost = 5
+		available = {
+			has_country_leader = GER_hermann_goring
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+		 add_offsite_building = {
+			type = arms_factory
+			level = 3
+		 }
 		}
 	}
 
