@@ -2887,7 +2887,7 @@ focus_tree = {
 		icon = GFX_focus_GER_army
 		#prerequisite = { focus = }
 
-		x = 8
+		x = 6
 		y = 0
 		#relative_position_id = GER_prioritize_economic_growth
 		cost = 5
@@ -4776,7 +4776,7 @@ focus_tree = {
 		icon = GFX_focus_GER_airforce
 		#prerequisite = { focus = }
 
-		x = 12
+		x = 14
 		y = 0
 		relative_position_id = GER_develop_modern_maneuver_warfare
 		cost = 5
@@ -4912,7 +4912,7 @@ focus_tree = {
 		icon = GFX_focus_generic_air_research_boost
 		prerequisite = { focus = GER_expanding_the_luftwaffe }
 
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = GER_expanding_the_luftwaffe
 		cost = 5
@@ -5481,7 +5481,7 @@ focus_tree = {
 		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = GER_expanding_the_luftwaffe }
 
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = GER_expanding_the_luftwaffe
 		cost = 5
@@ -5530,6 +5530,162 @@ focus_tree = {
 			show_ideas_tooltip = kurt_student
 		}
 	}
+
+	focus = {
+		id = GER_rush_experimental_models
+		prerequisite = { focus = GER_expanding_the_luftwaffe }
+		x = -1
+		y = 1
+		relative_position_id = GER_expanding_the_luftwaffe
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = yes
+			or = {
+				has_country_leader = GER_hermann_goring
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = {  }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Me 209/Bf 109R"
+				type = small_plane_airframe_1
+				design_team = mio:GER_messerschmitt_organization
+				parent_version = 0
+				modules = {
+					main_armament_slot = light_mg_2x
+					fixed_auxiliary_weapon_slot_1 = light_mg_2x
+					engine_type_slot = engine_2_1x
+				}
+				
+				icon = "GFX_GER_fighter1_medium"
+			}
+			create_equipment_variant = {
+				name = "Messerschmitt Me 309"
+				type = small_plane_airframe_1
+				design_team = mio:GER_messerschmitt_organization
+				parent_version = 0
+				modules = {
+					main_armament_slot = aircraft_cannon_1_2x
+					fixed_auxiliary_weapon_slot_1 = light_mg_4x
+					fixed_auxiliary_weapon_slot_2  = aircraft_cannon_1_1x
+					engine_type_slot = engine_2_1x
+				}
+				
+				icon = "GFX_GER_fighter1_medium"
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fighter_competition
+		prerequisite = { focus = GER_rush_experimental_models }
+		x = 0
+		y = 1
+		relative_position_id = GER_rush_experimental_models
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = yes
+			or = {
+				has_country_leader = GER_hermann_goring
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = {  }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Me 209II V5"
+				type = small_plane_airframe_2
+				design_team = mio:GER_messerschmitt_organization
+				parent_version = 0
+				modules = {
+					main_armament_slot = light_mg_2x
+					fixed_auxiliary_weapon_slot_1 = light_mg_2x
+					engine_type_slot = engine_3_1x
+				}
+				
+				icon = "GFX_GER_fighter1_medium"
+			}
+			create_equipment_variant = {
+				name = "Ta 152 H-1"
+				type = small_plane_airframe_3
+				design_team = mio:GER_focke_wulf_organization
+				parent_version = 0
+				modules = {
+					main_armament_slot = aircraft_cannon_2_2x
+					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+					engine_type_slot = engine_3_1x
+				}
+				
+				icon = "GFX_GER_fighter1_medium"
+			}
+		}
+	}
+
+	focus = {
+		id = GER_compete_with_US_aircraft
+		prerequisite = { focus = GER_fighter_competition }
+		x = 0
+		y = 1
+		relative_position_id = GER_fighter_competition
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = yes
+			or = {
+				has_country_leader = GER_hermann_goring
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = {  }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Me 509"
+				type = small_plane_airframe_3
+				design_team = mio:GER_messerschmitt_organization
+				parent_version = 0
+				modules = {
+					main_armament_slot = light_mg_2x
+					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+					special_type_slot_1 = armor_plate_small
+					special_type_slot_2 = armor_plate_small
+					engine_type_slot = engine_4_1x
+				}
+				
+				icon = "GFX_GER_fighter1_medium"
+			}
+			create_equipment_variant = {
+				name = "Me 609/Me 309 Zwilling"
+				allow_without_tech = no
+				type = medium_plane_airframe_2
+				design_team = mio:GER_messerschmitt_organization
+				modules = {
+					fixed_main_weapon_slot = large_aircraft_cannon_2x
+					fixed_auxiliary_weapon_slot_1 = bomb_locks
+					engine_type_slot = engine_3_2x
+					special_type_slot_1 = armor_plate_medium
+					special_type_slot_2 = drop_tanks	
+					special_type_slot_3 = self_sealing_fuel_tanks_small	
+				}
+				icon = "GFX_GER_plane_2_medium"
+			}
+		}
+	}
+
 
 	focus = {
 		id = GER_luftwaffe_field_command
