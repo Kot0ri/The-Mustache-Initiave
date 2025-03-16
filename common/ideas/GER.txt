@@ -67,6 +67,23 @@ ideas = {
 			}
 		}
 		
+		ahnenerbe_research_division = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				political_power_gain = -0.02
+				research_speed_factor = 0.02
+			}
+		}
+
 		#MM: UNUSED AFTER WW (FOR NOW unless we give this to SOV after Treaty with the USSR)
 		GER_air_innovations_2_idea = {
 			removal_cost = -1
