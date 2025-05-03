@@ -4181,7 +4181,7 @@ focus_tree = {
 						}
 					}
 					create_equipment_variant = {
-						name = "T-34"
+						name = "Model 1943 T-34/85"
 						type = medium_tank_chassis_2
 						parent_version = 0
 						modules = {
@@ -4199,7 +4199,7 @@ focus_tree = {
 						icon = "GFX_SOV_improved_medium_tank_medium"
 					}
 				}
-				else_if = {
+				if = {
 					limit = {
 						OR = {
 							has_tech = artillery1
@@ -4207,7 +4207,7 @@ focus_tree = {
 						}
 					}
 					create_equipment_variant = {
-						name = "T-34"
+						name = "Model 1941 T-34/76B"
 						type = medium_tank_chassis_2
 						parent_version = 0
 						modules = {
@@ -4225,12 +4225,12 @@ focus_tree = {
 						icon = "GFX_SOV_improved_medium_tank_medium"
 					}
 				}
-				else_if = { #Why? You ruined your T-34
+				if = { #Why? You ruined your T-34
 					limit = {
 						has_tech = interwar_artillery
 					}
 					create_equipment_variant = {
-						name = "T-34"
+						name = "Model 1940 T-34/76A"
 						type = medium_tank_chassis_2
 						parent_version = 0
 						modules = {
@@ -4248,9 +4248,9 @@ focus_tree = {
 						icon = "GFX_SOV_improved_medium_tank_medium"
 					}
 				}
-				else = { #Don't do this to yourself dude
+				if = { #Don't do this to yourself dude
 					create_equipment_variant = {
-						name = "T-34"
+						name = "A-34"
 						type = medium_tank_chassis_2
 						parent_version = 0
 						modules = {
