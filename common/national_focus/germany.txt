@@ -4386,6 +4386,9 @@ focus_tree = {
 		add_trait = {
 			trait = defensive_doctrine
 		}
+		add_trait = {
+			trait = organizer
+		}
 		}
 		}
 	}
