@@ -2016,6 +2016,16 @@ characters = {
 				factor = 2.000
 			}
 		}
+		corps_commander = {
+			traits = {
+				politically_connected brilliant_strategist infantry_expert
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
 	}
 
 	GER_erich_bey = {
