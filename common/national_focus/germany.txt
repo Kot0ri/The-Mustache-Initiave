@@ -3750,7 +3750,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NOT = { has_government = fascism }
+					has_government = fascism
 					has_character = GER_ferdinand_schorner
 					GER_ferdinand_schorner = {
 						NOT = { has_trait = winter_specialist }
