@@ -8783,7 +8783,7 @@ focus_tree = {
 		icon = GFX_focus_GER_heed_von_neuraths_concerns
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
 		mutually_exclusive = { focus = GER_reorganize_the_wehrmacht }
-		x = -10
+		x = -9
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
