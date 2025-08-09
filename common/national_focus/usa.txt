@@ -1611,7 +1611,7 @@ focus = {
 	focus = {
 		id = USA_limited_intervention
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_moderate_the_new_deal }
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
 		x = 0
