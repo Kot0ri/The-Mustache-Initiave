@@ -162,6 +162,7 @@ focus = {
 		
 
 		mutually_exclusive = { focus = USA_reestablish_the_gold_standard }
+		mutually_exclusive = { focus = USA_moderate_the_new_deal}
 		cost = 10
 
 		ai_will_do = {
@@ -1614,7 +1615,7 @@ focus = {
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_continue_the_new_deal
 
 		offset = {
@@ -2117,8 +2118,8 @@ focus = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 4
-		y = 1
+		x = 8
+		y = 2
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
@@ -2231,6 +2232,7 @@ focus = {
 			}
 		}
 	}
+	
 	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
@@ -2996,14 +2998,11 @@ focus = {
 			army_experience = 10			
 		}
 	}
-###  ## ###  ##  ###  #   ###  ## #  #     ### #  # ###      ##   ##  #   ###       ## ###  ##  #  # ###   ##  ###  ###  
-#   #    #  #  # #  # #    #  #   #  #      #  #  # #       #    #  # #   #  #     #    #  #  # ## # #  # #  # #  # #  # 
-##   #   #  #### ###  #    #   #  ####      #  #### ##      # ## #  # #   #  #      #   #  #### # ## #  # #### ###  #  # 
-#     #  #  #  # #  # #    #    # #  #      #  #  # #       #  # #  # #   #  #       #  #  #  # #  # #  # #  # #  # #  # 
-### ##   #  #  # ###  ### ### ##  #  #      #  #  # ###      ##   ##  ### ###      ##   #  #  # #  # ###  #  # #  # ###  
 
-	focus = {
-		id = USA_reestablish_the_gold_standard
+#alf landon route
+
+focus = {
+		id = USA_moderate_the_new_deal
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = USA_beacon_of_liberty
 		prerequisite = { focus = USA_beacon_of_liberty}
@@ -3015,6 +3014,198 @@ focus = {
 			factor = 1
 		}
 		mutually_exclusive = { focus = USA_continue_the_new_deal }
+		mutually_exclusive = { focus = USA_reestablish_the_gold_standard }
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = USA_continue_the_new_deal
+				}
+			}
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = usa_alf_landon
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_push_for_equal_rights
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_moderate_the_new_deal
+		prerequisite = { focus = USA_moderate_the_new_deal}
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = USA_continue_the_new_deal
+				}
+			}
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = usa_alf_landon
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_reinforce_economic_ties_with_europe
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_moderate_the_new_deal
+		prerequisite = { focus = USA_moderate_the_new_deal}
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = USA_continue_the_new_deal
+				}
+			}
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = usa_alf_landon
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_curtail_presidental_powers
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_moderate_the_new_deal
+		prerequisite = { focus = USA_moderate_the_new_deal}
+		x = -3
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = USA_continue_the_new_deal
+				}
+			}
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = usa_alf_landon
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+###  ## ###  ##  ###  #   ###  ## #  #     ### #  # ###      ##   ##  #   ###       ## ###  ##  #  # ###   ##  ###  ###  
+#   #    #  #  # #  # #    #  #   #  #      #  #  # #       #    #  # #   #  #     #    #  #  # ## # #  # #  # #  # #  # 
+##   #   #  #### ###  #    #   #  ####      #  #### ##      # ## #  # #   #  #      #   #  #### # ## #  # #### ###  #  # 
+#     #  #  #  # #  # #    #    # #  #      #  #  # #       #  # #  # #   #  #       #  #  #  # #  # #  # #  # #  # #  # 
+### ##   #  #  # ###  ### ### ##  #  #      #  #  # ###      ##   ##  ### ###      ##   #  #  # #  # ###  #  # #  # ###  
+
+	focus = {
+		id = USA_reestablish_the_gold_standard
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_beacon_of_liberty
+		prerequisite = { focus = USA_beacon_of_liberty}
+		x = 8
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = { focus = USA_continue_the_new_deal }
+		mutually_exclusive = { focus = USA_moderate_the_new_deal}
 
 		allow_branch = {
 			if = {
@@ -5005,7 +5196,7 @@ focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = USA_beacon_of_liberty}
-		x = 18
+		x = 24
 		y = 4
 		offset = {
 			x = -17
