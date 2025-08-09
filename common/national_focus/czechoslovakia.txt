@@ -1270,9 +1270,11 @@
 		}
 
 		available = {
-
+			has_government = democratic
 		}
-
+		mutually_exclusive = {
+			focus = CZE_anti_czech_resentments
+		}
 		bypass = {
 
 		}
@@ -1280,7 +1282,7 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			add_political_power = 120
@@ -1344,7 +1346,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			
 		}
@@ -1372,7 +1374,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			
 		}
@@ -1400,7 +1402,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			
 		}
@@ -1485,7 +1487,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			
 		}
@@ -1547,6 +1549,245 @@ focus = {
 		}
 	}
 
+focus = {
+		id = CZE_anti_czech_resentments
+		icon = GFX_goal_generic_improve_relations
+		x = 12
+		y = 0
+		relative_position_id = CZE_industrial_legacy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+		mutually_exclusive = {
+			focus = CZE_masaryks_legacy
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = CZE_slovak_peoples_party
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 1
+		relative_position_id = CZE_anti_czech_resentments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+		prerequisite = {
+			focus = CZE_anti_czech_resentments
+		}
+		available = {
+
+		}
+		mutually_exclusive = {
+			focus = CZE_sudeten_german_party
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = CZE_sudeten_german_party
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 1
+		relative_position_id = CZE_anti_czech_resentments
+		prerequisite = {
+			focus = CZE_anti_czech_resentments
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+		mutually_exclusive = {
+			focus = CZE_slovak_peoples_party
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		
+		}
+	}
+
+focus = {
+		id = CZE_grundplanung_OA
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 1
+		relative_position_id = CZE_sudeten_german_party
+		prerequisite = {
+			focus = CZE_sudeten_german_party
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = CZE_incoporate_carpathian_german_party
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 1
+		relative_position_id = CZE_sudeten_german_party
+		prerequisite = {
+			focus = CZE_sudeten_german_party
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = CZE_allaince_with_magyar_parties
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 1
+		relative_position_id = CZE_incoporate_carpathian_german_party
+		prerequisite = {
+			focus = CZE_incoporate_carpathian_german_party
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = CZE_support_austro-fascism
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 2
+		relative_position_id = CZE_incoporate_carpathian_german_party
+		prerequisite = {
+			focus = CZE_incoporate_carpathian_german_party
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+			country_exists = AUS
+			AUS = {	has_government = fascism }
+			has_government = fascism
+		}
+		mutually_exclusive = {
+			focus = CZE_german_puppet
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+		
+		}
+	}
+
 	#######################################
 	######### STRATEGY DECISIONS ##########
 	#######################################
@@ -1554,7 +1795,7 @@ focus = {
 	focus = {
 		id = CZE_strategy_decisions
 		icon = GFX_goal_generic_position_armies
-		x = 12
+		x = 14
 		y = 0
 		relative_position_id = CZE_masaryks_legacy
 
@@ -1626,8 +1867,8 @@ focus = {
 	focus = {
 		id = CZE_german_puppet
 		icon = GFX_focus_CZE_german_puppet
-		prerequisite = { focus = CZE_deliver_sudetenland }
-		mutually_exclusive = { focus = CZE_german_ally focus = CZE_german_minor_ally }
+		prerequisite = { focus = CZE_deliver_sudetenland  focus = CZE_incoporate_carpathian_german_party  }
+		mutually_exclusive = {  }
 		x = -2
 		y = 3
 		relative_position_id = CZE_german_leanings
@@ -1642,12 +1883,15 @@ focus = {
 			GER = { exists = yes }
 			GER = { is_subject = no }
 			NOT = { has_war_with = GER }
+			has_government = fascism
 		}
 
 		bypass = {
 			is_subject_of = GER
 		}
-
+		mutually_exclusive = {
+			focus = CZE_support_austro-fascism
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
