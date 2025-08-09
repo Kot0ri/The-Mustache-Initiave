@@ -23,7 +23,7 @@ ideas = {
 			}
 		}
 
-		CZE_czech_fascism = {
+		CZE_german_idealism = {
 
 			allowed = {
 				always = no
@@ -39,7 +39,6 @@ ideas = {
 
 			modifier = {
 				fascism_drift = 0.05
-
 			}
 		}
 

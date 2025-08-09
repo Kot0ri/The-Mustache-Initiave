@@ -1404,7 +1404,7 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			
+			add_ideas = CZE_beacon_of_liberty
 		}
 	}
 
@@ -1424,6 +1424,7 @@ focus = {
 		}
 		available = {
 			has_completed_focus = CZE_favor_czechs_1
+			has_completed_focus = CZE_arms_exports_1
 		}
 		bypass = {
 
@@ -1578,7 +1579,11 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 80
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -1648,7 +1653,16 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-		
+		add_ideas = CZE_german_idealism
+		add_country_leader_role = {
+    	character = CZE_konrad_henlein
+   	 	promote_leader = yes
+   		 country_leader = {
+        ideology = fascism_ideology
+        expire = "1965.1.1.1"
+        traits = { SDP_head }
+    }
+	}
 		}
 	}
 
@@ -2508,13 +2522,10 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_czechoslovak_legion
+		id = CZE_reform_the_czechoslovak_legion
 		icon = GFX_goal_generic_axis_build_infantry
-		prerequisite = { focus = CZE_strategy_decisions }
-		x = 5
-		y = 1
-		relative_position_id = CZE_strategy_decisions
-
+		x = 38
+		y = 0
 		cost = 10
 
 		ai_will_do = {
@@ -2540,6 +2551,38 @@ focus = {
 			add_ideas = foreign_expeditions_focus
 		}
 	}
+
+	focus = {
+		id = CZE_lessons_from_1919
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = CZE_reform_the_czechoslovak_legion
+		}
+		relative_position_id = CZE_reform_the_czechoslovak_legion
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+
 	#######################################
 	##### MILITARY RESEARCH INSTITUTE #####	
 	#######################################
@@ -2547,7 +2590,7 @@ focus = {
 	focus = {
 		id = CZE_military_research_institute
 		icon = GFX_focus_CZE_military_research_institute
-		x = 11
+		x = 14
 		y = 0
 		relative_position_id = CZE_strategy_decisions
 
