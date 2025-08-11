@@ -4956,10 +4956,254 @@
 			remove_ideas = FRA_political_violence
 		}
 	}	
+
+	focus = {
+		id = FRA_croix-de-freu
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 4
+		y = 1
+		relative_position_id = FRA_revive_the_national_bloc
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_revive_the_national_bloc
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_form_the_popular_front
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_revive_the_national_bloc
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+			focus = FRA_utilize_the_leagues
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+
+
+focus = {
+		id = FRA_maintain_far-right_policies
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 2
+		y = 1
+		relative_position_id = FRA_croix-de-freu
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_croix-de-freu
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_form_the_popular_front
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_croix-de-freu
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+			focus = FRA_form_moderate_benchmark
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_form_moderate_benchmark
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 1
+		relative_position_id = FRA_croix-de-freu
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_croix-de-freu
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_form_the_popular_front
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_croix-de-freu
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+			focus = FRA_maintain_far-right_policies
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+		focus = {
+		id = FRA_Parti_social_français
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 1
+		relative_position_id = FRA_form_moderate_benchmark
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_form_moderate_benchmark
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_form_the_popular_front
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_form_moderate_benchmark
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
 	focus = {
 		id = FRA_utilize_the_leagues
 		icon = GFX_focus_generic_strike_at_democracy1
-		x = 8
+		x = 14
 		y = 1
 		relative_position_id = FRA_revive_the_national_bloc
 		
@@ -5005,7 +5249,9 @@
 			}
 			is_subject = no
 		}
-		
+		mutually_exclusive = {
+			focus = FRA_croix-de-freu
+		}
 		bypass = {
 			OR = {
 				has_government = fascism
@@ -5022,6 +5268,189 @@
 			unlock_decision_tooltip = { decision = FRA_unleash_la_cagoule show_effect_tooltip = yes }
 		}
 	}
+
+	focus = {
+		id = FRA_Parti_populaire_français
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -5
+		y = 1
+		relative_position_id = FRA_utilize_the_leagues
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_utilize_the_leagues
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_utilize_the_leagues
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_utilize_the_leagues
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+			focus = FRA_national_regeneration
+		}
+		mutually_exclusive = {
+			focus = FRA_the_council_of_rambouillet
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_Front_de_la_Liberté
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -1
+		y = 1
+		relative_position_id = FRA_Parti_populaire_français
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_utilize_the_leagues
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_utilize_the_leagues
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_Parti_populaire_français focus = FRA_maintain_far-right_policies
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_seek_italian_support
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 2
+		relative_position_id = FRA_Parti_populaire_français
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_utilize_the_leagues
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_utilize_the_leagues
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_Parti_populaire_français 
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
 	focus = {
 		id = FRA_national_regeneration
 		icon = GFX_goal_generic_political_pressure
@@ -5046,6 +5475,9 @@
 
 		prerequisite = {
 			focus = FRA_utilize_the_leagues
+		}
+		mutually_exclusive = {
+			focus = FRA_Parti_populaire_français
 		}
 		mutually_exclusive = { focus = FRA_the_council_of_rambouillet }
 		cost = 10
@@ -5105,7 +5537,7 @@
 	focus = {
 		id = FRA_destroy_decadence
 		icon = GFX_focus_rom_parties_end
-		x = -4
+		x = -3
 		y = 1
 		
 		prerequisite = {
@@ -5137,7 +5569,7 @@
 	focus = {
 		id = FRA_integralism
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = -2
+		x = -1
 		y = 1
 		
 		prerequisite = {
@@ -5280,7 +5712,7 @@
 	focus = {
 		id = FRA_political_unity
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 0
+		x = 1
 		y = 1
 		
 		prerequisite = {
@@ -5314,7 +5746,7 @@
 	focus = {
 		id = FRA_diplomatic_freedom
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		x = 2
+		x = 3
 		y = 1
 		
 		prerequisite = {
@@ -6771,6 +7203,9 @@
 			focus = FRA_utilize_the_leagues
 		}
 		mutually_exclusive = { focus = FRA_national_regeneration }
+		mutually_exclusive = {
+			focus = FRA_Parti_populaire_français
+		}
 		cost = 10
 
 		ai_will_do = {
@@ -8237,7 +8672,7 @@ focus = {
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 72
+		x = 84
 		y = 0
 
 		offset = {
