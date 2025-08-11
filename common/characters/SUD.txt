@@ -1,6 +1,6 @@
 characters={
 	SUD_steward_symes={
-		name="Steward Symes"
+		name="Sir Steward Symes"
 		portraits={
 			civilian={
 				large="gfx/leaders/SUD/Sir_George_Stewart_Symes.dds"
