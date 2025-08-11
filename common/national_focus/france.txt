@@ -5015,6 +5015,16 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			create_country_leader = {
+				name = "François de la Rocque"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_francois_de_la_rocque
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					retired_officer
+				}
+			}
 		}
 	}
 
@@ -5330,6 +5340,16 @@ focus = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			create_country_leader = {
+				name = "Jacques Doriot"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_jacques_doriot
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					eager_collaborator
+				}
+			}
 		}
 	}
 
@@ -5428,6 +5448,186 @@ focus = {
 		}
 		prerequisite = {
 			focus = FRA_Parti_populaire_français 
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_support_corporatism
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -1
+		y = 1
+		relative_position_id = FRA_seek_italian_support
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_utilize_the_leagues
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_utilize_the_leagues
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_seek_italian_support
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_german_financing
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 1
+		y = 1
+		relative_position_id = FRA_seek_italian_support
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_utilize_the_leagues
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_utilize_the_leagues
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_seek_italian_support
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_anti_soviet_alliance
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 2
+		relative_position_id = FRA_seek_italian_support
+		
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_dlc = "La Resistance"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = FRA_utilize_the_leagues
+			}
+		}
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = FRA_utilize_the_leagues
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_support_corporatism
+		}
+		prerequisite = {
+			focus = FRA_german_financing
 		}
 		cost = 10
 
@@ -5566,16 +5766,50 @@ focus = {
 			add_timed_idea = { idea = FRA_anti_decandence days = 365 }
 		}
 	}
+
 	focus = {
-		id = FRA_integralism
+		id = FRA_Fédération_nationale_des_Camelots_du_Roi
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = -1
+		x = 2
 		y = 1
 		
 		prerequisite = {
-			focus = FRA_national_regeneration
+			focus = FRA_Action_Française
 		}
-		relative_position_id = FRA_national_regeneration
+		relative_position_id = FRA_Action_Française
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_integralism
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_Action_Française
+		}
+		relative_position_id = FRA_Action_Française
 		cost = 10
 
 		ai_will_do = {
@@ -5681,6 +5915,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_integralism
 		}
+		prerequisite = {
+			focus = FRA_Fédération_nationale_des_Camelots_du_Roi
+		}
 		mutually_exclusive = {
 			focus = FRA_family
 			focus = FRA_work
@@ -5709,10 +5946,148 @@ focus = {
 			add_political_power = 150
 		}
 	}
+
+		focus = {
+		id = FRA_national_intergralism
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_fatherland
+		}
+		
+		relative_position_id = FRA_fatherland
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			
+		}
+	}
+
+focus = {
+		id = FRA_Action_Française
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_national_regeneration
+		}
+		relative_position_id = FRA_national_regeneration
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		mutually_exclusive = {
+			focus = FRA_Mouvement_Franciste
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+focus = {
+		id = FRA_Mouvement_Franciste
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 5
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_national_regeneration
+		}
+		relative_position_id = FRA_national_regeneration
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = FRA_Action_Française
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+focus = {
+		id = FRA_Chemises_bleues
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_Mouvement_Franciste
+		}
+		relative_position_id = FRA_Mouvement_Franciste
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			
+		}
+	}
+
 	focus = {
 		id = FRA_political_unity
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 1
+		x = -1
 		y = 1
 		
 		prerequisite = {
@@ -5746,7 +6121,7 @@ focus = {
 	focus = {
 		id = FRA_diplomatic_freedom
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		x = 3
+		x = 7
 		y = 1
 		
 		prerequisite = {
@@ -5816,6 +6191,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_diplomatic_freedom
 		}
+		prerequisite = {
+			focus = FRA_Mouvement_Franciste
+		}
 		mutually_exclusive = { focus = FRA_towards_a_new_europe }
 		relative_position_id = FRA_diplomatic_freedom
 		cost = 10
@@ -5839,16 +6217,7 @@ focus = {
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = FRA_latin_entente
-			create_country_leader = {
-				name = "François de la Rocque"
-				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-				picture = GFX_portrait_fra_francois_de_la_rocque
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {
-					retired_officer
-				}
-			}
+			
 		}
 	}
 	focus = {
@@ -6216,16 +6585,7 @@ focus = {
 
 		completion_reward = {
 			add_stability = -0.05
-			create_country_leader = {
-				name = "Jacques Doriot"
-				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-				picture = GFX_portrait_fra_jacques_doriot
-				expire = "1965.1.1"
-				ideology = nazism
-				traits = {
-					eager_collaborator
-				}
-			}
+			
 		}
 	}
 	focus = {
@@ -7167,7 +7527,7 @@ focus = {
 	focus = {
 		id = FRA_the_council_of_rambouillet
 		icon = GFX_goal_generic_major_alliance
-		x = 14
+		x = 18
 		y = 1
 		
 		offset = {

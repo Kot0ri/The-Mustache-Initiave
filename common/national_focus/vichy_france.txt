@@ -406,11 +406,12 @@
 			add_ideas = { FRA_mandatory_work_service }
 		}
 	}
+
 	focus = {
-		id = VIC_a_nation_reborn
+		id = VIC_neo-traditionalism
 		icon = GFX_goal_support_fascism
 		x = 0
-		y = 2
+		y = 1
 		offset = {
 			x = 0
 			y = 0
@@ -425,6 +426,40 @@
 			focus = VIC_mandatory_work_service
 		}
 		relative_position_id = VIC_celebrate_motherhood
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = VIC_a_nation_reborn
+		icon = GFX_goal_support_fascism
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = VIC_neo-traditionalism
+		}
+		relative_position_id = VIC_neo-traditionalism
 		
 		cost = 10
 		ai_will_do = {
