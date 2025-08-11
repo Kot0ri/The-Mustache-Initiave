@@ -1,0 +1,14 @@
+characters={
+	SUD_sir_steward_symes={
+		name=SUD_sir_steward_symes
+		portraits={
+			civilian={
+				large="gfx/leaders/SUD/Sir_George_Stewart_Symes.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1940.10.19.1"
+		}
+	}
+}
