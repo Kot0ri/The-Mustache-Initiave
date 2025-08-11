@@ -7532,7 +7532,7 @@
 	focus = {
 		id = FRA_proclaim_the_third_empire
 		icon = GFX_focus_focus_fra_third_empire
-		x = 3
+		x = 5
 		y = 1
 		
 		prerequisite = {
@@ -7588,7 +7588,7 @@
 	focus = {
 		id = FRA_avenge_waterloo #you now have ABBA stuck in your head for the rest of the day
 		icon = GFX_focus_attack_britain
-		x = 0
+		x = 1
 		y = 1
 		
 		prerequisite = {
@@ -7653,7 +7653,7 @@
 	focus = {
 		id = FRA_southern_sphere
 		icon = GFX_focus_attack_britain
-		x = 3
+		x = 4
 		y = 1
 		
 		prerequisite = {
@@ -7695,10 +7695,77 @@
 			}
 		}
 	}
-	focus = {
-		id = FRA_Polish_allaince
+
+focus = {
+		id = FRA_cult_of_the_emperor
 		icon = GFX_focus_attack_britain
-		x = 4
+		x = -3
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_proclaim_the_third_empire
+		}
+		relative_position_id = FRA_proclaim_the_third_empire
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+			is_subject = no
+		}
+		mutually_exclusive = {
+			focus = FRA_cult_of_science
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		
+		}
+	}
+
+	focus = {
+		id = FRA_cult_of_science
+		icon = GFX_focus_attack_britain
+		x = -1
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_proclaim_the_third_empire
+		}
+		relative_position_id = FRA_proclaim_the_third_empire
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+			is_subject = no
+		}
+		mutually_exclusive = {
+			focus = FRA_cult_of_the_emperor
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		
+		}
+	}
+
+	focus = {
+		id = FRA_reform_the_Continetal_Leauge
+		icon = GFX_focus_attack_britain
+		x = 5
 		y = 2
 		
 		prerequisite = {
@@ -7722,19 +7789,49 @@
 
 		completion_reward = {
 			create_faction = Continetal_Leauge
+		
+		}
+	}
+
+	focus = {
+		id = FRA_Polish_allaince
+		icon = GFX_focus_attack_britain
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_reform_the_Continetal_Leauge
+		}
+		relative_position_id = FRA_reform_the_Continetal_Leauge
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available = {
+			is_subject = no
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
 			add_to_faction = POL
 		}
 	}
 	focus = {
 		id = FRA_Pressure_the_Swiss
 		icon = GFX_focus_attack_britain
-		x = 0
-		y = 2
+		x = 2
+		y = 1
 		
 		prerequisite = {
-			focus = FRA_Polish_allaince
+			focus = FRA_reform_the_Continetal_Leauge
 		}
-		relative_position_id = FRA_Polish_allaince
+		relative_position_id = FRA_reform_the_Continetal_Leauge
 		cost = 5
 
 		ai_will_do = {
@@ -8140,7 +8237,7 @@
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 70
+		x = 72
 		y = 0
 
 		offset = {
@@ -8690,7 +8787,7 @@
 	 		focus = FRA_rush_the_richelieus
 	 		focus = FRA_improved_screen_ships
 	 	}
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = FRA_rush_the_richelieus
 		cost = 10
