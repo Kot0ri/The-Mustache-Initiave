@@ -15,11 +15,48 @@ default = yes
 
 continuous_focus_position = { x = 20 y = 1200 }
 
+##Fascist Path
 focus = {
 	id = JAP_land_of_the_rising_sun
 	icon = GFX_focus_jap_pacific_guardian
 	x = 6
 	y = 0
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		date > 1936.02.26
+		JAP_keisuke_Okada = {
+			is_country_leader = yes
+		}
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_consolidate_military_control
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_land_of_the_rising_sun }
+	x = -2
+	y = 1
+	relative_position_id = JAP_land_of_the_rising_sun
 
 	cost = 3
 
@@ -46,6 +83,441 @@ focus = {
 	}
 }
 
+focus = {
+	id = JAP_liason_conference
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_land_of_the_rising_sun }
+	x = 0
+	y = 1
+	relative_position_id = JAP_land_of_the_rising_sun
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_purge_kodoha
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_land_of_the_rising_sun }
+	x = 2
+	y = 1
+	relative_position_id = JAP_land_of_the_rising_sun
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_national_mobilisation
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_consolidate_military_control }
+	prerequisite = { focus = JAP_liason_conference }
+	x = 1
+	y = 1
+	relative_position_id = JAP_consolidate_military_control
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_empires_symbol
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_purge_kodoha }
+	prerequisite = { focus = JAP_liason_conference }
+	x = -1
+	y = 1
+	relative_position_id = JAP_purge_kodoha
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_reinforce_manchuria
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_national_mobilisation }
+	x = 0
+	y = 1
+	relative_position_id = JAP_national_mobilisation
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_reinforce_taiwan
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_empires_symbol }
+	x = 0
+	y = 1
+	relative_position_id = JAP_empires_symbol
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_war_with_china
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_reinforce_manchuria }
+	prerequisite = { focus = JAP_reinforce_taiwan }
+	x = 1
+	y = 1
+	relative_position_id = JAP_reinforce_manchuria
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+##Germany Support Path
+focus = {
+	id = JAP_anti_comintern_pact
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_national_mobilisation }
+	x = -4
+	y = 1
+	relative_position_id = JAP_national_mobilisation
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_expand_industrial_cooperation
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_anti_comintern_pact }
+	x = -1
+	y = 1
+	relative_position_id = JAP_anti_comintern_pact
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_youth_culture_exchange_initiative
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_anti_comintern_pact }
+	x = 1
+	y = 1
+	relative_position_id = JAP_anti_comintern_pact
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_german_japanese_treaty
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_expand_industrial_cooperation }
+	prerequisite = { focus = JAP_youth_culture_exchange_initiative }
+	x = 1
+	y = 1
+	relative_position_id = JAP_expand_industrial_cooperation
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_tripartite_pact
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_german_japanese_treaty }
+	x = 0
+	y = 1
+	relative_position_id = JAP_german_japanese_treaty
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {
+	id = JAP_strike_north
+	icon = GFX_focus_jap_pacific_guardian
+	prerequisite = { focus = JAP_tripartite_pact }
+	x = 0
+	y = 1
+	relative_position_id = JAP_tripartite_pact
+
+	cost = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+##Economy Path
 focus = {
 	id = JAP_zaibatsus
 	icon = GFX_focus_jap_pacific_guardian
@@ -694,6 +1166,7 @@ focus = {
 			has_government = fascism
 			has_government = neutrality
 		}
+		date > 1940.06.29
 	}
 
 	bypass = {
