@@ -89,4 +89,4 @@ set_popularities = {
 }
 
 #Leader
-recruit_character = SUD_sir_steward_symes
+recruit_character = SUD_steward_symes
