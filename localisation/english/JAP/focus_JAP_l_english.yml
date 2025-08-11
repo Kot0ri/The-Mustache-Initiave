@@ -1,0 +1,30 @@
+﻿l_english:
+  Japan_nf:0 "Empire of Japan Focus tree"
+
+##Opening
+JAP_land_of_the_rising_sun:0 "Land of the Rising Sun"
+JAP_consolidate_military_control:0 "Consolidate Military Control"
+JAP_liason_conference:0 "Liason Conference"
+JAP_purge_kodoha:0 "Purge the Kōdōha Faction"
+JAP_national_mobilisation:0 "National Mobilisation"
+JAP_empires_symbol:0 "The Empire's Symbol"
+JAP_reinforce_manchuria:0 "Reinforce Manchuria"
+JAP_reinforce_taiwan:0 "Reinforce Taiwan"
+JAP_war_with_china:0 "Spark the Second Sino-Japanese War"
+
+##German Friendship Branch
+JAP_anti_comintern_pact:0 "Sign the Anti-Comintern Pact"
+JAP_expand_industrial_cooperation:0 "Japanese-German Industrial Cooperation"
+JAP_youth_culture_exchange_initiative:0 "Japanese-German Youth Culture Exchange"
+JAP_german_japanese_treaty:0 "Japanese-German Treaty of Friendship"
+JAP_tripartite_pact:0 "Sign the Tripartite Pact"
+JAP_strike_north:0 "Hokushin-ron"
+
+##Economy
+JAP_question_zaibatsus:0 "Question of the Zaibatsus"
+
+##Military
+
+
+##GEACPS
+JAP_geacps_project:0 "G.E.A.C.P.S. Project"

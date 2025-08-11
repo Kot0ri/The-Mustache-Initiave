@@ -519,7 +519,7 @@ focus = {
 
 ##Economy Path
 focus = {
-	id = JAP_zaibatsus
+	id = JAP_question_zaibatsus
 	icon = GFX_focus_jap_pacific_guardian
 	x = 12
 	y = 2
@@ -1180,7 +1180,7 @@ focus = {
 	
 
 	completion_reward = {
-		add_stability = 0.1
+		create_faction = "Daitoa Kyoeiken"
 	}
 }
 
