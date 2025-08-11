@@ -4290,6 +4290,232 @@ focus = {
 
 	}
 
+focus = {
+		id = BEL_quest_to_empower_the_monarchy
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -1
+		y = 1
+		prerequisite = { focus = BEL_constitutional_crisis }
+		relative_position_id = BEL_constitutional_crisis
+		mutually_exclusive = { focus = BEL_leave_matters_to_parliment	}
+		mutually_exclusive = {focus = BEL_revolutionary_ideas}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		mutually_exclusive = {
+			focus = BEL_kings_abdication
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_conflict_with_parliment
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_quest_to_empower_the_monarchy }
+		relative_position_id = BEL_quest_to_empower_the_monarchy
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_act_independently
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_conflict_with_parliment }
+		relative_position_id = BEL_conflict_with_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_appoint_Overstraeten
+		icon = GFX_goal_generic_treaty
+		x = 2
+		y = 1
+		prerequisite = { focus = BEL_conflict_with_parliment }
+		relative_position_id = BEL_conflict_with_parliment
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_a_new_military
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 2
+		prerequisite = { focus = BEL_appoint_Overstraeten }
+		relative_position_id = BEL_appoint_Overstraeten
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+has_government = neutrality
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = BEL_the_king_and_his_people
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_act_independently }
+		relative_position_id = BEL_act_independently
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+	}
+
+	focus = {
+		id = BEL_disband_parliment
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		prerequisite = { focus = BEL_the_king_and_his_people}
+		relative_position_id = BEL_the_king_and_his_people
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+	}
+
 	focus = {
 		id = BEL_kings_abdication
 		icon = GFX_focus_NOR_send_the_king_back_to_denmark
@@ -4300,14 +4526,16 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
 
-		x = 0
+		x = 5
 		y = 1
 	
 		cost = 5
 
 		available = {
 		}
-	
+		mutually_exclusive = {
+			focus = BEL_quest_to_empower_the_monarchy
+		}
 	
 		completion_reward = {
 			clr_country_flag = BEL_leopold_flag
@@ -5335,7 +5563,7 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }		
 
-		x = 23
+		x = 28
 		y = 1
 	
 		cost = 0
@@ -7156,7 +7384,7 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_STABILITY }
 
-		x = 29
+		x = 35
 		y = 0
 	
 		cost = 10
