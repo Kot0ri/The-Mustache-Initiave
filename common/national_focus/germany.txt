@@ -3020,6 +3020,17 @@ focus_tree = {
 					promote_leader = yes
 				}
 			}
+			if = {
+				limit = {
+					has_character = GER_werner_kempf
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GER_werner_kempf = {
+				add_attack = 1
+				add_defense = 1
+				add_logistics = 1	
+				}
+			}
 		}
 	}
 	
@@ -12673,6 +12684,19 @@ focus_tree = {
 				}
 			}
 			
+		if = {
+				limit = {
+					has_character = GER_nikolaus_falkenhorst
+					GER_nikolaus_falkenhorst = {
+						is_field_marshal = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GER_nikolaus_falkenhorst = {
+					promote_leader = yes
+				}
+			}
+
 			add_tech_bonus = {
 				name = tp_bonus
 				bonus = 1.0

@@ -401,6 +401,23 @@ characters = {
 		}
 	}
 
+	GER_nikolaus_falkenhorst = {
+		name = "Nikolaus von Falkenhorst"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/nikolaus_falkenhorst.dds"
+			}
+		}
+		corps_commander = { 
+			traits = { invader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
 	GER_walter_reichenau = {
 		name = "Walter Karl Ernst August von Reichenau "
 		portraits = {
@@ -1347,6 +1364,25 @@ characters = {
 			
 		}
 	}
+
+	GER_werner_kempf = {
+		name = "Werner Kempf"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/werner_kempf.dds"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			
+		}
+	}
+
 
 	GER_hans_kahle = {
 		name = GER_hans_kahle

@@ -920,6 +920,8 @@ recruit_character = GER_ernst_busch
 recruit_character = GER_walter_reichenau
 recruit_character = GER_traugott_herr
 recruit_character = GER_curt_hasse
+recruit_character = GER_werner_kempf
+recruit_character = GER_nikolaus_falkenhorst
 
 #SCIENTISTS
 recruit_character = GER_peter_adolf_thiessen
