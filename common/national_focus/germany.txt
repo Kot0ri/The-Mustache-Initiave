@@ -5799,7 +5799,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER  FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
-		
+		recruit_character = GER_adolf_galland
 		}
 	}
 	
@@ -6191,6 +6191,9 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_war_with_major = yes
+			GER_hermann_goring = {
+				is_air_chief = no
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
