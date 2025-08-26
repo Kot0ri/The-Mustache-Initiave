@@ -384,6 +384,40 @@ characters = {
 		}
 	}
 
+	GER_ernst_busch = {
+		name = "Ernst Bernhard Wilhelm Busch"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/ernst_busch.dds"
+			}
+		}
+		corps_commander = { 
+			traits = { infantry_officer politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	GER_walter_reichenau = {
+		name = "Walter Karl Ernst August von Reichenau "
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/walter_reichenau.dds"
+			}
+		}
+		corps_commander = { 
+			traits = { engineer politically_connected }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
 
  ######   ######## ##    ## ######## ########     ###    ##        ######  
 ##    ##  ##       ###   ## ##       ##     ##   ## ##   ##       ##    ## 
