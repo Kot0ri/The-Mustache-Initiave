@@ -918,6 +918,8 @@ recruit_character = GER_eva_braun
 
 recruit_character = GER_ernst_busch
 recruit_character = GER_walter_reichenau
+recruit_character = GER_traugott_herr
+recruit_character = GER_curt_hasse
 
 #SCIENTISTS
 recruit_character = GER_peter_adolf_thiessen

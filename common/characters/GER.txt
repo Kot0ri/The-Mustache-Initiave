@@ -409,7 +409,7 @@ characters = {
 			}
 		}
 		corps_commander = { 
-			traits = { engineer politically_connected }
+			traits = { trait_engineer politically_connected }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1309,6 +1309,42 @@ characters = {
 			visible = {
 				has_completed_focus = GER_panzer_troops_school
 			}
+		}
+	}
+
+	GER_curt_hasse = {
+		name = "Curt Hasse"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/curt_hasse.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			
+		}
+	}
+
+	GER_traugott_herr = {
+		name = "Traugott Herr"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/traugott_herr.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
 		}
 	}
 
