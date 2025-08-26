@@ -2070,6 +2070,9 @@ characters = {
 			army = {
 				small = GFX_idea_ferdinand_schorner
 			}
+			army = {
+				large = "gfx/leaders/GER/ferdinand_schorner.dds"
+			}
 		}
 		advisor = {
 			slot = high_command
