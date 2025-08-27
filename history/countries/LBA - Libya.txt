@@ -83,3 +83,4 @@ set_popularities = {
 
 
 recruit_character = LBA_italo_balbo
+
