@@ -1,0 +1,183 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = libya_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LBA
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1000 }
+
+	focus = {
+		id = LBA_escalate_the_abyssinia_crisis
+		icon = GFX_goal_generic_neutrality_focus
+		x = 34
+		y = 0
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			country_exists = ETH
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = LBA_request_additional_forces
+		icon = GFX_goal_generic_neutrality_focus
+		x = -1
+		y = 1
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		prerequisite = {
+			focus = LBA_escalate_the_abyssinia_crisis
+		}
+		relative_position_id = LBA_escalate_the_abyssinia_crisis
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_desert_war_preperations
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		prerequisite = {
+			focus = LBA_escalate_the_abyssinia_crisis
+		}
+		relative_position_id = LBA_escalate_the_abyssinia_crisis
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_secret_troop_movements
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		prerequisite = {
+			focus = LBA_request_additional_forces
+		}
+		prerequisite = {
+			focus = LBA_desert_war_preperations
+		}
+		relative_position_id = LBA_request_additional_forces
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_Egypt_to_Ethopia
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		prerequisite = {
+			focus = LBA_secret_troop_movements
+		}
+		relative_position_id = LBA_secret_troop_movements
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+}
