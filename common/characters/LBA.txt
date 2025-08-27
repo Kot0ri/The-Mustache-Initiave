@@ -1,0 +1,31 @@
+characters = {
+
+#country leaders
+
+LBA_italo_balbo={
+		name= "Italo Balbo"
+		portraits={
+			civilian={
+				large = "gfx/leaders/LBA/italo_balbo.dds"
+			}
+			army = {
+				large = "gfx/leaders/LBA/italo_balbo.dds"
+			}
+		}
+		country_leader={
+			ideology= fascism_ideology
+			traits={}
+			expire="1989.1.1.1"
+			id=-1
+		}
+		field_marshal = {
+			traits = {	politically_connected}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+
+}
+}
