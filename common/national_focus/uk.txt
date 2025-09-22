@@ -153,7 +153,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			date > 1937.1.1
+			has_completed_focus = ENG_begin_secret_rearmament
 		}
 		bypass = {
 			custom_trigger_tooltip =  {

@@ -23,6 +23,332 @@ focus_tree = {
 	continuous_focus_position = { x = 20 y = 1000 }
 
 	focus = {
+		id = LBA_begin_assimilation_policies
+		icon = GFX_goal_generic_neutrality_focus
+		x = 14
+		y = 0
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_the_forth_shore
+		icon = GFX_goal_generic_neutrality_focus
+		x = -2
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_begin_assimilation_policies
+		}
+		relative_position_id = LBA_begin_assimilation_policies
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_additional_italian_settlements
+		icon = GFX_goal_generic_neutrality_focus
+		x = -1
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_the_forth_shore
+		}
+		relative_position_id = LBA_the_forth_shore
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_incoporation_into_metropolitan_italy
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_the_forth_shore
+		}
+		relative_position_id = LBA_the_forth_shore
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_improve_economic_situation
+		icon = GFX_goal_generic_neutrality_focus
+		x = 2
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_begin_assimilation_policies
+		}
+		relative_position_id = LBA_begin_assimilation_policies
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_grant_citizenship_to_all_libyans
+		icon = GFX_goal_generic_neutrality_focus
+		x = -1
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_improve_economic_situation
+		}
+		relative_position_id = LBA_improve_economic_situation
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_create_new_villages
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_improve_economic_situation
+		}
+		relative_position_id = LBA_improve_economic_situation
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_nation_of_all_religions
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 3
+		cost = 1
+		prerequisite = {
+			focus = LBA_grant_citizenship_to_all_libyans
+		}
+		prerequisite = {
+			focus = LBA_create_new_villages
+		}
+		prerequisite = {
+			focus = LBA_incoporation_into_metropolitan_italy
+		}
+		prerequisite = {
+			focus = LBA_additional_italian_settlements
+		}
+		relative_position_id = LBA_begin_assimilation_policies
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			is_in_faction_with = GER
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_improve_military_infrastructure
+		icon = GFX_goal_generic_neutrality_focus
+		x = -1
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_nation_of_all_religions
+		}
+		relative_position_id = LBA_nation_of_all_religions
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = LBA_support_arab_nationalists_in_egypt
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = LBA_nation_of_all_religions
+		}
+		relative_position_id = LBA_nation_of_all_religions
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
 		id = LBA_escalate_the_abyssinia_crisis
 		icon = GFX_goal_generic_neutrality_focus
 		x = 34
