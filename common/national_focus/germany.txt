@@ -21689,12 +21689,13 @@ focus_tree = {
 	focus = {
 		id = GER_dawn_of_the_black_sun
 		icon = GFX_focus_GER_ascension_of_himmler
-		prerequisite = { focus = GER_a_strong_successor }
-		x = 1
+		
+		x = -8
 		y = 1
 		relative_position_id = GER_a_strong_successor
 		cost = 5
 		available = {
+			has_completed_focus = GER_a_strong_successor
 			has_country_leader = GER_heinrich_himmler
 		}
 
@@ -21706,14 +21707,33 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_ss_primacy
+		icon = GFX_focus_GER_ascension_of_goring
+		prerequisite = { focus = GER_reich_aristocracy focus = GER_dawn_of_the_black_sun }
+		x = 0
+		y = 1
+		relative_position_id = GER_dawn_of_the_black_sun
+		cost = 5
+		mutually_exclusive = {
+			focus = GER_concessions_to_the_heer
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
 		id = GER_reich_aristocracy
 		icon = GFX_focus_GER_ascension_of_goring
-		prerequisite = { focus = GER_a_strong_successor }
-		x = -1
+
+		x = -12
 		y = 1
 		relative_position_id = GER_a_strong_successor
 		cost = 5
 		available = {
+			has_completed_focus = GER_a_strong_successor
 			has_country_leader = GER_hermann_goring
 		}
 
@@ -21762,6 +21782,25 @@ focus_tree = {
 			type = arms_factory
 			level = 3
 		 }
+		}
+	}
+
+	focus = {
+		id = GER_concessions_to_the_heer
+		icon = GFX_focus_GER_ascension_of_goring
+		prerequisite = { focus = GER_reich_aristocracy focus = GER_dawn_of_the_black_sun }
+		x = 2
+		y = 1
+		relative_position_id = GER_reich_aristocracy
+		cost = 5
+		mutually_exclusive = {
+			focus = GER_luftwaffe_prioritization
+			focus = GER_ss_primacy
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
 		}
 	}
 
