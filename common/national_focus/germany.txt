@@ -8612,7 +8612,43 @@ focus_tree = {
 ##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ########     ###  ###   ###  ###  
 
 
+focus = {
+		id = GER_preparations_for_rhineland
 
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+
+
+		allow_branch = {
+		
+		}
+
+		x = 35
+		y = 0
+		relative_position_id = GER_prioritize_economic_growth
+
+		cost = 5
+
+		bypass = {
+		
+		}
+
+		available = {
+			is_subject = no
+			has_government = fascism
+			
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
 
 
 	focus = {
@@ -8640,9 +8676,12 @@ focus_tree = {
 			}
 		}
 
-		x = 35
-		y = 0
-		relative_position_id = GER_prioritize_economic_growth
+		x = 0
+		y = 1
+		relative_position_id = GER_preparations_for_rhineland
+		prerequisite = {
+			focus = GER_preparations_for_rhineland
+		}
 
 		cost = 5
 
@@ -21811,10 +21850,12 @@ focus_tree = {
 
 		mutually_exclusive = { focus = GER_remilitarize_the_rhineland }
 
-		x = 76
-		y = 0
-		relative_position_id = GER_prioritize_economic_growth
-
+		x = 42
+		y = 1
+		relative_position_id = GER_preparations_for_rhineland
+		prerequisite = {
+			focus = GER_preparations_for_rhineland
+		}
 		cost = 10
 
 		available = {
