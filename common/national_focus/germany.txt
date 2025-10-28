@@ -9045,7 +9045,7 @@ focus = {
 		icon = GFX_focus_generic_secret_service_agency
 		prerequisite = { focus = GER_war_preparations }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = GER_war_preparations
 		cost = 10
 
