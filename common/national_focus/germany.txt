@@ -8999,6 +8999,30 @@ focus = {
 			
 		}
 	}
+
+	focus = {
+		id = GER_warm_relations_with_britain
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = GER_keep_moderates_in_office }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_keep_moderates_in_office
+		cost = 10
+		available = {
+			is_subject = no
+			has_war = no
+			ENG = {
+				has_government = democratic 
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+		
+		}
+	}
 	
 	focus = {
 		id = GER_prepare_for_the_next_blockade_ww
@@ -9043,7 +9067,7 @@ focus = {
 	focus = {
 		id = GER_reorganize_secret_services
 		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = GER_war_preparations }
+		prerequisite = { focus = GER_war_preparations focus = GER_warm_relations_with_britain }
 		x = -1
 		y = 2
 		relative_position_id = GER_war_preparations
@@ -9102,11 +9126,12 @@ focus = {
 		icon = GFX_focus_ARG_keep_it_in_the_party
 		prerequisite = { focus = GER_reorganize_secret_services }
 
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = GER_reorganize_secret_services
 		cost = 5
 		available = {
+			has_completed_focus = GER_prepare_for_the_next_blockade_ww
 		}
 
 		search_filters = {}
@@ -10363,6 +10388,32 @@ focus = {
 				GER_wunderwaffen_production_speed_facility_factor = 0.05
 				tooltip = production_speed_facility_factor_tt
 			}
+		}
+	}
+
+
+	focus = {
+		id = GER_invite_halifax
+		icon = GFX_focus_ger_reichskommisariats
+		alternate_icon = GFX_focus_ger_reichskommisariats_historical
+		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
+
+		x = 15
+		y = 1
+		relative_position_id = GER_heed_von_neuraths_concerns
+		cost = 5
+		available = {
+			has_government = fascism
+		}
+		bypass = {
+			ENG = {
+				has_completed_focus = ENG_send_halifax_to_germany
+			}
+		}
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
 		}
 	}
 

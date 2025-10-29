@@ -7511,6 +7511,70 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ENG_reapproach_mussolini
+		icon = GFX_goal_generic_build_tank
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = ENG_maintaining_power_balance_in_europe
+			NOT = {
+				has_completed_focus = ENG_shield_against_the_reds
+			}
+		}
+		bypass = {
+			
+		}
+		prerequisite = {
+			focus = ENG_begin_secret_rearmament
+		}
+		relative_position_id = ENG_begin_secret_rearmament
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		complete_tooltip = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ENG_revive_stressa
+		icon = GFX_goal_generic_build_tank
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = ENG_maintaining_power_balance_in_europe
+			NOT = {
+				has_completed_focus = ENG_shield_against_the_reds
+			}
+		}
+		bypass = {
+			
+		}
+		prerequisite = {
+			focus = ENG_reapproach_mussolini
+		}
+		relative_position_id = ENG_reapproach_mussolini
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		complete_tooltip = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
 		id = ENG_work_on_recovering_the_economy
 		icon = GFX_goal_generic_build_tank
 		x = 2
@@ -7590,6 +7654,38 @@ focus_tree = {
 			focus = ENG_begin_secret_rearmament
 		}
 		relative_position_id = ENG_steady_as_she_goes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_HISTORICAL}
+		complete_tooltip = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+
+focus = {
+		id = ENG_send_halifax_to_germany
+		icon = GFX_goal_generic_build_tank
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		bypass = {
+			GER = {
+				has_completed_focus = GER_invite_halifax
+			}
+		}
+		prerequisite = {
+			focus = ENG_chamberlain_comes_to_office
+		}
+		
+		relative_position_id = ENG_chamberlain_comes_to_office
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_HISTORICAL}
 		complete_tooltip = {
@@ -7819,7 +7915,9 @@ focus = {
 			factor = 1
 		}
 		available = {
-			
+			NOT = {
+				has_completed_focus = ENG_reapproach_mussolini
+			}
 		}
 		bypass = {
 			
