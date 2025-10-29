@@ -7552,9 +7552,10 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_completed_focus = ENG_maintaining_power_balance_in_europe
 			NOT = {
-				has_completed_focus = ENG_shield_against_the_reds
+				ITA = {
+					has_completed_focus = ITA_pact_of_steel
+				}
 			}
 		}
 		bypass = {
