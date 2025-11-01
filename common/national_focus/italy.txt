@@ -64,8 +64,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ethiopian_war_logistics_bba
 		icon = GFX_goal_generic_position_armies
-
-		x = 2
+		x = 0
 		y = 0
 		offset = {
 			x = 6
@@ -152,7 +151,7 @@ focus_tree = {
 	focus = {
 		id = ITA_italian_highways_bba
 		icon = GFX_focus_generic_truck
-		x = 6
+		x = 4
 		y = 0
 		relative_position_id = ITA_ethiopian_war_logistics_bba
 		cost = 5
@@ -4907,7 +4906,7 @@ focus_tree = {
 		id = ITA_air_innovations_bba
 		icon = GFX_goal_expand_the_luftwaffe
 
-		x = 7
+		x = 9
 		y = 0
 		relative_position_id = ITA_army_primacy_bba
 		cost = 5
@@ -5037,13 +5036,13 @@ focus_tree = {
 		id = ITA_reggianes_exports
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = ITA_citta_dell_aria }
-
 		x = -2
 		y = 1
 		relative_position_id = ITA_citta_dell_aria
-		cost = 10
+		cost = 5
 		available = {
 			has_full_control_of_state = 161
+			has_completed_focus = ITA_programme_r
 		}
 
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
@@ -5104,6 +5103,25 @@ focus_tree = {
 				}
 				ITA_add_reggianes_exports_templates = yes
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_programme_r
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = ITA_citta_dell_aria }
+		x = -4
+		y = 1
+		relative_position_id = ITA_citta_dell_aria
+		cost = 5
+		available = {
+			date > 1938.1.1
+		}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {
+			
 		}
 	}
 
@@ -5239,7 +5257,7 @@ focus_tree = {
 	focus = {
 		id = ITA_standardization
 		icon = GFX_goal_generic_production2
-		prerequisite = { focus = ITA_superaereo }
+		prerequisite = { focus = ITA_superaereo focus = ITA_programme_r }
 		mutually_exclusive = { focus = ITA_specialization }
 		x = -1
 		y = 1
@@ -5296,7 +5314,7 @@ focus_tree = {
 	focus = {
 		id = ITA_specialization
 		icon = GFX_goal_generic_air_production
-		prerequisite = { focus = ITA_superaereo }
+		prerequisite = { focus = ITA_superaereo focus = ITA_programme_r }
 		mutually_exclusive = { focus = ITA_standardization }
 		x = 1
 		y = 1
@@ -5350,16 +5368,17 @@ focus_tree = {
 		}
 	}
 
+	
+
 
 	focus = {
 		id = ITA_long_range_aircraft
 		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = ITA_standardization }
-
 		x = -2
 		y = 1
 		relative_position_id = ITA_standardization
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -5401,11 +5420,10 @@ focus_tree = {
 		id = ITA_bomber_designs
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
-
 		x = 2
 		y = 0
 		relative_position_id = ITA_long_range_aircraft
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -5444,11 +5462,10 @@ focus_tree = {
 		id = ITA_fighter_designs
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
-
 		x = 4
 		y = 0
 		relative_position_id = ITA_long_range_aircraft
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -5487,11 +5504,10 @@ focus_tree = {
 		id = ITA_multirole_aircraft
 		icon = GFX_focus_generic_multi_role_aircraft
 		prerequisite = { focus = ITA_specialization }
-
 		x = 6
 		y = 0
 		relative_position_id = ITA_long_range_aircraft
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -5575,6 +5591,24 @@ focus_tree = {
 				}
 				ITA_add_supremacy_in_the_skies_templates = yes
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_jet_development
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = ITA_supremacy_in_the_skies }
+		x = 0
+		y = 1
+		relative_position_id = ITA_supremacy_in_the_skies
+		cost = 10
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {
+			
 		}
 	}
 
