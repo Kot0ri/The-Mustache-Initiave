@@ -1318,8 +1318,7 @@ focus = {
 	focus = {
 		id = USA_wpa
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = USA_continue_the_new_deal }
-		prerequisite = { focus = USA_a_new_wind_blows }
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_a_new_wind_blows }
 		relative_position_id = USA_continue_the_new_deal
 		x = -4
 		y = 1
@@ -1991,7 +1990,7 @@ focus = {
 	focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
-		prerequisite = { focus = USA_black_chamber focus = USA_arsenal_of_democracy }
+		prerequisite = { focus = USA_black_chamber focus = USA_wartime_industry }
 		x = 1
 		y = 1
 		relative_position_id = USA_black_chamber
@@ -2007,29 +2006,7 @@ focus = {
 				has_completed_focus = USA_neutrality_act
 			}
 		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
+	
 
 		cost = 10
 		#ai_will_do = {
@@ -2096,7 +2073,7 @@ focus = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 4
+		x = 3
 		y = 2
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 	
@@ -2550,6 +2527,42 @@ focus = {
 			add_ideas = wartime_industry_focus
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = USA_general_motors
+		}
+	}
+
+	focus = {
+		id = USA_women_in_the_workforce
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_wartime_industry
+		prerequisite = { focus = USA_wartime_industry}
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		allow_branch = {
+			
+		}
+
+		available = {
+			has_government = democratic
+			congress_high_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
 		}
 	}
 	
@@ -3048,6 +3061,80 @@ focus = {
 	}
 
 	focus = {
+		id = USA_remove_white-colored_distinctions
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_push_for_equal_rights
+		prerequisite = { focus = USA_push_for_equal_rights}
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		allow_branch = {
+			
+		}
+
+		available = {
+			has_government = democratic
+			congress_high_support_trigger = yes
+			has_country_leader = usa_alf_landon
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_bring_women_into_the_workforce
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_remove_white-colored_distinctions
+		prerequisite = { focus = USA_remove_white-colored_distinctions}
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		allow_branch = {
+			
+		}
+
+		available = {
+			has_government = democratic
+			congress_high_support_trigger = yes
+			has_country_leader = usa_alf_landon
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
 		id = USA_reinforce_economic_ties_with_europe
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = USA_moderate_the_new_deal
@@ -3092,6 +3179,8 @@ focus = {
 			
 		}
 	}
+
+
 
 	focus = {
 		id = USA_curtail_presidental_powers
@@ -3244,7 +3333,7 @@ focus = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 2
 		y = 1
-		prerequisite = { focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_reestablish_the_gold_standard focus = USA_moderate_the_new_deal }
 		relative_position_id = USA_reestablish_the_gold_standard
 		cost = 10
 
@@ -3276,12 +3365,71 @@ focus = {
 		}
 	}
 	focus = {
-		id = USA_labour_management_relations_act
+		id = USA_restore_ngo_releif_primacy
 		icon = GFX_focus_generic_military_academy
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = USA_adjusted_compensation_act }
 		relative_position_id = USA_adjusted_compensation_act
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_pay_as_you_go_social_security
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		prerequisite = { focus = USA_adjusted_compensation_act }
+		relative_position_id = USA_adjusted_compensation_act
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = USA_labour_management_relations_act
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		prerequisite = { focus = USA_america_first }
+		relative_position_id = USA_america_first
 		cost = 10
 
 		ai_will_do = {
@@ -3318,7 +3466,7 @@ focus = {
 		icon = GFX_goal_generic_defence
 		x = 0
 		y = 2
-		prerequisite = { focus = USA_labour_management_relations_act }
+		prerequisite = { focus = USA_adjusted_compensation_act }
 		relative_position_id = USA_adjusted_compensation_act
 		cost = 10
 
@@ -3349,9 +3497,38 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_national_land_use_program
+		icon = GFX_goal_generic_intelligence_exchange
+		x =-1
+		y = 3
+		prerequisite = { focus = USA_protectionist_tariffs }
+		relative_position_id = USA_adjusted_compensation_act
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
 		id = USA_income_tax_reform
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 0
+		x = 1
 		y = 3
 		prerequisite = { focus = USA_protectionist_tariffs }
 		relative_position_id = USA_adjusted_compensation_act
@@ -3384,7 +3561,7 @@ focus = {
 		icon = GFX_focus_research
 		x = 0
 		y = 4
-		prerequisite = { focus = USA_income_tax_reform }
+		prerequisite = { focus = USA_income_tax_reform focus = USA_national_land_use_program }
 		relative_position_id = USA_adjusted_compensation_act
 		cost = 10
 
@@ -3476,7 +3653,7 @@ focus = {
 		id = USA_extend_the_chinese_exclusion_acts
 		icon = GFX_goal_generic_forceful_treaty
 		x = 0
-		y = 1
+		y = 2
 		prerequisite = { focus = USA_america_first }
 		relative_position_id = USA_america_first
 		cost = 10
@@ -6468,7 +6645,7 @@ focus = {
 	focus = {
 		id = USA_light_tanks
 		icon = GFX_focus_generic_combined_arms
-		x = 5.5
+		x = 6
 		y = 3
 		prerequisite = { focus = USA_tank_experiments }
 		relative_position_id = USA_selective_training_act
@@ -6628,7 +6805,7 @@ focus = {
 #  # ### #  #     ##  ###  ##   #  ###  ##  #  # 
 
 	focus = {
-		id = USA_air_war_plans_division
+		id = USA_listen_to_lindbergh
 		icon = GFX_goal_generic_build_airforce
 		x = 2
 		y = 1
@@ -6638,6 +6815,61 @@ focus = {
 		#}
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_secretary_of_air
+		icon = GFX_goal_generic_build_airforce
+		x = -1
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_listen_to_lindbergh }
+		relative_position_id = USA_listen_to_lindbergh
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_form_independent_air_arm
+		icon = GFX_goal_generic_build_airforce
+		x = 1
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_listen_to_lindbergh }
+		relative_position_id = USA_listen_to_lindbergh
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_air_war_plans_division
+		icon = GFX_goal_generic_build_airforce
+		x = -1
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_form_independent_air_arm focus = USA_secretary_of_air }
+		relative_position_id = USA_form_independent_air_arm
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 	
@@ -6893,7 +7125,7 @@ focus = {
 	focus = {
 		id = USA_two_ocean_navy_act
 		icon = GFX_focus_generic_navy_battleship2
-		x = 8
+		x = 10
 		y = 1
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
