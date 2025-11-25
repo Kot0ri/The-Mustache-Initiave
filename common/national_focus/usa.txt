@@ -1611,24 +1611,13 @@ focus = {
 	focus = {
 		id = USA_limited_intervention
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_moderate_the_new_deal }
-		mutually_exclusive = { focus = USA_neutrality_act }
+		prerequisite = { focus = USA_arsenal_of_democracy }
 		continue_if_invalid = yes
-		x = 0
+		x = -2
 		y = 2
-		relative_position_id = USA_continue_the_new_deal
+		relative_position_id = USA_arsenal_of_democracy
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
+		
 
 		cost = 10
 		#ai_will_do = {
@@ -1640,17 +1629,6 @@ focus = {
 		continue_if_invalid = yes
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = USA_neutrality_act
-				}
-			}
 		}
 
 		available = {
@@ -2118,38 +2096,13 @@ focus = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 8
+		x = 4
 		y = 2
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
-		mutually_exclusive = { focus = USA_limited_intervention }
+	
 		relative_position_id = USA_continue_the_new_deal
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+		
 
 		cost = 5
 
@@ -3144,8 +3097,8 @@ focus = {
 		id = USA_curtail_presidental_powers
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = USA_moderate_the_new_deal
-		prerequisite = { focus = USA_moderate_the_new_deal}
-		x = -3
+		prerequisite = { focus = USA_moderate_the_new_deal focus = USA_reestablish_the_gold_standard }
+		x =3
 		y = 1
 		cost = 10
 
@@ -3170,7 +3123,41 @@ focus = {
 
 		available = {
 			has_government = democratic
-			has_country_leader = usa_alf_landon
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+focus = {
+		id = USA_empower_the_supreme_court
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_curtail_presidental_powers
+		prerequisite = { focus = USA_curtail_presidental_powers }
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		allow_branch = {
+			
+		}
+
+		available = {
+			has_government = democratic
 		}
 		
 		bypass = {
@@ -3365,7 +3352,7 @@ focus = {
 		id = USA_income_tax_reform
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
-		y = 4
+		y = 3
 		prerequisite = { focus = USA_protectionist_tariffs }
 		relative_position_id = USA_adjusted_compensation_act
 		cost = 10
@@ -3396,7 +3383,7 @@ focus = {
 		id = USA_institute_of_american_sciences
 		icon = GFX_focus_research
 		x = 0
-		y = 6
+		y = 4
 		prerequisite = { focus = USA_income_tax_reform }
 		relative_position_id = USA_adjusted_compensation_act
 		cost = 10
