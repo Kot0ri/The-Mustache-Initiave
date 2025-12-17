@@ -2166,47 +2166,12 @@ focus = {
 	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
-		x = 2
-		y = 2
-		prerequisite = { focus = USA_neutrality_act focus = USA_limited_intervention }
-		relative_position_id = USA_limited_intervention
+		x = -1
+		y = 1
+		prerequisite = { focus = USA_neutrality_act  }
+		relative_position_id = USA_neutrality_act
 
-		offset = {
-			x = -1
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -2
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
+	
 		cost = 10
 
 		ai_will_do = {
@@ -2214,6 +2179,7 @@ focus = {
 		}
 
 		available = {
+			has_country_leader = USA_franklin_delano_roosevelt
 			if = {
 				limit = {
 					has_war_support > 0.4
@@ -3681,114 +3647,15 @@ focus = {
 			}
 		}
 	}
-	focus = {
-		id = USA_a_tale_of_two_generals
-		icon = GFX_goal_generic_forceful_treaty
-		x = -2
-		y = 1
-		prerequisite = { focus = USA_america_first }
-		relative_position_id = USA_america_first
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_low_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			add_popularity = { ideology = neutrality popularity = 0.25 }
-		}
-	}
-
-
-	focus = {
-		id = USA_american_caesar
-		icon = GFX_goal_generic_forceful_treaty
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_a_tale_of_two_generals }
-		relative_position_id = USA_a_tale_of_two_generals
-		mutually_exclusive = {focus = USA_duty_honor_country}
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		completion_reward = {
-			set_party_name = {
-				ideology = neutrality
-				long_name = Pattons_Legion
-				name = Ironshirts
-			}
-			
-		}
-	}
-
-	focus = {
-		id = USA_duty_honor_country
-		icon = GFX_goal_generic_forceful_treaty
-		x = -2
-		y = 1
-		prerequisite = { focus = USA_a_tale_of_two_generals }
-		relative_position_id = USA_a_tale_of_two_generals
-		mutually_exclusive = {focus = USA_american_caesar}
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_low_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			set_party_name = {
-				ideology = neutrality
-				long_name = McArthurs_legion
-				name = Blueshirts
-			}
-		}
-	}
+	
 
 	focus = {
 		id = USA_push_to_save_democracy
 		icon = GFX_goal_generic_forceful_treaty
 		x = -1
-		y = 2
-		prerequisite = { focus = USA_duty_honor_country focus = USA_american_caesar }
-		relative_position_id = USA_a_tale_of_two_generals
+		y = 1
+		prerequisite = { focus = USA_limited_intervention }
+		relative_position_id = USA_limited_intervention
 		cost = 10
 
 		ai_will_do = {
@@ -3815,10 +3682,10 @@ focus = {
 	focus = {
 		id = USA_crush_the_anti_american_ideals
 		icon = GFX_goal_generic_forceful_treaty
-		x = 0
+		x = -1
 		y = 1
-		prerequisite = { focus = USA_push_to_save_democracy}
-		relative_position_id = USA_push_to_save_democracy
+		prerequisite = { focus = USA_empower_the_huac}
+		relative_position_id = USA_empower_the_huac
 		cost = 10
 
 		ai_will_do = {
@@ -3837,35 +3704,6 @@ focus = {
 		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			
-	}
-	}
-
-	focus = {
-		id = USA_seek_out_allies
-		icon = GFX_goal_generic_forceful_treaty
-		x = -1
-		y = 1
-		prerequisite = { focus = USA_duty_honor_country}
-		relative_position_id = USA_duty_honor_country
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_low_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
 		completion_reward = {
 			
 	}
@@ -5363,7 +5201,7 @@ focus = {
 		x = 24
 		y = 4
 		offset = {
-			x = -17
+			x = -12
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -6923,6 +6761,28 @@ focus = {
 		completion_reward = {
 			air_experience = 25
 			add_ideas = strategic_bombing_focus
+		}
+	}
+
+	focus = {
+		id = USA_hemispheric_fortress
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = USA_strategic_bombing }
+		x = 1
+		y = 1
+		relative_position_id = USA_strategic_bombing
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+		available = {
+			has_country_leader = USA_charles_lindbergh
+		}
+
+		completion_reward = {
+			
 		}
 	}
 
