@@ -211,6 +211,74 @@ focus = {
 		}
 	}
 
+focus = {
+		id = USA_conservation_effort
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_continue_the_new_deal  }
+		relative_position_id = USA_continue_the_new_deal
+		x = 2
+		y = 1
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available = {
+			has_country_leader = USA_franklin_delano_roosevelt
+		}
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_judicial_procedures_reform_bill_of_1937
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_continue_the_new_deal  }
+		relative_position_id = USA_continue_the_new_deal
+		x = 0
+		y = 1
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available = {
+			date > 1937.01.1
+			has_country_leader = USA_franklin_delano_roosevelt
+		}
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_reorganization_act_of_1939
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_judicial_procedures_reform_bill_of_1937  }
+		relative_position_id = USA_judicial_procedures_reform_bill_of_1937
+		x = 0
+		y = 1
+
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available = {
+			date > 1939.01.1
+			has_country_leader = USA_franklin_delano_roosevelt
+		}
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS }
+		completion_reward = {
+			
+		}
+	}
+
 	focus = {
 		id = USA_suspend_the_presecution
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -1701,6 +1769,7 @@ focus = {
 		prerequisite = { focus = USA_limited_intervention }
 		available = {
 			has_government = democratic
+			has_war = yes
 		}
 
 		bypass = {
@@ -2433,7 +2502,7 @@ focus = {
 		available = {
 			OR = {
 				has_war = yes
-				has_war_support > 0.3
+				has_war_support > 0.45
 			}
 			democratic > 0.95
 		}
@@ -2488,6 +2557,7 @@ focus = {
 		available_if_capitulated = yes
 		available = {
 			democratic > 0.95
+			has_war = yes
 		}
 		completion_reward = {
 			add_ideas = wartime_industry_focus
@@ -3656,7 +3726,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_limited_intervention }
 		relative_position_id = USA_limited_intervention
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3675,7 +3745,8 @@ focus = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			
+			add_war_support = 0.05
+			add_command_power = 5
 	}
 	}
 
