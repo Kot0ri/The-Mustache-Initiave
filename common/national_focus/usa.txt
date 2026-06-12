@@ -1683,9 +1683,6 @@ focus = {
 		x = -2
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
-
-		
-
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
@@ -1694,10 +1691,6 @@ focus = {
 		available_if_capitulated = no
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-
-		allow_branch = {
-		}
-
 		available = {
 			congress_high_support_trigger = yes 
 			has_government = democratic
@@ -2231,14 +2224,112 @@ focus = {
 			}
 		}
 	}
+
+	focus = {
+		id = USA_sanction_japan
+		icon = GFX_goal_generic_neutrality_focus
+		x = -1
+		y = 1
+		prerequisite = { focus = USA_neutrality_act }
+		relative_position_id = USA_neutrality_act
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			JAP = {
+				has_war_with = CHI
+			}
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+		focus = {
+		id = USA_freeze_japanese_assets
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_sanction_japan }
+		relative_position_id = USA_sanction_japan
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			JAP = {
+				has_war_with = CHI
+			}
+			date > 1941.01.1
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_revise_the_neutrality_act
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 3
+		prerequisite = { focus = USA_neutrality_act }
+		relative_position_id = USA_neutrality_act
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+
+
+		available = {
+			date > 1939.01.1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
 	
 	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
 		x = -1
 		y = 1
-		prerequisite = { focus = USA_neutrality_act  }
-		relative_position_id = USA_neutrality_act
+		prerequisite = { focus = USA_revise_the_neutrality_act  }
+		relative_position_id = USA_revise_the_neutrality_act
 
 	
 		cost = 10
@@ -2248,31 +2339,7 @@ focus = {
 		}
 
 		available = {
-			has_country_leader = USA_franklin_delano_roosevelt
-			if = {
-				limit = {
-					has_war_support > 0.4
-				}
-				congress_medium_support_trigger = yes
-			}
-			else = {
-				congress_high_support_trigger = yes
-			}
-			democratic > 0.95
-			custom_trigger_tooltip = {
-				tooltip = USA_lend_lease_act_neutrality_tt
-			}
-			if = {
-				limit = {
-					has_completed_focus = USA_neutrality_act
-				}
-				any_other_country = {
-					is_major = yes
-					has_government = ROOT
-					has_war = yes
-					surrender_progress > 0
-				}
-			}
+		
 		}
 		
 		bypass = {
@@ -2353,25 +2420,240 @@ focus = {
 			}
 		}
 	}
+
+	focus = {
+		id = USA_war_looms
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_revise_the_neutrality_act }
+		x = 0
+		y = 2
+		relative_position_id = USA_revise_the_neutrality_act
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_maintain_new_deal_supremacy
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_war_looms }
+		x = -2
+		y = 1
+		relative_position_id = USA_war_looms
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = USA_restore_conservative_policies
+		}
+		mutually_exclusive = {
+			focus = USA_isolationism_stands
+		}
+		mutually_exclusive = {
+			focus = USA_interventionism_pushes_through
+		}
+		mutually_exclusive = {
+			focus = USA_balance_policy_with_preparedness
+		}
+		mutually_exclusive = {
+			focus = USA_america_first_committee
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_restore_conservative_policies
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_war_looms }
+		x = -4
+		y = 1
+		relative_position_id = USA_war_looms
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = USA_maintain_new_deal_supremacy
+		}
+			mutually_exclusive = {
+			focus = USA_isolationism_stands
+		}
+		mutually_exclusive = {
+			focus = USA_interventionism_pushes_through
+		}
+		mutually_exclusive = {
+			focus = USA_balance_policy_with_preparedness
+		}
+		mutually_exclusive = {
+			focus = USA_america_first_committee
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_isolationism_stands
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_war_looms }
+		x = 6
+		y = 1
+		relative_position_id = USA_war_looms
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = USA_restore_conservative_policies
+		}
+		mutually_exclusive = {
+			focus = USA_maintain_new_deal_supremacy
+		}
+		mutually_exclusive = {
+			focus = USA_america_first_committee
+		}
+		mutually_exclusive = {
+			focus = USA_interventionism_pushes_through
+		}
+		mutually_exclusive = {
+			focus = USA_balance_policy_with_preparedness
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_america_first_committee
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_war_looms }
+		x = 8
+		y = 1
+		relative_position_id = USA_war_looms
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = USA_restore_conservative_policies
+		}
+		mutually_exclusive = {
+			focus = USA_maintain_new_deal_supremacy
+		}
+		mutually_exclusive = {
+			focus = USA_isolationism_stands
+		}
+		mutually_exclusive = {
+			focus = USA_interventionism_pushes_through
+		}
+		mutually_exclusive = {
+			focus = USA_balance_policy_with_preparedness
+		}
+		available = {
+			has_completed_focus = USA_listen_to_lindbergh
+			fascism > 0.25
+			neutrality > 0.25
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_balance_policy_with_preparedness
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_war_looms }
+		x = 4
+		y = 1
+		relative_position_id = USA_war_looms
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = USA_restore_conservative_policies
+		}
+		mutually_exclusive = {
+			focus = USA_maintain_new_deal_supremacy
+		}
+		mutually_exclusive = {
+			focus = USA_isolationism_stands
+		}
+		mutually_exclusive = {
+			focus = USA_interventionism_pushes_through
+		}
+		mutually_exclusive = {
+			focus = USA_america_first_committee
+		}
+		mutually_exclusive = {
+			focus = USA_balance_policy_with_preparedness
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_interventionism_pushes_through
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_war_looms }
+		x = 2
+		y = 1
+		relative_position_id = USA_war_looms
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = USA_restore_conservative_policies
+		}
+		mutually_exclusive = {
+			focus = USA_maintain_new_deal_supremacy
+		}
+		mutually_exclusive = {
+			focus = USA_isolationism_stands
+		}
+		mutually_exclusive = {
+			focus = USA_america_first_committee
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
 	focus = {
 		id = USA_arsenal_of_democracy
 		icon = GFX_goal_support_democracy
-		prerequisite = { focus = USA_neutrality_act }
+		prerequisite = { focus = USA_war_looms }
 		x = 0
 		y = 2
-		relative_position_id = USA_neutrality_act
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+		relative_position_id = USA_war_looms
 
 		cost = 15
 		ai_will_do = {
