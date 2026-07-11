@@ -2509,6 +2509,25 @@ focus = {
 	}
 
 	focus = {
+		id = USA_purge_communist_infiltrators
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_restore_conservative_policies }
+		x = -1
+		y = 1
+		relative_position_id = USA_restore_conservative_policies
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
 		id = USA_isolationism_stands
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = USA_war_looms }
@@ -2575,6 +2594,150 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+		# leaders will be either Charles Lindbergh Jospeh Kennedy Robert Stuart Henry Ford or Robert Wood
+		}
+	}
+
+	focus = {
+		id = USA_unite_with_conservative_democrats
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_america_first_committee }
+		x = 2
+		y = 1
+		relative_position_id = USA_america_first_committee
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_align_progressive_republicans
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_america_first_committee }
+		x = 0
+		y = 1
+		relative_position_id = USA_america_first_committee
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_from_the_halls_of_yale
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_align_progressive_republicans focus = USA_unite_with_conservative_democrats }
+		x = 1
+		y = 1
+		relative_position_id = USA_align_progressive_republicans
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_impregnable_defense_of_america
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_from_the_halls_of_yale }
+		x = -1
+		y = 1
+		relative_position_id = USA_from_the_halls_of_yale
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_safegaurd_of_civilization
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_impregnable_defense_of_america }
+		x = 0
+		y = 1
+		relative_position_id = USA_impregnable_defense_of_america
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_preserve_democracy_through_peace
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_from_the_halls_of_yale }
+		x = 1
+		y = 1
+		relative_position_id = USA_from_the_halls_of_yale
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_distance_the_british
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_preserve_democracy_through_peace }
+		x = 0
+		y = 1
+		relative_position_id = USA_preserve_democracy_through_peace
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_end_the_special_relationship
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_distance_the_british }
+		x = 0
+		y = 1
+		relative_position_id = USA_distance_the_british
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
 		
 		}
 	}
@@ -2607,6 +2770,25 @@ focus = {
 		}
 		mutually_exclusive = {
 			focus = USA_balance_policy_with_preparedness
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_peace_through_preparedness
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_balance_policy_with_preparedness focus = USA_isolationism_stands focus = USA_america_first_committee }
+		x = 0
+		y = 1
+		relative_position_id = USA_balance_policy_with_preparedness
+		cost = 15
+		ai_will_do = {
+			factor = 1
 		}
 		available = {
 		}
