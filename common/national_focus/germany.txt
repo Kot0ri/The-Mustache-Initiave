@@ -2881,6 +2881,187 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = GER_waffen_ss
+		icon = GFX_focus_GER_army
+		x = 24
+		y = 8
+		cost = 5
+		available = {
+			has_completed_focus = GER_ascension_of_himmler
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_maintain_purity
+		icon = GFX_focus_GER_army
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = GER_waffen_ss
+		}
+		mutually_exclusive = {
+			focus = GER_european_crusade_against_bolshevism
+		}
+		relative_position_id = GER_waffen_ss
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_european_crusade_against_bolshevism
+		icon = GFX_focus_GER_army
+		x = -2
+		y = 1
+		cost = 5
+		available = {
+			has_completed_focus = GER_prepare_barbarossa
+		}
+		mutually_exclusive = {
+			focus = GER_maintain_purity
+		}
+		prerequisite = {
+			focus = GER_waffen_ss
+		}
+		relative_position_id = GER_waffen_ss
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_officer_training_camps
+		icon = GFX_focus_GER_army
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+			has_completed_focus = GER_strengthen_the_waffen_ss
+		}
+		prerequisite = {
+			focus = GER_waffen_ss
+		}
+		relative_position_id = GER_waffen_ss
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_expand_sd_powers
+		icon = GFX_focus_GER_army
+		x = 4
+		y = 1
+		cost = 5
+		available = {
+			has_completed_focus = GER_absorb_the_abwehr
+		}
+		prerequisite = {
+			focus = GER_waffen_ss
+		}
+		relative_position_id = GER_waffen_ss
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_operation_modellhut
+		icon = GFX_focus_GER_army
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			has_completed_focus = GER_hegemony_of_the_ss
+		}
+		prerequisite = {
+			has_war_with = ENG
+			focus = GER_expand_sd_powers
+		}
+		relative_position_id = GER_expand_sd_powers
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_reach_out_to_bernadotte
+		icon = GFX_focus_GER_army
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			has_war_with = ENG
+		}
+		prerequisite = {
+			focus = GER_operation_modellhut
+		}
+		relative_position_id = GER_operation_modellhut
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_plot_against_hitler
+		icon = GFX_focus_GER_army
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			has_war_with = ENG
+		}
+		prerequisite = {
+			focus = GER_reach_out_to_bernadotte
+		}
+		relative_position_id = GER_reach_out_to_bernadotte
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_form_own_operational_command
+		icon = GFX_focus_GER_army
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			has_completed_focus = GER_strengthen_the_waffen_ss
+		}
+		prerequisite = {
+			focus = GER_officer_training_camps
+		}
+		relative_position_id = GER_officer_training_camps
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			
+		}
+	}
+
 
 	focus = {
 		id = GER_develop_modern_maneuver_warfare
@@ -21868,7 +22049,18 @@ focus = {
 		search_filters = {}
 
 		completion_reward = {
-		
+		add_country_leader_role = {
+    	character = GER_hans_oster
+    	promote_leader = yes
+   	 	country_leader = {
+        ideology = moderatism
+        expire = "1965.1.1.1"
+        traits = {  }
+    	}
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
 		}
 	}
 
@@ -21929,7 +22121,18 @@ focus = {
 		search_filters = {}
 
 		completion_reward = {
-		
+		add_country_leader_role = {
+    	character = GER_claus_von_stauffenburg
+    	promote_leader = yes
+   	 	country_leader = {
+        ideology = moderatism
+        expire = "1965.1.1.1"
+        traits = {  }
+    	}
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
 		}
 	}
 
@@ -22026,7 +22229,7 @@ focus = {
 	focus = {
 		id = GER_ss_primacy
 		icon = GFX_focus_GER_ascension_of_goring
-		prerequisite = { focus = GER_reich_aristocracy focus = GER_dawn_of_the_black_sun }
+		prerequisite = { focus = GER_dawn_of_the_black_sun }
 		x = 0
 		y = 1
 		relative_position_id = GER_dawn_of_the_black_sun
@@ -22034,6 +22237,21 @@ focus = {
 		mutually_exclusive = {
 			focus = GER_concessions_to_the_heer
 		}
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_plenipotentiary_of_the_ss
+		icon = GFX_focus_GER_ascension_of_goring
+		prerequisite = { focus = GER_ss_primacy }
+		x = 0
+		y = 1
+		relative_position_id = GER_ss_primacy
+		cost = 5
 		search_filters = {}
 
 		completion_reward = {

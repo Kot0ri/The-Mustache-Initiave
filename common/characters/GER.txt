@@ -142,6 +142,26 @@ characters = {
 		}
 	}
 
+	GER_claus_von_stauffenberg = {
+		name = "Claus Von Stauffenberg"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/claus_von_stauffenberg.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/GER/claus_von_stauffenberg.dds"
+			}
+		}
+		corps_commander = {
+		traits = { old_guard thorough_planner organisational_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		} 
+	}
+
 	GER_oberste_heeresleitung_character = { #Empty Military Council so they don't become ruler automatically if the neutrals are in power
 		name = GER_oberste_heeresleitung_character
 		portraits = {
@@ -3015,6 +3035,9 @@ GER_adolf_galland = {
 		portraits = {
 			army = {
 				small = GFX_idea_GER_hans_oster
+			}
+			civilian = {
+				large = "gfx/leaders/GER/hans_oster.dds"
 			}
 		}
 		advisor = {

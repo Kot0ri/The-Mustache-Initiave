@@ -4892,6 +4892,31 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ITA_finish_army_modernization
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
+		prerequisite = { focus = ITA_fanti_dell_aria }
+		prerequisite = { focus = ITA_ferrea_mole_ferreo_cuore }
+		x = 1
+		y = 1
+		relative_position_id = ITA_fanti_dell_aria
+		cost = 10
+		available = {
+			date > 1943.01.1
+			has_completed_focus = ITA_new_industrialization_program
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_the_italian_legions_re_tt
+			add_to_variable = { ITA_re_army_core_defence_factor = 0.05 }
+			add_to_variable = { ITA_re_army_speed_factor = 0.05 }
+			add_to_variable = { ITA_re_army_army_org_factor = 0.05 }
+			add_to_variable = { ITA_re_army_army_attack_factor = 0.05 }
+		}
+	}
+
 
 ########  ########  ######   ####    ###          ###    ######## ########   #######  ##    ##    ###    ##     ## ######## ####  ######     ###    
 ##     ## ##       ##    ##   ##    ## ##        ## ##   ##       ##     ## ##     ## ###   ##   ## ##   ##     ##    ##     ##  ##    ##   ## ##   
@@ -9723,8 +9748,6 @@ focus_tree = {
 		id = ITA_towards_a_greater_italy
 		icon = GFX_focus_ITA_greater_italy
 		prerequisite = { focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty focus = ITA_setting_course }
-		mutually_exclusive = { focus = ITA_mare_nostrum_bba }
-
 		x = 0
 		y = 1
 		relative_position_id = ITA_strengthen_the_regime
@@ -13707,10 +13730,9 @@ focus_tree = {
 	focus = {
 		id = ITA_mare_nostrum_bba
 		icon = GFX_focus_ITA_mare_nostrum
-		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
-		mutually_exclusive = { focus = ITA_towards_a_greater_italy }
+		prerequisite = { focus = ITA_setting_course focus = ITA_towards_a_greater_italy focus = ITA_blackshirt_loyalty }
 		x = 31
-		y = 0
+		y = 1
 		offset = {
 			x = -25
 			y = 0

@@ -915,7 +915,7 @@ recruit_character = GER_paul_von_lettow_vorbeck
 recruit_character = GER_carl_friedrich_goerdeler
 recruit_character = GER_wilhelm_iv
 recruit_character = GER_eva_braun
-
+recruit_character = GER_claus_von_stauffenberg
 recruit_character = GER_ernst_busch
 recruit_character = GER_walter_reichenau
 recruit_character = GER_traugott_herr
