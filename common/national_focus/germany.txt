@@ -3038,7 +3038,6 @@ focus_tree = {
 		id = GER_the_prussian_legacy
 		icon = GFX_focus_GER_prussian_legacy
 		prerequisite = { focus = GER_develop_modern_maneuver_warfare }
-		mutually_exclusive = { focus = GER_adopt_new_panzer_doctrine }
 		x = -2
 		y = 2
 		relative_position_id = GER_develop_modern_maneuver_warfare
@@ -4448,12 +4447,9 @@ focus_tree = {
 	
 	focus = {
 		id = GER_adopt_new_panzer_doctrine
-
 		icon = GFX_focus_generic_tank_assault
 		alternate_icon = GFX_focus_GER_adopt_new_panzer_doctrine_historical
-
 		prerequisite = { focus = GER_develop_modern_maneuver_warfare }
-		mutually_exclusive = { focus = GER_the_prussian_legacy }
 		x = 2
 		y = 2
 		relative_position_id = GER_develop_modern_maneuver_warfare
@@ -11387,19 +11383,14 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = GER_reassert_eastern_claims
-
 		cost = 10
-
 		available = {
 			has_war = no
 		}
-
 		ai_will_do = {
 			factor = 10
 		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
 		completion_reward = {
 			
 		}
@@ -12756,13 +12747,11 @@ focus = {
 
 	focus = {
 		id = GER_operation_weserubung
-
 		icon = GFX_focus_GER_operation_wesserubung
 		alternate_icon = GFX_focus_GER_operation_wesserubung_historical
-
 		prerequisite = { focus = GER_danzig_or_war }
 		mutually_exclusive = { focus = GER_utilize_the_nordliche_gesellschaft }
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = GER_danzig_or_war
 		cost = 4
@@ -12942,13 +12931,10 @@ focus = {
 
 	focus = {
 		id = GER_war_with_france
-
 		icon = GFX_focus_attack_france
 		alternate_icon = GFX_focus_GER_war_with_france
-
 		prerequisite = { focus = GER_around_maginot focus = GER_operation_weserubung }
-
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = GER_around_maginot
 		cost = 10
@@ -13076,14 +13062,11 @@ focus = {
 		id = GER_reintegrate_luxemburg_and_alsace_lorraine
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = GER_war_with_france }
-
 		x = 4
 		y = 2
 		relative_position_id = GER_war_with_france
 		cost = 10
-
 		cancel_if_invalid = yes
-		
 		available = {
 			is_subject = no
 			has_full_control_of_state = 8
@@ -13106,13 +13089,10 @@ focus = {
 				}
 			}
 		}
-
 		ai_will_do = {
 			factor = 10
 		}
-
 		search_filters = { FOCUS_FILTER_MANPOWER }
-		
 		completion_reward = {
 			add_state_core = 8
 			add_state_core = 28
@@ -13309,17 +13289,12 @@ focus = {
 	
 	focus = {
 		id = GER_secure_finland
-
 		icon = GFX_focus_FIN_keepers_of_the_north
-
 		prerequisite = { focus = GER_operation_weserubung focus = GER_utilize_the_nordliche_gesellschaft }
-
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_utilize_the_nordliche_gesellschaft
-
 		cost = 5
-
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -21877,6 +21852,154 @@ focus = {
 			hidden_effect = {
 				clr_country_flag = GER_loyalty_to_the_fuhrer_flag
 			}
+		}
+	}
+
+	focus = {
+		id = GER_Septemberverschwörung
+		icon = GFX_focus_GER_ascension_of_goring
+		x = -2
+		y = 4
+		relative_position_id = GER_form_rome_berlin_axis
+		cost = 5
+		available = {
+			has_war_with = CZE
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_form_a_new_government
+		icon = GFX_focus_GER_ascension_of_goring
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GER_Septemberverschwörung
+		}
+		relative_position_id = GER_Septemberverschwörung
+		cost = 5
+		available = {
+			has_war_with = CZE
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_to_end_the_war
+		icon = GFX_focus_GER_ascension_of_goring
+		x = 0
+		y = 4
+		relative_position_id = GER_form_rome_berlin_axis
+		cost = 5
+		available = {
+			has_war_with = SOV
+			has_war_with = ENG
+			has_war_with = USA
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_Unternehmen_Walküre
+		icon = GFX_focus_GER_ascension_of_goring
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GER_to_end_the_war
+		}
+		relative_position_id = GER_to_end_the_war
+		cost = 5
+		available = {
+			has_war_with = SOV
+			has_war_with = ENG
+			has_war_with = USA
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+		focus = {
+		id = GER_ensure_a_greater_germany
+		icon = GFX_focus_GER_ascension_of_goring
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GER_Unternehmen_Walküre
+		}
+		relative_position_id = GER_Unternehmen_Walküre
+		cost = 5
+		available = {
+			has_war_with = SOV
+			has_war_with = ENG
+			has_war_with = USA
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_flemsburg_government
+		icon = GFX_focus_GER_ascension_of_goring
+		x = 2
+		y = 4
+		relative_position_id = GER_form_rome_berlin_axis
+		cost = 5
+		available = {
+			has_war_with = SOV
+			has_war_with = ENG
+			has_war_with = USA
+		}
+		search_filters = {}
+
+		completion_reward = {
+		add_country_leader_role = {
+    character = GER_karl_donitz
+    	promote_leader = yes
+   	 country_leader = {
+        ideology = nazism
+        expire = "1985.1.1.1"
+        traits = {  }
+    	}
+		}
+		}
+	}
+
+	focus = {
+		id = GER_make_peace_with_the_western_allies
+		icon = GFX_focus_GER_ascension_of_goring
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GER_flemsburg_government
+		}
+		relative_position_id = GER_flemsburg_government
+		cost = 5
+		available = {
+			has_war_with = ENG
+			has_war_with = USA
+		}
+		search_filters = {}
+
+		completion_reward = {
+		
 		}
 	}
 

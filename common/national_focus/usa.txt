@@ -1377,6 +1377,21 @@ focus = {
 			}
 		}
 	}
+
+	focus = {
+		id = USA_warm_relations_with_soviets
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = USA_continue_the_new_deal }
+		relative_position_id = USA_continue_the_new_deal
+		x = -2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
 #	#   # ## #  
 #   # #  # #  # 
 # # # ###  #### 
@@ -1390,29 +1405,6 @@ focus = {
 		relative_position_id = USA_continue_the_new_deal
 		x = -4
 		y = 1
-
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 10
 		#ai_will_do = {
@@ -1742,17 +1734,6 @@ focus = {
 			hidden_effect = {
 				news_event = { id = mtg_news.4 days = 3 }
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 
@@ -1774,18 +1755,6 @@ focus = {
 		continue_if_invalid = yes
 		x = 0
 		y = 2
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 10
 		#ai_will_do = {
@@ -1878,19 +1847,6 @@ focus = {
 		x = -1
 		y = 4
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1909,6 +1865,25 @@ focus = {
 			else = {
 				add_ideas = office_of_strategic_services_lar
 			}
+		}
+	}
+	focus = {
+		id = USA_reach_out_to_weary_enemies
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = USA_office_of_strategic_services }
+		available = {
+			
+		}
+		x = -1
+		y = 1
+		relative_position_id = USA_office_of_strategic_services
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICS}
+		completion_reward = {
 		}
 	}
 	focus = {
@@ -2138,43 +2113,20 @@ focus = {
 		x = 3
 		y = 2
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
-	
 		relative_position_id = USA_continue_the_new_deal
-
-		
-
 		cost = 5
-
 		ai_will_do = {
 			factor = 1
 		}
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = USA_limited_intervention
-				}
-			}
-		}
-
-
 		available = {
 			congress_low_support_trigger = yes
 			democratic > 0.95
 			NOT = { has_idea_with_trait = fascist_demagogue }
 			NOT = { has_idea_with_trait = communist_revolutionary }
 		}
-		
 		bypass = {
-
+			has_war = yes
 		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -2210,17 +2162,6 @@ focus = {
 			custom_effect_tooltip = USA_lend_lease_act_neutrality_tt
 			hidden_effect = {
 				news_event = { id = mtg_news.3 days = 3 random_days = 5 }
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
 			}
 		}
 	}
@@ -2432,6 +2373,9 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			has_war = yes
+		}
 		available = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -2465,6 +2409,25 @@ focus = {
 		}
 		mutually_exclusive = {
 			focus = USA_america_first_committee
+		}
+		available = {
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_four_freedoms
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_maintain_new_deal_supremacy }
+		x = 0
+		y = 1
+		relative_position_id = USA_maintain_new_deal_supremacy
+		cost = 15
+		ai_will_do = {
+			factor = 1
 		}
 		available = {
 		}
@@ -2820,6 +2783,9 @@ focus = {
 		}
 		mutually_exclusive = {
 			focus = USA_america_first_committee
+		}
+		mutually_exclusive = {
+			focus = USA_balance_policy_with_preparedness
 		}
 		available = {
 		}
@@ -5783,24 +5749,7 @@ focus = {
 				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = USA_continue_the_new_deal
-					has_completed_focus = USA_reestablish_the_gold_standard
-				}
-				OR = {
-					has_completed_focus = USA_limited_intervention
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
+		
 		
 		cost = 10
 
