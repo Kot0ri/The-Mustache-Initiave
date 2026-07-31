@@ -844,9 +844,7 @@
 		icon = GFX_goal_generic_army_artillery
 		x = -4
 		y = 1
-		
 		prerequisite = { focus = FRA_defensive_focus }
-		mutually_exclusive = { focus = FRA_methodical_battle }
 		relative_position_id = FRA_defensive_focus
 		cost = 10
 
@@ -875,9 +873,7 @@
 		icon = GFX_goal_generic_cavalry
 		x = 0
 		y = 1
-		
 		prerequisite = { focus = FRA_defensive_focus }
-		mutually_exclusive = { focus = FRA_firepower_kills }
 		relative_position_id = FRA_defensive_focus
 		cost = 10
 
@@ -1123,8 +1119,10 @@
 		x = 2
 		y = 1
 		
-		prerequisite = { focus = FRA_firepower_kills focus = FRA_methodical_battle }
-		mutually_exclusive = { }
+		prerequisite = { focus = FRA_firepower_kills  }
+		prerequisite = {
+			focus = FRA_methodical_battle
+		}
 		relative_position_id = FRA_firepower_kills
 		cost = 10
 
@@ -1251,9 +1249,7 @@
 		icon = GFX_goal_generic_position_armies
 		x = 0
 		y = 1
-		
 		prerequisite = { focus = FRA_aggressive_focus }
-		mutually_exclusive = { focus = FRA_air_dominance }
 		relative_position_id = FRA_aggressive_focus
 		cost = 10
 
@@ -1339,9 +1335,7 @@
 		icon = GFX_goal_generic_air_fighter2
 		x = 2
 		y = 1
-		
 		prerequisite = { focus = FRA_aggressive_focus }
-		mutually_exclusive = { focus = FRA_battle_of_maneuver }
 		relative_position_id = FRA_aggressive_focus
 		cost = 10
 
