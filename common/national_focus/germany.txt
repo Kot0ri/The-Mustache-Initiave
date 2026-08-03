@@ -4518,6 +4518,25 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_wehrmachthelferin
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = GER_improve_the_logistics_system focus = GER_defend_the_vaterland }
+		x = -2
+		y = 1
+		relative_position_id = GER_improve_the_logistics_system
+		cost = 5
+		available = {
+			has_war_with_major = yes
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			
+		}
+	}
 	
 	focus = {
 		id = GER_uranverein

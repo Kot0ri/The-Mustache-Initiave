@@ -151,6 +151,31 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = USA_nye_committe_findings
+		icon = GFX_focus_generic_self_management
+		relative_position_id = USA_beacon_of_liberty
+		prerequisite = {focus = USA_beacon_of_liberty }
+		x = -4
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
 
 	focus = {
 		id = USA_continue_the_new_deal
@@ -1418,6 +1443,41 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_robinson-patman_act
+		icon = GFX_goal_generic_consumer_goods
+		x = 2
+		y = 1
+		prerequisite = { focus = USA_wpa }
+		relative_position_id = USA_wpa
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+			has_government = democratic
+		}
+		
+		bypass = {
+			not = {
+				OR = {
+					has_idea = great_depression
+					has_idea = great_depression_2
+					has_idea = great_depression_3
+				}
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+		}
+	}
+	focus = {
 		id = USA_agricultural_adjustment_act
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
@@ -1607,7 +1667,7 @@ focus = {
 	focus = {
 		id = USA_office_of_scientific_research_and_development
 		icon = GFX_focus_research
-		x = 2
+		x = -2
 		y = 1
 		prerequisite = { focus = USA_wpa }
 		relative_position_id = USA_wpa
@@ -1641,7 +1701,7 @@ focus = {
 		available = {
 			
 		}
-		x = 2
+		x = -2
 		y = 2
 		relative_position_id = USA_wpa
 		cost = 10
@@ -2111,7 +2171,7 @@ focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
 		x = 3
-		y = 2
+		y = 3
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 		relative_position_id = USA_continue_the_new_deal
 		cost = 5
@@ -3561,11 +3621,40 @@ focus = {
 	}
 
 	focus = {
+		id = USA_nationality_act_of_1940
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_moderate_the_new_deal
+		prerequisite = { focus = USA_moderate_the_new_deal focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		x = -2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+			date > 1940.01.1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
 		id = USA_push_for_equal_rights
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = USA_moderate_the_new_deal
 		prerequisite = { focus = USA_moderate_the_new_deal}
-		x = -1
+		x = 0
 		y = 1
 		cost = 10
 
@@ -3685,15 +3774,12 @@ focus = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = USA_moderate_the_new_deal
 		prerequisite = { focus = USA_moderate_the_new_deal}
-		x = 1
+		x = 2
 		y = 1
 		cost = 10
-
 		ai_will_do = {
 			factor = 1
 		}
-		
-
 		allow_branch = {
 			if = {
 				limit = {
@@ -3733,15 +3819,12 @@ focus = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = USA_moderate_the_new_deal
 		prerequisite = { focus = USA_moderate_the_new_deal focus = USA_reestablish_the_gold_standard }
-		x =3
+		x = 4
 		y = 1
 		cost = 10
-
 		ai_will_do = {
 			factor = 1
 		}
-		
-
 		allow_branch = {
 			if = {
 				limit = {
@@ -3764,6 +3847,34 @@ focus = {
 
 		}
 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_work_with_big_business
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = USA_moderate_the_new_deal
+		prerequisite = { focus = USA_moderate_the_new_deal focus = USA_reestablish_the_gold_standard }
+		x = 6
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3819,7 +3930,7 @@ focus = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = USA_beacon_of_liberty
 		prerequisite = { focus = USA_beacon_of_liberty}
-		x = 8
+		x = 10
 		y = 1
 		cost = 10
 
@@ -3911,7 +4022,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = USA_restore_ngo_releif_primacy
+		id = USA_restore_ngo_relief_primacy
 		icon = GFX_focus_generic_military_academy
 		x = -1
 		y = 1
