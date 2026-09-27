@@ -1032,7 +1032,7 @@ focus_tree = {
 		prerequisite = { focus = GER_prioritize_economic_growth focus = GER_the_four_year_plan }
 
 		x = 3
-		y = 1
+		y = 2
 		relative_position_id = GER_prioritize_economic_growth
 		cost = 5
 		available = {
@@ -2451,15 +2451,56 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = GER_strengthen_the_industrial_cartels
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = GER_the_four_year_plan }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_the_four_year_plan
+		cost = 5
+		available = {
+		}
+		mutually_exclusive = {
+			focus = GER_keep_campaign_promises
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = GER_keep_campaign_promises
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = GER_prioritize_economic_growth }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_prioritize_economic_growth
+		cost = 5
+		available = {
+		}
+		mutually_exclusive = {
+			focus = GER_strengthen_the_industrial_cartels
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+		
+		}
+	}
 
 	focus = {
 		id = GER_accelerate_the_rearmament_program
 		icon = GFX_focus_generic_combined_arms
-		prerequisite = { focus = GER_the_four_year_plan }
+		prerequisite = { focus = GER_autarky_efforts }
 
-		x = 6
+		x = 4
 		y = 1
-		relative_position_id = GER_the_four_year_plan
+		relative_position_id = GER_autarky_efforts
 		cost = 5
 		available = {
 		}
