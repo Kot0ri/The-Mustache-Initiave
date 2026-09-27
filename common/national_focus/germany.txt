@@ -3043,6 +3043,30 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_schellenberg_coup
+		icon = GFX_focus_GER_army
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			has_war_with = ENG
+		}
+		prerequisite = {
+			focus = GER_plot_against_hitler
+		}
+		relative_position_id = GER_plot_against_hitler
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			promote_character = {
+   			character = GER_walter_friedrich_schellenberg
+   	 		ideology = nazism
+			}
+			retire_character = GER_adolf_hitler
+		}
+	}
+
+	focus = {
 		id = GER_form_own_operational_command
 		icon = GFX_focus_GER_army
 		x = 0

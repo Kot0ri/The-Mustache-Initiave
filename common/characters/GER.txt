@@ -78,6 +78,38 @@ characters = {
 		}
 	}
 
+	GER_walter_friedrich_schellenberg = {
+		name = "Walter Friedrich Schellenberg"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/adolf_galland.dds"
+			}
+			army = {
+				 large = "gfx/leaders/GER/adolf_galland.dds"
+			}
+		}
+		#country_leader = {
+		#	ideology = nazism
+		#	traits = { }
+		#	expire = "1954.1.1.1"
+		#	id = -1
+		#}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_schellenberg
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_plenipotentiary_of_the_ss
+			}
+			traits = {
+				
+			}
+		}
+	}
+
 	### NON-ALIGNED ###
 
 	GER_wilhelm_ii = { #Empty Wilhelm II so he doesn't become ruler automatically if the neutrals are in power
